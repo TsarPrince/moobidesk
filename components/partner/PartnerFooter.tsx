@@ -2,7 +2,7 @@
 // ! THE FOOTER FOR THIS PAGE IS DIFFERENT FROM THE HOMEPAGE
 
 import Image from "next/image"
-import Partner from "../../../constants/Partner"
+import Partner from "@/constants/Partner"
 
 const PartnerFooter = () => {
   return (

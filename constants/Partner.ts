@@ -3,7 +3,7 @@ const Partner = {
 
   // page <title goes here>
   title: '',
-  
+
   heading: 'Moobidesk partnership programs',
   subheading: 'Reveal new opportunities to help your clients create incredible customer experiences and accelerate your business growth.',
 
@@ -29,20 +29,20 @@ const Partner = {
       {
         heading: 'Reseller Partner',
         description: 'More businesses are engaging omnichannel messaging services to meet the evolving consumer needs. Keep pace with marketplace demands by becoming a Moobidesk reseller partner and enjoy an attractive incentive program that will help you to increase profits, simultaneously driving business growth. Achieve mutual success with Moobidesk’s reseller partner program.',
-        image: '/partner/reseller-partner.png',
+        imageURL: '/partner/reseller-partner.png',
         btn_text: 'BECOME A RESELLING PARTNER',
       },
       {
         heading: 'Technology Partner',
         description: 'We provide highly collaborative partnership opportunities in effort to connect with our industry counterparts. Integrate your technology and Moobidesk’s software to harness the combined strength of our products. Together, we can bring customer satisfaction to new heights and expand our user base. Discover the power of teamwork with Moobidesk’s technology partner program.',
-        image: '/partner/technology-partner.png',
+        imageURL: '/partner/technology-partner.png',
         btn_text: 'BECOME A TECHNOLOGY PARTNER',
 
       },
       {
         heading: 'White Label Partner',
         description: 'As a Moobidesk white label partner, you get to resell Moobidesk products with full functionality through your brand name and labelling to your customers. Scale your products and services to drive new revenue streams with Moobidesk’s white label partner program.',
-        image: '/partner/white-label-partner@2x.png',  
+        imageURL: '/partner/white-label-partner@2x.png',
         btn_text: 'BECOME A WHITELABEL PARTNER',
       }
     ]

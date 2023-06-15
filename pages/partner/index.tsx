@@ -2,21 +2,27 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 
 // required components
-import Partner from '../../constants/Partner';
-import BannerButton from './partnerComponents/BannerButton';
-import PartnerCard from './partnerComponents/PartnerCard';
-import PartnerExperienceCard from './partnerComponents/PartnerExperienceCard';
-import PartnerFooter from './partnerComponents/PartnerFooter';
+import Partner from '@/constants/Partner';
+import BannerButton from '@/components/partner/BannerButton';
+import PartnerCard from '@/components/partner/PartnerCard';
+import PartnerExperienceCard from '@/components/partner/PartnerExperienceCard';
+import PartnerFooter from '@/components/partner/PartnerFooter';
+import SEO from '@/components/SEO';
 
 const PartnerPage: NextPage = () => {
   return (
     <>
       {/* NAVBAR COMPONENT GOES AT TOP / DEFAULT LAYOUT */}
 
+      <SEO
+        title='Moobidesk Partner'
+        description='Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better.'
+      />
+
 
       {/* FLOATING BUTTON */}
       <button className='fixed right-10 z-10 flex items-center gap-2 bottom-12 bg-btn_floating rounded-full px-4 py-2 text-white'>
-        <Image src={'/icons/webchat.png'} width={25} height={25} alt='webchat'/>
+        <Image src={'/icons/webchat.png'} width={25} height={25} alt='webchat' />
         Leave us a message</button>
 
       {/* BANNER SECTION */}
@@ -31,7 +37,7 @@ const PartnerPage: NextPage = () => {
             </h1>
           </div>
           <div className='flex'>
-            <BannerButton>{ Partner.button.partner }</BannerButton>
+            <BannerButton>{Partner.button.partner}</BannerButton>
           </div>
         </div>
       </div>
@@ -54,9 +60,10 @@ const PartnerPage: NextPage = () => {
 
             {/* todo : LOOP AND MAP ALL THE CARDS cards.map() */}
             {/* DONE ! */}
-            {Partner.section_2.cards.map((card) => (
+            {Partner.section_2.cards.map((card, index) => (
               <PartnerCard
-                image={card.image}
+                key={index}
+                image={card.imageURL}
                 heading={card.heading}
                 description={card.description}
                 btn_text={card.btn_text}
@@ -68,22 +75,26 @@ const PartnerPage: NextPage = () => {
       </div>
 
       {/* SECTION-3 ( MOOBIDESK PARTNERSHIP EXPERIENCE) */}
-      <section className='pt-16 pb-16'>
-        <h1 className='text-2xl sm:text-4xl font-bold text-center'>
-          {Partner.section_3.heading}
-        </h1>
-        <div className=' pt-16 flex flex-col xl:flex-row gap-2 px-20'>
+      <section className='bg-white pt-16 pb-16'>
+        <div className='2xl:container mx-auto'>
 
-          {Partner.section_3.cards.map((card) => (
-            <PartnerExperienceCard
-              image={card.imageURL}
-              description={card.description}
-              heading={card.heading} />
-          ))}
+          <h1 className='text-2xl sm:text-4xl font-bold text-center'>
+            {Partner.section_3.heading}
+          </h1>
+          <div className=' pt-16 flex flex-col xl:flex-row gap-2 px-20'>
 
-          {/* DONE */}
-        {/* todo : LOOP AND MAP ALL THE CARDS cards.map() */}
-    
+            {Partner.section_3.cards.map((card, index) => (
+              <PartnerExperienceCard
+                key={index}
+                image={card.imageURL}
+                description={card.description}
+                heading={card.heading} />
+            ))}
+
+            {/* DONE */}
+            {/* todo : LOOP AND MAP ALL THE CARDS cards.map() */}
+
+          </div>
         </div>
       </section>
 
@@ -96,7 +107,7 @@ const PartnerPage: NextPage = () => {
       </section>
 
       {/* PARTNER PAGE (DIFFERENT FOOTER) */}
-      <PartnerFooter/>
+      <PartnerFooter />
     </>
   )
 }
