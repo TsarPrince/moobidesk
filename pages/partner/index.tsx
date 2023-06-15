@@ -81,7 +81,7 @@ const PartnerPage: NextPage = () => {
           <h1 className='text-2xl sm:text-4xl font-bold text-center'>
             {Partner.section_3.heading}
           </h1>
-          <div className=' pt-16 flex flex-col xl:flex-row gap-2 px-20'>
+          <div className=' pt-16 flex flex-col xl:flex-row xl:gap-0 gap-6 xl:px-28 justify-center'>
 
             {Partner.section_3.cards.map((card, index) => (
               <PartnerExperienceCard
