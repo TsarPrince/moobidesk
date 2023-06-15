@@ -1,18 +1,11 @@
 
 const Partner = {
 
-  // page <title goes here>
-  title: '',
-
   heading: 'Moobidesk partnership programs',
   subheading: 'Reveal new opportunities to help your clients create incredible customer experiences and accelerate your business growth.',
 
   button: {
     partner: 'BECOME A PARTNER',
-    resellingPartner: 'BECOME A RESELLING PARTNER',
-    // more to be added
-    technologyPartner: 'BECOME A TECHNOLOGY PARTNER',
-    whitelabelPartner: 'BECOME A WHITELABEL PARTNER',
   },
 
   section_1: {
@@ -23,8 +16,6 @@ const Partner = {
   section_2: {
     heading: 'Choose the right partnership program',
 
-    // todo : put the image url here
-    // * right now just random URL
     cards: [
       {
         heading: 'Reseller Partner',
@@ -51,7 +42,6 @@ const Partner = {
   section_3: {
     heading: 'The Moobidesk partnership experience',
 
-    // todo : put corresponding image URLs
     cards: [
       {
         heading: 'A dedicated support team',
@@ -86,11 +76,5 @@ const Partner = {
   }
 };
 
-export interface PartnerCardType {
-  heading: string,
-  description: string,
-  image: string,
-  btn_text?: string,
-};
 
 export default Partner;

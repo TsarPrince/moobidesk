@@ -1,19 +1,23 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 
-// required components
-import Partner from '@/constants/Partner';
+// import Partner from '@/constants/Partner';
 import BannerButton from '@/components/partner/BannerButton';
 import PartnerCard from '@/components/partner/PartnerCard';
 import PartnerExperienceCard from '@/components/partner/PartnerExperienceCard';
 import PartnerFooter from '@/components/partner/PartnerFooter';
 import SEO from '@/components/SEO';
 
-const PartnerPage: NextPage = () => {
+import { client, urlFor } from 'lib/client';
+import { Partner as PartnerType } from 'sanity/schema';
+
+type PageProps = {
+  Partner: PartnerType
+}
+
+const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
   return (
     <>
-      {/* NAVBAR COMPONENT GOES AT TOP / DEFAULT LAYOUT */}
-
       <SEO
         title='Moobidesk Partner'
         description='Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better.'
@@ -37,7 +41,7 @@ const PartnerPage: NextPage = () => {
             </h1>
           </div>
           <div className='flex'>
-            <BannerButton>{Partner.button.partner}</BannerButton>
+            <BannerButton>{Partner?.button?.partner}</BannerButton>
           </div>
         </div>
       </div>
@@ -48,10 +52,10 @@ const PartnerPage: NextPage = () => {
         {/* TOGETHER WE GO FURTHUR SECTION-1 */}
         <section className=''>
           <div className=' mx-auto'>
-            <h1 className='text-center text-2xl sm:text-4xl font-bold'>{Partner.section_1.heading}</h1>
-            <p className='mx-auto text-center max-w-[55rem] px-6 text-gray-600 mt-8 sm:text-lg'>{Partner.section_1.subheading}</p>
+            <h1 className='text-center text-2xl sm:text-4xl font-bold'>{Partner.section_1?.heading}</h1>
+            <p className='mx-auto text-center max-w-[55rem] px-6 text-gray-600 mt-8 sm:text-lg'>{Partner?.section_1?.subheading}</p>
           </div>
-          <h2 className='mt-14 font-bold text-center text-lg sm:text-3xl'>{Partner.section_2.heading}</h2>
+          <h2 className='mt-14 font-bold text-center text-lg sm:text-3xl'>{Partner.section_2?.heading}</h2>
         </section>
 
         {/* PARTNERSHIP PROGRAM SECTION-2 */}
@@ -60,12 +64,12 @@ const PartnerPage: NextPage = () => {
 
             {/* todo : LOOP AND MAP ALL THE CARDS cards.map() */}
             {/* DONE ! */}
-            {Partner.section_2.cards.map((card, index) => (
+            {Partner.section_2?.cards?.map((card, index) => (
               <PartnerCard
                 key={index}
-                image={card.imageURL}
-                heading={card.heading}
-                description={card.description}
+                image={urlFor(card.image).url()}
+                heading={card.heading || ''}
+                description={card.description || ''}
                 btn_text={card.btn_text}
               />
             ))}
@@ -79,16 +83,16 @@ const PartnerPage: NextPage = () => {
         <div className='2xl:container mx-auto'>
 
           <h1 className='text-2xl sm:text-4xl font-bold text-center'>
-            {Partner.section_3.heading}
+            {Partner.section_3?.heading}
           </h1>
           <div className=' pt-16 flex flex-col xl:flex-row xl:gap-0 gap-6 xl:px-28 justify-center'>
 
-            {Partner.section_3.cards.map((card, index) => (
+            {Partner.section_3?.cards?.map((card, index) => (
               <PartnerExperienceCard
                 key={index}
-                image={card.imageURL}
-                description={card.description}
-                heading={card.heading} />
+                image={urlFor(card.image).url()}
+                description={card.description || ''}
+                heading={card.heading || ''} />
             ))}
 
             {/* DONE */}
@@ -100,9 +104,9 @@ const PartnerPage: NextPage = () => {
 
       {/* END BANNER */}
       <section className='bg-tertiary py-20'>
-        <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>{Partner.endBanner.heading}</h1>
+        <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>{Partner.endBanner?.heading}</h1>
         <div className='flex'>
-          <BannerButton>{Partner.button.partner}</BannerButton>
+          <BannerButton>{Partner.button?.partner}</BannerButton>
         </div>
       </section>
 
@@ -113,3 +117,12 @@ const PartnerPage: NextPage = () => {
 }
 
 export default PartnerPage;
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
+  const Partner: PartnerType = await client.fetch(`*[_type in ['partner']][0]`);
+  return {
+    props: {
+      Partner
+    }
+  }
+}

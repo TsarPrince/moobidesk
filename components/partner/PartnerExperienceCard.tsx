@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PartnerCardType } from "@/constants/Partner";
+import { PartnerCardType } from "@/interfaces/PartnerCard";
 
 const PartnerExperienceCard = (props: PartnerCardType) => {
   return (
