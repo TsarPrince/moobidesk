@@ -4,10 +4,11 @@ import { PartnerCardType } from "../../../constants/Partner";
 const PartnerExperienceCard = (props: PartnerCardType) => {
   return (
 
-    // todo : remove the border class, border only for debgugging
-    <div className="px-8 block xl:inline-block pb-6 max-w-[24rem] mx-auto">
-      <Image alt={'dedicated-support'} height={50} width={50} src={props.image} />
-      <h2 className="font-bold text-lg mt-4">{props.heading}</h2>
+    <div className="px-0 sm:px-4 block xl:inline-block pb-6 w-[20rem] mx-auto">
+      <Image alt={'dedicated-support'} height={45} width={45} src={props.image} className="h-12"/>
+
+      {/* whitespace-nowrap as the heading was wrapping in the line below */}
+      <h2 className="font-semi text-lg mt-4 whitespace-nowrap">{props.heading}</h2>
       <p className="mt-6 text-gray-600">{props.description}</p>
     </div>
   )

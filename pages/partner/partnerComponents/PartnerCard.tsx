@@ -4,7 +4,7 @@ import BannerButton from "./BannerButton";
 
 const PartnerCard = (props: PartnerCardType) => {
   return (
-    <div className="mt-16 max-w-[28rem] relative mx-auto">
+    <div className="mt-16 lg:max-w-[28rem] relative mx-auto">
       <Image src={props.image} alt="img" className="z-10 rounded-full mx-auto"
         width={130}
         height={130} />
