@@ -26,4 +26,4 @@ const SEO = ({ title, description }: {
   )
 }
 
-export default SEO
+export default SEO;
