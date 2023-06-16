@@ -21,6 +21,7 @@ const PartnerPage: NextPage = () => {
 
 
       {/* FLOATING BUTTON */}
+      {/* to be removed */}
       <button className='fixed right-10 z-10 flex items-center gap-2 bottom-12 bg-btn_floating rounded-full px-4 py-2 text-white'>
         <Image src={'/icons/webchat.png'} width={25} height={25} alt='webchat' />
         Leave us a message</button>
