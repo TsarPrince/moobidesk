@@ -50,9 +50,9 @@ const FullNavbar = () => {
                 <div className="absolute top-12 -left-10 p-2 bg-white flex" id="products_dropdown">
 
                   {/* MAP THE PRODUCT CARDS */}
-                  {Home.productDropdownCards.map((card) => (
+                  {Home.productDropdownCards.map((card, index) => (
 
-                    <Link href={card.link}>
+                    <Link href={card.link} key={index}>
                       <DropDownCard
                         key={card.imageURL}
                         imageURL={card.imageURL}
@@ -77,8 +77,8 @@ const FullNavbar = () => {
                 <div className="absolute top-12 -left-10 bg-white flex flex-col p-2 w-max gap-1" id="industries_dropdown">
 
                   {/* MAP THE INDUSTRY CARDS */}
-                  {Home.industryDropdownCards.map((card) => (
-                    <Link href={card.link}>
+                  {Home.industryDropdownCards.map((card, index) => (
+                    <Link href={card.link} key={index}>
                       <IndustryDropdownCard
                         key={card.imageURL}
                         imageURL={card.imageURL}

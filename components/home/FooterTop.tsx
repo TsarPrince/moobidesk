@@ -99,8 +99,8 @@ const FooterTop = () => {
             <h1 className="font-medium text-md ">{contactUsSection.title}</h1>
             <h4 className="text-sm my-6">{contactUsSection.description}</h4>
 
-            {contactUsSection.details.map((detail) => (
-              <div className="text-sm my-2">
+            {contactUsSection.details.map((detail, index) => (
+              <div key={index} className="text-sm my-2">
                 <span className="font-semibold">{detail.field + ': '}</span>
 
                 {detail.URL ?
