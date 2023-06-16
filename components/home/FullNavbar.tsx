@@ -92,28 +92,28 @@ const FullNavbar = () => {
             </li>
             <li>
               <Link href={Home.pageLinks.pricing}>
-              </Link>
                 <span>Pricing</span>
+              </Link>
             </li>
             <li>
               <Link href={Home.pageLinks.partner}>
+                <span>Partner</span>
               </Link>
-              <span>Partner</span>
             </li>
             <li>
               <Link href={Home.pageLinks.home}>
+                <span>About Us</span>
               </Link>
-              <span>About Us</span>
             </li>
             <li>
               <Link href={Home.pageLinks.home}>
+                <span>Blog</span>
               </Link>
-              <span>Blog</span>
             </li>
             <li>
               <Link href={Home.pageLinks.home}>
+                <span>Contact Us</span>
               </Link>
-              <span>Contact Us</span>
             </li>
           </ul>
         </div>
@@ -121,7 +121,9 @@ const FullNavbar = () => {
         {/* LOGIN + BUTTON */}
         <div className="ml-auto gap-6 h-12 flex items-center">
           <Link href={'#'} className="mr-0">Login</Link>
-          <GeneralButton>TALK TO AN EXPERT</GeneralButton>
+          <Link href={Home.pageLinks.talk_to_expert}>
+            <GeneralButton>TALK TO AN EXPERT</GeneralButton>
+          </Link>
         </div>
       </div>
     </nav>

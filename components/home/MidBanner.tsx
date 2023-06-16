@@ -15,16 +15,18 @@ const MidBanner = (props: Props) => {
         <div className='flex mt-10'>
 
           {/* if link mentioned, then provide the link */}
-          <GeneralButton>
             {
               props.link ?
-              <Link href={props.link}>
-                {props.buttonText}
+              <Link href={props.link} className="mx-auto">
+                <GeneralButton>
+                  {props.buttonText}
+                </GeneralButton>
               </Link>
               :
-              (<>{ props.buttonText }</>)
+              (<GeneralButton>
+                {props.buttonText}
+              </GeneralButton>)
             }
-          </GeneralButton>
         </div>
       </div>
     </section>

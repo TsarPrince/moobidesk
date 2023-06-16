@@ -11,11 +11,12 @@ import FullNavbar from '@/components/home/FullNavbar'
 import TopBannerButton from '@/components/home/TopBannerButton'
 import StatCard from '@/components/home/StatCard'
 import KeyFeaturePanel from '@/components/home/KeyFeaturePanel'
-import BenefitCard from '@/components/home/BenefitCard'
+import BenefitCard from '@/components/BenefitCard'
 import FooterTop from '@/components/home/FooterTop'
 import FooterBottom from '@/components/home/FooterBottom'
 import MidBanner from '@/components/home/MidBanner'
 import SEO from '@/components/SEO'
+import Link from 'next/link'
 
 const seo = {
   title: 'Customer Engagement Solution Singapore | Omnichannel Contact Centre Solution Singapore',
@@ -40,7 +41,11 @@ const Home: NextPage = () => {
           {HomeConstants.topBanner.subheading}
         </p>
         <div className='flex mt-20'>
-          <TopBannerButton>{HomeConstants.topBanner.bannerButton.text}</TopBannerButton>
+              <Link className='mx-auto' href={HomeConstants.pageLinks.watch_video}>
+                <TopBannerButton>
+                  {HomeConstants.topBanner.bannerButton.text}
+                </TopBannerButton>
+              </Link>
         </div>
       </div>
 
@@ -96,7 +101,7 @@ const Home: NextPage = () => {
       
         
         {/* heading and subheading and icons */}
-        <div className='text-white lg:hidden text-2xl w-max font-medium mx-auto'>
+        <div className='text-white lg:hidden text-2xl max-w-full px-4 font-medium mx-auto'>
           <h1>{HomeConstants.section_4.heading_1}</h1>
           <h1>{HomeConstants.section_4.heading_2}</h1>
           <p className='text-base font-normal my-10'>{HomeConstants.section_4.subheading}</p>
@@ -104,7 +109,7 @@ const Home: NextPage = () => {
           {/* icons */}
           <div className='flex'>
             {/* grid which has the home-social-icons */}
-            <div className='inline-grid gap-y-4 lg:hidden sm:gap-x-2 mx-auto grid-cols-6 w-[25rem] justify-items-center '>
+            <div className='grid gap-y-4 lg:hidden sm:gap-x-4 gap-4 mx-auto grid-cols-6 max-w-[25rem] justify-items-center '>
               {HomeConstants.section_4.imageURLs.map((imageURL) => (
                 <Image className="w-7 h-7 sm:w-8 sm:h-8"
                   key={imageURL}
@@ -117,43 +122,47 @@ const Home: NextPage = () => {
         </div>
     
 
+        <section className='w-full overflow-hidden'>
+            
 
-        {/* the laptop-image */}
-        <div className='p-2 my-8 max-w-[25rem] relative mx-auto lg:max-w-[70%] '>
-
+        <div className='p-2 my-8 max-w-[25rem] relative mx-auto lg:max-w-[70%] px-2'>
           
+        {/* the laptop-image */}
         <Image className='lg:w-[90%] lg:max-w-6xl w-full object-contain' src={'/home/img-laptop.png'} alt='laptop-image' width={500} height={200}>
         </Image>
 
           {/* change heading and subheading position when viewport changes */}
-          <div className='text-white lg:block absolute bottom-20 xl:right-16 -right-4 hidden text-2xl lg:text-4xl w-max font-medium mx-auto'>
-            <h1>{HomeConstants.section_4.heading_1}</h1>
+          <div className='text-white lg:block absolute bottom-20 xl:right-16 -right-4 hidden text-2xl lg:text-4xl w-max font-medium mx-auto px-2'>
+            <h1 className='w-max-full'>{HomeConstants.section_4.heading_1}</h1>
             <h1>{HomeConstants.section_4.heading_2}</h1>
             <p className='text-base font-normal my-10'>{HomeConstants.section_4.subheading}</p>
 
             {/* icons */}
             <div className='flex'>
               {/* grid which has the home-social-icons */}
-              <div className='inline-grid gap-y-4 sm:gap-x-2 mx-auto grid-cols-6 w-[20rem] '>
+              <div className='grid gap-y-4 sm:gap-x-4 mx-auto grid-cols-6 max-w-[20rem]'>
                 {HomeConstants.section_4.imageURLs.map((imageURL) => (
                   <Image className="w-7 h-7 sm:w-8 sm:h-8"
-                    key={imageURL}
-                    src={imageURL}
-                    alt={'image'}
-                    width={30} height={30} />
+                  key={imageURL}
+                  src={imageURL}
+                  alt={'image'}
+                  width={30} height={30} />
                   ))}
               </div>
             </div>
           </div>
 
         </div>
+        </section>
 
-        <div className='flex flex-col mt-16 gap-4 max-w-sm mx-auto text-white text-xs lg:max-w-3xl lg:flex-row lg:gap-10'>
+        <div className='flex flex-col mt-16 gap-4 px-4 max-w-sm mx-auto text-white text-xs lg:max-w-3xl lg:flex-row lg:gap-10'>
           <div>{HomeConstants.section_4.desc_1}</div>
           <div>{HomeConstants.section_4.desc_2}</div>
         </div>
         </div>
       </div>
+
+
 
       {/* KEY FEATURES SECTION PANEL  */}
       
@@ -164,7 +173,7 @@ const Home: NextPage = () => {
           <h3 className="text-center mt-8 px-10">{HomeConstants.section_5.subheading}</h3>
         </div>
 
-        <div className='mt-20 flex flex-col gap-24'>
+        <div className='mt-20 flex flex-col px-4 gap-24'>
           {HomeConstants.section_5.panels.map((panel, index) => (
             <KeyFeaturePanel
               key={index}
@@ -186,16 +195,15 @@ const Home: NextPage = () => {
       />
 
 
-      {/* CUSTOMER ENGAGEMENT SECTION */}
-      {/* SECTION-3 ( MOOBIDESK PARTNERSHIP EXPERIENCE) */}
+      {/* BENEFITS OF CUSTOMER ENGAGEMENT SECTION */}
       <section className='bg-white pt-16 pb-16'>
-        <div className='2xl:container mx-auto'>
+        <div className='2xl:container mx-auto px-2'>
 
-          <h1 className='text-2xl sm:text-3xl px-4 sm:text-center mt-16  w-[25rem] sm:w-full mx-auto'>
+          <h1 className='text-2xl sm:text-3xl px-3 sm:text-center mt-16  lg:max-w-full max-w-[25rem] sm:w-full mx-auto'>
             {HomeConstants.section_6.heading}
           </h1>
-          <h3 className=' mt-8 w-[25rem] mx-auto sm:w-full sm:text-center text-sm sm:text-base px-4'>{HomeConstants.section_6.subheading}</h3>
-          <div className=' pt-16 grid grid-cols-1 xl:grid-cols-3 xl:gap-6 gap-6 xl:px-28 '>
+          <h3 className=' mt-8 max-w-[25rem] mx-auto sm:w-full sm:text-center text-sm sm:text-base px-4'>{HomeConstants.section_6.subheading}</h3>
+          <div className=' pt-16 grid grid-cols-1 xl:grid-cols-3 xl:gap-6 gap-6 xl:px-28 max-w-full'>
 
               {HomeConstants.section_6.cards.map((card, index) => (
                 <BenefitCard

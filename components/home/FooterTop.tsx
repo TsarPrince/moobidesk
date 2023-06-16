@@ -67,9 +67,13 @@ const FooterTop = () => {
                   <Link className="text-blue-500 text-sm mb-6" href={websiteURL.url}>{websiteURL.text}</Link>
                 </div>
 
-                <div className=" flex mx-auto max-w-sm sm:max-w-lg lg:max-w-xl">
+            <div className=" flex mx-auto max-w-sm sm:max-w-lg gap-4 lg:max-w-xl">
+              <Link href={Home.pageLinks.app_store}>
                   <Image className="w-36" src={downloadOnImage.appstore} alt="Download on App Store" width={300} height={50}/>
+              </Link>
+              <Link href={Home.pageLinks.google_play}>
                   <Image className="w-36" src={downloadOnImage.googleplay} alt="Download on Google Play" width={300} height={50}/>
+              </Link>
                 </div>    
             </div>
 
@@ -104,7 +108,9 @@ const FooterTop = () => {
                 <span className="font-semibold">{detail.field + ': '}</span>
 
                 {detail.URL ?
-                  <Link href={detail.URL} className="text-blue-500">
+                  <Link
+                    href={detail.URL}
+                    className="text-blue-500">
                     <span>{detail.value}</span>
                   </Link>
                   :
