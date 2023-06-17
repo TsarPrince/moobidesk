@@ -1,7 +1,5 @@
 
 const Home = {
-
-
   pageLinks: {
     home: '/',
     products: [
