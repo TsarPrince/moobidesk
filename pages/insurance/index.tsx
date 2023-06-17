@@ -9,6 +9,9 @@ import PartnerFooter from "@/components/partner/PartnerFooter";
 const InsurancePage: NextPage = () => {
   return (
     <>
+      {/* NAVBAR to be added here*/}
+      
+
       {/* BANNER SECTION 1 */}
       {/* banner bg-image */}
       <div className="bg-[url('/images/insurance/bg-insurance.jpg')] bg-cover bg-center">
