@@ -11,6 +11,7 @@ module.exports = {
         "hero-partner": "url('/hero-partner.jpg')",
         "hero-homepage": "url('/hero-homepage.jpg')",
         "bg-section-4": "url('/home/bg-section-4.jpg')",
+        "bg-insurance": "url('/insurance/bg-insurance.jpg')",
       },
       colors: {
         "blue-partner-overlay": "#047AE06B",
