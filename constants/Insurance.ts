@@ -1,31 +1,39 @@
 
 const Insurance = {
 
+  section_1: {
+    title: 'INSURANCE',
+    heading: 'Simplify Complexities of your customer support process',
+    description: 'The complete helpdesk that manages everything from general enquiries to insurance claims.',
+  },
+
+  section_2: {
+    heading: 'Build customer relationships that lasts',
+    description: 'Customers prioritize trust when engaging insurers and will subconsciously decide how much they are willing to trust your business based on their first interactions which is usually with your customer support team. Hence, many insurance providers are looking for a platform that allows effortless management of communications to maintain quality customer service. With Moobidesk, conversations from all channels are organized in one place – enabling seamless interactions. And customer context can be easily accessed – allowing agents to deliver personalized responses to establish a strong foundation of trust with your customers.',
+
+  },
+
   // todo: replace with appropriate data, this is dummy data
   panels: [
     {
-      imageURL: '/home/panels/panel-img-1.png',
-      title: 'UNIFIED VOICE & CHAT CHANNELS',
-      heading: 'A truly connected customer experience.',
-      description: 'Orchestrate the best customer experience across all channels on one platform. With this customer engagement platform, you get to choose the right communication channels that best fit your business needs and respond to those enquiries from a single interface.',
+      imageURL: '/images/insurance/panel-1.png',
+      heading: 'Streamline customers\' enquiries',
+      description: 'Insurance companies receive an overwhelming number of enquiries every day from both existing and potential customers. Moobidesk directs all enquiries to one centralized platform and organizes them according to different queues. The smart routing assigns enquiries to specific agents to ensure that they are handled by the most suitable representative for effective management of customer enquiries.',
     },
     {
-      imageURL: '/home/panels/panel-img-2.png',
-      title: 'AUTOMATED SMART RESPONSE SUGGESTION',
-      heading: 'Speed up customer service response time.',
-      description: 'A fast response makes customers feel valued. With our help desk software, Moobidesk analyses the incoming message and automatically suggests the best responses to your agents, removing the potential for human error and allowing agents to respond quickly to customer issues.',
+      imageURL: '/images/insurance/panel-2.png',
+      heading: 'Continuous conversations always',
+      description: 'Providing consistent support is challenging in a split communications environment. Insurers need to switch between platforms to access past conversations while engaging customers on their preferred channels. Alternatively, Moobidesk allows you to see all conversation histories at a glance and interact with customers on different channels via one interface. Deliver a delightful omnichannel experience with Moobidesk.',
     },
     {
-      imageURL: '/home/panels/panel-img-3.png',
-      title: 'SMART AI OMINICHANNEL ROUTING',
-      heading: 'Seamless bot to agent transition.',
-      description: 'As soon as someone connects with your business, the Moobidesk bot intelligently engages and services the customer. When it comes to complex requests, the Moobidesk bot transfers control of the chat or call to a live agent automatically.',
+      imageURL: '/images/insurance/panel-3.png',
+      heading: 'Enhanced communication efficiency',
+      description: 'The insurance industry has a dynamic environment encompassing a variety of situations from casual enquiries to emergencies. The Moobidesk chatbot function assists customers with simple questions, only engaging a live agent when necessary. This enables businesses to deliver adequate support accurately and allocate resources accordingly to improve effectiveness and productivity.',
     },
     {
-      imageURL: '/home/panels/panel-img-4.png',
-      title: 'CLAIM A CONVERSATION',
-      heading: 'Ownership is given to the agent who first responds to the chat.',
-      description: 'The agent who responds first can claim ownership of a new conversation, helping to ensure that the customer doesn’t get messages from multiple agents. New conversations will be categorised in an Unassigned tab, allowing agents to access and claim it easily.',
+      imageURL: '/images/insurance/panel-4.png',
+      heading: 'Truly understand your policyholders',
+      description: 'More often than not, customers are unsure of what insurance they need. Hence, providers need to understand them in order to provide relevant recommendations. Moobidesk’s CRM feature allows you to import and manage customer information on the same platform where customer interactions are handled. Give your team quick access to key information and conversation histories to provide contextualized responses effortlessly.',
     },
   ],
 

@@ -19,9 +19,9 @@ const InsurancePage: NextPage = () => {
 
           {/* banner content */}
           <div className="flex flex-col sm:mt-16 gap-4 sm:gap-6 xl:mx-[7%]">
-            <h5 className="text-xs sm:text-sm text-center sm:text-left">INSURANCE</h5>
-            <h1 className="text-2xl sm:text-4xl text-center sm:text-left w-max-[60%] sm:max-w-[40rem]">Simplify Complexities of your customer support process</h1>
-            <h3 className="text-center sm:text-xl sm:text-left w-max-[60%] sm:max-w-[40rem]">The complete helpdesk that manages everything from general enquiries to insurance claims.</h3>
+            <h5 className="text-xs sm:text-sm text-center sm:text-left">{Insurance.section_1.title}</h5>
+            <h1 className="text-2xl sm:text-4xl text-center sm:text-left w-max-[60%] sm:max-w-[40rem]">{Insurance.section_1.heading}</h1>
+            <h3 className="text-center sm:text-xl sm:text-left w-max-[60%] sm:max-w-[40rem]">{Insurance.section_1.description}</h3>
 
             {/* 2 banner buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mt-8 items-center">
@@ -41,7 +41,7 @@ const InsurancePage: NextPage = () => {
 
       {/* SECTION 2 BUILD CUSTOMER RELATIONSHIP */}
       <section className="py-14 bg-tertiary px-4 sm:px-0">
-        <h1 className="text-white text-center text-2xl max-w-md mx-auto sm:max-w-4xl sm:text-3xl">Build customer relationships that lasts</h1>
+        <h1 className="text-white text-center text-2xl max-w-md mx-auto sm:max-w-4xl sm:text-3xl">{Insurance.section_2.heading}</h1>
 
         <div className="flex flex-col sm:flex-col-reverse gap-4 mt-8 max-w-[60rem] mx-auto">
           <Image
@@ -50,7 +50,7 @@ const InsurancePage: NextPage = () => {
             alt="customer relation image"
             width={1000} height={600} />
           <p className="px-3 sm:text-lg text-center text-white">
-Customers prioritize trust when engaging insurers and will subconsciously decide how much they are willing to trust your business based on their first interactions which is usually with your customer support team. Hence, many insurance providers are looking for a platform that allows effortless management of communications to maintain quality customer service. With Moobidesk, conversations from all channels are organized in one place – enabling seamless interactions. And customer context can be easily accessed – allowing agents to deliver personalized responses to establish a strong foundation of trust with your customers.
+            {Insurance.section_2.description}
           </p>
         </div>
       </section>
