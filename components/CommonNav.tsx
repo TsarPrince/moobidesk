@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Navbar from "@/constants/Navbar";
 
-const CommonNav = ({ hideAtXL } : { hideAtXL: boolean }) => {
+const CommonNav = ({ hideAtXL=false } : { hideAtXL?: boolean }) => {
   
   const [showMenu, setShowMenu] = useState(false);
   const showMenuClass = (showMenu ? 'right-0' : '-right-0');

@@ -9,7 +9,7 @@ import CommonLinks from "@/constants/Links";
 const PartnerFooter = () => {
   return (
     <div className="py-8 flex items-center px-24 gap-6 xl:gap-12 justify-center xl:flex-row flex-col">
-      <span className=" text-xs text-gray-700 xl:order-1 order-3">{Partner.footer.footer_line}</span>
+      <span className="text-center text-xs text-gray-700 xl:order-1 order-3">{Partner.footer.footer_line}</span>
       <div className="flex order-2">
       <Link href={CommonLinks.pageLinks.app_store}>
         <Image src={'/images/app-store-logo.png'} alt={'App Store'} width={110} height={0}/>

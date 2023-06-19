@@ -13,6 +13,8 @@ module.exports = {
         "bg-section-4": "url('/home/bg-section-4.jpg')",
         "bg-insurance": "url('/insurance/bg-insurance.jpg')",
         "hero-retail": "url('/hero-retail.jpg')",
+        "hero-cussupport": "url('/hero-cussupport.jpg')",
+        "section-bg": "url('/cussupport/section-bg.jpg')",
       },
       colors: {
         "blue-partner-overlay": "#047AE06B",
