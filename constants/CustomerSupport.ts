@@ -1,5 +1,31 @@
 
 const CustomerSupport = {
+
+  section_1: {
+    heading: 'The modern customer support solution that just does it all.',
+    description: 'An advanced customer support software with everything you need to foster greater loyalty and to retain and grow your business.',
+  },
+
+  section_2: {
+    heading: 'Our Clients',
+
+  },
+
+  section_3: {
+    heading: ' Power and Simplicity. All in One Platform. ',
+    description: 'We know that managing customer support today isn’t easy. Most customer service team struggle to deliver consistent experiences across multiple touchpoints and in multiple channels. That’s why we have decided to build Moobidesk – the customer support solution to creating an exceptional customer experience using one simplified customer service platform.',
+  },
+
+  section_4: {
+    heading: 'Integration with all major communication platforms',
+  },
+
+  section_5: {
+    heading: 'Key features of Moobidesk ',
+    description: 'Learn how Moobidesk makes your agents’ lives easier, your customer support more efficient, and your customers happier ',
+  },
+
+
   client_images: [
     '/home/client/client-comfort@2x.png',
     '/home/client/client-fullerton.png',
@@ -81,7 +107,37 @@ const CustomerSupport = {
       description: 'An individual customer’s data from any channel they have used is automatically stored on the same interface and database. It makes the customer experience a great one, as it eliminates the need for the customer to repeat information that has been mentioned before.  ',
     },
     
-  ]
+  ],
+
+  section_7: {
+    title: 'AVAILABLE IN THE CLOUD, ON PREMISES OR HYBRID CLOUD',
+  },
+
+  section_8: {
+    heading: 'Benefits of Moobidesk',
+    subheading: 'What you can expect from our customer support and engagement platform  ',
+  },
+  section_9: {
+    heading: 'Why organizations choose Moobidesk',
+    card_1: {
+      heading: 'WITH MOOBIDESK',
+      description: 'Intuitive modern helpdesk empowers all to drive desired business outcomes faster and easier than ever before.',
+    },
+    card_2: {
+      heading: 'OTHER CUSTOMER SUPPORT SOFTWARE',
+      description: 'Overly complex and siloed legacy systems, bound by inflexibility reduce productivity and efficiency.',
+    },
+  },
+  section_10: {
+    description: '“Before Moobidesk, our customer support process was painful - every day we’d be checking social media pages and emails, while handling phone calls and walk in customers. There are times when we missed messages and phone calls, leading to unhappy customers and lost sales. Now, we’ll never have to worry about missing any customers’ enquiries again with Moobidesk.” ',
+
+    person_name: 'Chris Chua',
+    person_title: 'Owner',
+  },
+
+  midBanner: {
+    heading: 'Experience the most innovative and affordable customer support solution today',
+  },
 };
 
 export default CustomerSupport;

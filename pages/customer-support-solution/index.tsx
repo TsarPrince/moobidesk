@@ -1,9 +1,7 @@
+// Components
 import CommonNav from "@/components/CommonNav"
 import GeneralButton from "@/components/GeneralButton"
 import MainBanner from "@/components/MainBanner"
-import type { NextPage } from "next"
-import Link from "next/link"
-import Image from "next/image"
 import CustomerSupport from "@/constants/CustomerSupport"
 import KeyFeaturePanel from "@/components/KeyFeaturePanel"
 import BlueSeparator from "@/components/BlueSeparator"
@@ -11,25 +9,31 @@ import InsuranceCard from "@/components/insurance/InsuranceCard"
 import MidBanner from "@/components/MidBanner"
 import PartnerFooter from "@/components/partner/PartnerFooter"
 
+// NextJS utils
+import type { NextPage } from "next"
+import Link from "next/link"
+import Image from "next/image"
+
 const CustomerSupportPage: NextPage = () => {
   return (
     <>
       <CommonNav/>
 
       <MainBanner>
+
         <Image src={'/black-logo.png'} alt="moobidesk" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
         <h1 className="mb-6 text-center text-3xl sm:max-w-xl px-6 max-w-lg mx-auto font-medium">
-          The modern customer support solution that just does it all.
+          {CustomerSupport.section_1.heading}
         </h1>
         <p className="mb-9 mx-auto px-1 max-w-lg sm:max-w-xl text-center">
-          An advanced customer support software with everything you need to foster greater loyalty and to retain and grow your business.
+          {CustomerSupport.section_1.description}
         </p>
   
         <div className="flex justify-center gap-6">
-          <Link href={''}>
+          <Link href={'/signup'}>
             <GeneralButton>TRY IT FREE</GeneralButton>
           </Link>
-          <Link href={''}>
+          <Link href={'/'}>
             <GeneralButton
               twColor="bg-tertiary-dark-blue"
               >CONTACT US</GeneralButton>
@@ -42,7 +46,7 @@ const CustomerSupportPage: NextPage = () => {
       {/* SECTION -2  */}
       <section className="bg-gray-200 py-12">
         <div className="2xl:container mx-auto flex flex-col">
-          <h1 className=" mb-12 text-center text-3xl text-gray-600"> Our Clients</h1>
+          <h1 className=" mb-12 text-center text-3xl text-gray-600">{CustomerSupport.section_2.heading}</h1>
           <div className=" px-4 inline-grid mx-auto gap-y-3 gap-x-4 sm:gap-x-8 grid-cols-2 sm:grid-cols-4 xl:flex xl:justify-evenly">
             {CustomerSupport.client_images.map((imageURL, index) => (
               <div key={index}
@@ -63,7 +67,7 @@ const CustomerSupportPage: NextPage = () => {
       {/* SECTION 3 */}
       <section className="py-14 bg-tertiary px-4 sm:px-0">
         <h1 className="text-white text-center text-2xl max-w-md mx-auto sm:max-w-4xl sm:text-3xl">
-        Power and Simplicity. All in One Platform.
+          {CustomerSupport.section_3.heading}
         </h1>
 
         <div className="flex flex-col-reverse gap-4 mt-8 max-w-[60rem] mx-auto">
@@ -73,7 +77,7 @@ const CustomerSupportPage: NextPage = () => {
             alt="customer relation image"
             width={1000} height={600} />
           <p className="px-3 sm:text-lg mb-4 text-center text-white">
-          We know that managing customer support today isn’t easy. Most customer service team struggle to deliver consistent experiences across multiple touchpoints and in multiple channels. That’s why we have decided to build Moobidesk – the customer support solution to creating an exceptional customer experience using one simplified customer service platform.
+            {CustomerSupport.section_3.description}
           </p>
         </div>
       </section>
@@ -82,7 +86,9 @@ const CustomerSupportPage: NextPage = () => {
       {/* SECTION 4 */}
       <section className="bg-gray-200 py-10 px-4">
         <div className="2xl:container mx-auto flex flex-col">
-          <h1 className="text-center text-gray-600 text-xl mb-6">Integration with all major communication platforms</h1>
+          <h1 className="text-center text-gray-600 text-xl mb-6">
+            {CustomerSupport.section_4.heading}
+          </h1>
           <div className="grid flex-1 px-4 lg:max-w-full grid-cols-6 gap-y-4 lg:flex lg:justify-center justify-items-center lg:gap-6">
             {CustomerSupport.social_urls.map((social, index) => (
               <div key={index}
@@ -105,9 +111,11 @@ const CustomerSupportPage: NextPage = () => {
       {/* SECTION 5 */}
       <section className="bg-white py-14 px-2">
         <div className="2xl:container mx-auto text-slate-800">
-          <h1 className="mb-8 text-2xl font-medium text-center mx-auto">Key Features of Moobidesk</h1>
+          <h1 className="mb-8 text-2xl font-medium text-center mx-auto">
+            {CustomerSupport.section_5.heading}
+          </h1>
           <p className=" mb-12 text-center max-w-md mx-auto text-lg">
-          Learn how Moobidesk makes your agents’ lives easier, your customer support more efficient, and your customers happier 
+            {CustomerSupport.section_5.description}
           </p>
 
           <div className="gap-20 flex flex-col">
@@ -125,13 +133,18 @@ const CustomerSupportPage: NextPage = () => {
       </section>
 
       <BlueSeparator>
-        AVAILABLE IN THE CLOUD, ON PREMISES OR HYBRID CLOUD
+        {CustomerSupport.section_7.title  }
       </BlueSeparator>
 
       {/* SECTION 6 */}
       <section className=" bg-tertiary-dark-blue">
         <div className="2xl:container mx-auto py-20">
-          <h1 className="text-2xl text-center text-white font-medium">Why choose Moobidesk</h1>
+          <h1 className="text-2xl text-center mb-6 text-white font-medium">
+            {CustomerSupport.section_8.heading}
+          </h1>
+          <h2 className="text-lg text-center text-white">
+            {CustomerSupport.section_8.subheading}
+          </h2>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 pt-16 px-6 justify-center items-center">
             {CustomerSupport.section_6.map((card, index) => (
@@ -145,19 +158,26 @@ const CustomerSupportPage: NextPage = () => {
       </section>
 
 
-      {/* SECTION 7  WHY ORG CHOOSE MOBIDESK ? */}
+      {/* SECTION 9  WHY ORG CHOOSE MOBIDESK ? */}
       <section className="bg-slate-200 py-14  ">
         <div className="2xl:container mx-auto">
-              <h1 className="text-center font-medium text-tertiary-dark-blue text-2xl sm:text-3xl mb-16">Why organisations choose mobidesk</h1>
+          <h1 className="text-center font-medium text-tertiary-dark-blue text-2xl sm:text-3xl mb-16">
+            {CustomerSupport.section_9.heading}
+          </h1>
 
           {/* the 2 blocks design */}
           <div className="py-6 flex flex-col lg:flex-row px-4 relative justify-center items-center">
 
             {/* light blue block (with moobidesk) */}
             <div className="lg:flex-1 p-16 lg:h-60 max-w-xl text-white  bg-gradient-to-br from-tertiary to-blue-200 relative lg:-top-10 lg:ml-auto">
-              <h1 className="font-medium text-3xl mb-4">WITH MOOBIDESK</h1>
+              <h1 className="font-medium text-3xl mb-4">
+                {CustomerSupport.section_9.card_1.heading}
+              </h1>
               <div className="h-[2px] bg-white mb-3"></div>
-              <p className="text-sm">Intuitive modern helpdesk empowers all to drive desired business outcomes faster and easier than ever before.</p>
+              <p className="text-sm">
+                {CustomerSupport.section_9.card_1.description}
+
+              </p>
 
               <div className="absolute h-20 flex -bottom-10 left-1/2 z-10 -translate-x-1/2 lg:transform-none lg:left-[93%] lg:bottom-16  items-center justify-center w-20 rounded-full bg-white text-tertiary-dark-blue text-4xl " >
                 <span>VS</span>
@@ -167,9 +187,13 @@ const CustomerSupportPage: NextPage = () => {
 
             {/* dark blue block (with moobidesk) */}
             <div className="lg:flex-1 p-16 lg:h-60 max-w-xl text-white  bg-gradient-to-br from-tertiary-dark-blue to-tertiary lg:mr-auto">
-              <h1 className="font-medium text-3xl mb-4">OTHER CUSTOMER SUPPORT SOFTWARE</h1>
+              <h1 className="font-medium text-3xl mb-4">
+                {CustomerSupport.section_9.card_2.heading}
+              </h1>
               <div className="h-[2px] bg-white mb-3"></div>
-              <p className="text-sm">Overly complex and siloed legacy systems, bound by inflexibility reduce productivity and efficiency.</p>
+              <p className="text-sm">
+                {CustomerSupport.section_9.card_2.description}
+              </p>
             </div>
 
 
@@ -179,8 +203,8 @@ const CustomerSupportPage: NextPage = () => {
 
 
 
-      {/* SECTION 8 */}
-      <section className="bg-[url('/cussupport/section-bg.png')] py-10">
+      {/* SECTION 10 */}
+      <section className="bg-[url('/cussupport/section-bg.png')] py-10 px-2">
         <div className="2xl:contianer mx-auto">
 
           {/* top part */}
@@ -208,7 +232,9 @@ const CustomerSupportPage: NextPage = () => {
 
           {/* description */}
           <div className="p-4 max-w-[48rem] mx-auto">
-              <p className="text-center text-lg">“Before Moobidesk, our customer support process was painful - every day we’d be checking social media pages and emails, while handling phone calls and walk in customers. There are times when we missed messages and phone calls, leading to unhappy customers and lost sales. Now, we’ll never have to worry about missing any customers’ enquiries again with Moobidesk.” </p>
+            <p className="text-center text-lg">
+              {CustomerSupport.section_10.description}  
+            </p>
           </div>
 
           {/* separator line */}
@@ -216,16 +242,23 @@ const CustomerSupportPage: NextPage = () => {
 
           {/* owner */}
           <div className="text-gray-700 flex flex-col justify-center items-center mx-auto">
-              <span><em>Chris Chua</em></span>
-              <span><em>Owner</em></span>
+            <span><em>
+              {CustomerSupport.section_10.person_name}
+            </em></span>
+            <span>
+              <em>
+              {CustomerSupport.section_10.person_title}
+              </em>
+            </span>
           </div>
         </div>
       </section>
 
       <MidBanner
-        heading="Experience the most innovative and affordable customer support solution today"
+        heading={CustomerSupport.midBanner.heading}
         buttonText="TRY IT FREE"
         bg="bg-tertiary"
+        link="/signup"
       />
 
       <PartnerFooter/>
