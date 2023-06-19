@@ -10,6 +10,7 @@ import SEO from '@/components/SEO';
 
 import { client, urlFor } from 'lib/client';
 import { Partner as PartnerType } from 'sanity/schema';
+import CommonNav from '@/components/CommonNav';
 
 type PageProps = {
   Partner: PartnerType
@@ -23,6 +24,8 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
         description='Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better.'
       />
 
+      {/* navbar */}
+      <CommonNav hideAtXL={false}/>
 
       {/* FLOATING BUTTON */}
       {/* to be removed */}

@@ -17,6 +17,7 @@ import FooterBottom from '@/components/home/FooterBottom'
 import MidBanner from '@/components/home/MidBanner'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
+import CommonNav from '@/components/CommonNav'
 
 const seo = {
   title: 'Customer Engagement Solution Singapore | Omnichannel Contact Centre Solution Singapore',
@@ -34,6 +35,10 @@ const Home: NextPage = () => {
 
       {/* FULL NAVBAR SHOWN WHEN SCREEN SIZE IS LARGE */}
       <FullNavbar />
+
+      <CommonNav
+        hideAtXL={true}
+      />
       
       <div className="bg-[url('/hero-homepage.jpg')] text-white bg-cover bg-center pt-20 sm:pt-72 pb-36">
         <h1 className=' text-3xl max-w-[25rem] mx-auto sm:max-w-[60rem] font-medium sm:text-5xl text-white text-center'>{HomeConstants.topBanner.heading}</h1>
