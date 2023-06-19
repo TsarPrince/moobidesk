@@ -5,6 +5,7 @@ import Insurance from "@/constants/Insurance";
 import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
 import PartnerFooter from "@/components/partner/PartnerFooter";
+import Link from "next/link";
 
 const InsurancePage: NextPage = () => {
   return (
@@ -28,10 +29,16 @@ const InsurancePage: NextPage = () => {
 
               {/* replace span with link */}
               <span>
-                <GeneralButton>TRY IT FREE</GeneralButton>
+                <Link href={'/signup'}>
+                  <GeneralButton>TRY IT FREE</GeneralButton>
+                </Link>
               </span>
               <span>
-                <GeneralButton>CONTACT US</GeneralButton>
+                <Link href={'/'}>
+                  <button className=" px-4 py-2 rounded-full sm:text-base text-sm text-white bg-tertiary-dark-blue hover:bg-opacity-75">
+                    CONTACT US
+                  </button>
+                </Link>
               </span>
             </div>
           </div>
@@ -95,12 +102,16 @@ const InsurancePage: NextPage = () => {
       <section className='bg-tertiary py-20'>
         <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>Get started with moobidesk today!</h1>
         <div className='flex flex-row justify-center gap-6'>
-        <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-button-color hover:bg-button-hover-color">
-          TRY IT FREE
-        </button>
-        <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-tertiary-dark-blue hover:bg-opacity-75">
-          CONTACT US
-        </button>
+          <Link href={'/signup'}>
+            <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-button-color hover:bg-button-hover-color">
+              TRY IT FREE
+            </button>
+          </Link>
+          <Link href={'/'}>
+            <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-tertiary-dark-blue hover:bg-opacity-75">
+              CONTACT US
+            </button>
+          </Link>
         </div>
       </section>
 
