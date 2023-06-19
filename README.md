@@ -45,3 +45,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] all routes working
 - [ ] navbar responsivity working
 - [ ] correct content at every page
+- [ ] add links on the navbars
