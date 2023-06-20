@@ -15,6 +15,8 @@ module.exports = {
         "hero-retail": "url('/hero-retail.jpg')",
         "hero-cussupport": "url('/hero-cussupport.jpg')",
         "section-bg": "url('/cussupport/section-bg.jpg')",
+        "hero-whatsapp": "url('/hero-whatsapp.jpg')",
+        "hero-whatsapp-mobile": "url('/hero-whatsapp-mobile.jpg')",
       },
       colors: {
         "blue-partner-overlay": "#047AE06B",
