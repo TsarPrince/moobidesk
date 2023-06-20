@@ -11,27 +11,6 @@ type Props = {
   }[],
 };
 
-const testProps:Props = {
-  topic1: 'Moobidesk + WhatsApp Business',
-  topic2: 'WhatsApp Web',
-  rowDetails: [
-    {
-      title: 'Send/receive messages',
-      isTopic1: true,
-      isTopic2: true,
-    },
-    {
-      title: 'Auto replies',
-      isTopic1: false,
-      isTopic2: true,
-    },
-    {
-      title: 'Multiple agents',
-      isTopic1: true,
-      isTopic2: false,
-    },
-  ],
-};
 
 const TabularSection = (props: Props) => {
 

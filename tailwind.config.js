@@ -17,6 +17,8 @@ module.exports = {
         "section-bg": "url('/cussupport/section-bg.jpg')",
         "hero-whatsapp": "url('/hero-whatsapp.jpg')",
         "hero-whatsapp-mobile": "url('/hero-whatsapp-mobile.jpg')",
+        "mobile-banner": "url('/livechat/mobile-banner.jpg')",
+        "full-banner": "url('/livechat/full-banner.png')",
       },
       colors: {
         "blue-partner-overlay": "#047AE06B",

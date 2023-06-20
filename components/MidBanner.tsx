@@ -7,6 +7,7 @@ type Props = {
   description?: string,
   link?: string,
   bg?: string,
+  children?: React.ReactNode
 };
 
 const MidBanner = (props: Props) => {
@@ -36,7 +37,9 @@ const MidBanner = (props: Props) => {
               (props.buttonText && <GeneralButton>
                 {props.buttonText}
               </GeneralButton>)
-            }
+          }
+          
+          {props.children}
         </div>
       </div>
     </section>
