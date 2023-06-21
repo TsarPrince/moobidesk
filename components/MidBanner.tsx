@@ -3,9 +3,11 @@ import GeneralButton from "./GeneralButton";
 
 type Props = {
   heading: string,
-  buttonText: string,
+  buttonText?: string,
+  description?: string,
   link?: string,
   bg?: string,
+  children?: React.ReactNode
 };
 
 const MidBanner = (props: Props) => {
@@ -16,6 +18,11 @@ const MidBanner = (props: Props) => {
     <section className={` ${bg} py-20`}>
       <div className='2xl:container mx-auto'>
         <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-3xl max-w-5xl mx-auto'>{props.heading}</h1>
+
+        {props.description && 
+          <p className="text-white mt-6 px-10 mx-auto max-w-5xl text-center">{props.description}</p>
+        }
+
         <div className='flex mt-10'>
 
           {/* if link mentioned, then provide the link */}
@@ -27,10 +34,12 @@ const MidBanner = (props: Props) => {
                 </GeneralButton>
               </Link>
               :
-              (<GeneralButton>
+              (props.buttonText && <GeneralButton>
                 {props.buttonText}
               </GeneralButton>)
-            }
+          }
+          
+          {props.children}
         </div>
       </div>
     </section>
