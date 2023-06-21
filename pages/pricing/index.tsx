@@ -107,11 +107,8 @@ const PricingPage: NextPage = () => {
       <hr />
       <FooterTop />
       <FooterBottom />
-      <div className="ls yu yz alj aqr">
-      <button className="aig ab lt nx rf uk xl adn aew agt bei ben bes bmu bmz bnm bob" id="headlessui-switch-1" role="switch" type="button" tabIndex={0} aria-checked="false" data-headlessui-state=""><span className="t">Use setting</span><span aria-hidden="true" className="vr u lq nu rw xc adn alj bbd bbn beg ben bes"></span></button>
-      </div>
     </>
   )
 }
 
-export default PricingPage
+export default PricingPage;

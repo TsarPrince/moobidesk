@@ -48,3 +48,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] add links on the navbars
 - [ ] interactive components on whatsapp page
 - [ ] interactive components on pricing page
+- [ ] correct currency calculation for currency page
