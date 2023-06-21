@@ -22,7 +22,7 @@ module.exports = {
         "button-hover-color": "#ff8a65",
 
         "sub-text-color": "#3e4b54",
-        
+
         "tertiary": "#1e82c8",
         "misc-blue": "#0081d2",
         "tertiary-dark-blue": "#0f4164",
@@ -31,6 +31,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ]
 }
 
