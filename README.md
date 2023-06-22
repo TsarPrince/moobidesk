@@ -113,20 +113,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - /live-chat-solution
 
 - [x] add navbar
-- [ ] mid blue banner try live chat free 
+- [x] mid blue banner try live chat free 
 
 ---
 
 - /insurance 
 
-- [ ] add navbar
+- [x] add navbar
 
 ---
 
 - /retail
 
-- [ ] add navbar
-- contact us button blue
+- [x] add navbar
+- [x] contact us button blue
 
 ---
 

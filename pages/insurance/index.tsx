@@ -6,12 +6,13 @@ import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
 import FooterSmall from "@/components/Footer/FooterSmall";
 import Link from "next/link";
+import CommonNav from "@/components/CommonNav";
 
 const InsurancePage: NextPage = () => {
   return (
     <>
       {/* NAVBAR to be added here*/}
-
+      <CommonNav/>
 
       {/* BANNER SECTION 1 */}
       {/* banner bg-image */}
@@ -107,7 +108,7 @@ const InsurancePage: NextPage = () => {
               TRY IT FREE
             </button>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/request-demo'}>
             <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-tertiary-dark-blue hover:bg-opacity-75">
               CONTACT US
             </button>
