@@ -40,18 +40,18 @@ const Enterprise = {
   // * format :-
   // [social_platform_image_url, social_platform_name]
   social_urls: [
-    ['/cussupport/icons/icon-1.png', 'Twitter'],
-    ['/cussupport/icons/icon-2.png', 'Line'],
-    ['/cussupport/icons/icon-3.png', 'Voice'],
-    ['/cussupport/icons/icon-4.png', 'Telegram'],
-    ['/cussupport/icons/icon-5.png', 'Email'],
-    ['/cussupport/icons/icon-6.png', 'SMS'],
-    ['/cussupport/icons/icon-7.png', 'WhatsApp'],
-    ['/cussupport/icons/icon-8.png', 'Facebook'],
-    ['/cussupport/icons/icon-9.png', 'WeChat'],
-    ['/cussupport/icons/icon-10.png', 'Messenger'],
-    ['/cussupport/icons/icon-11.png', 'Instagram'],
-    ['/cussupport/icons/icon-12.png', 'Web Chat'],
+    { imageURL: '/cussupport/icons/icon-1.png', name: 'Twitter', },
+    { imageURL: '/cussupport/icons/icon-2.png', name: 'Line', },
+    { imageURL: '/cussupport/icons/icon-3.png', name: 'Voice', },
+    { imageURL: '/cussupport/icons/icon-4.png', name: 'Telegram', },
+    { imageURL: '/cussupport/icons/icon-5.png', name: 'Email', },
+    { imageURL: '/cussupport/icons/icon-6.png', name: 'SMS', },
+    { imageURL: '/cussupport/icons/icon-7.png', name: 'WhatsApp', },
+    { imageURL: '/cussupport/icons/icon-8.png', name: 'Facebook', },
+    { imageURL: '/cussupport/icons/icon-9.png', name: 'WeChat', },
+    { imageURL: '/cussupport/icons/icon-10.png', name: 'Messenger', },
+    { imageURL: '/cussupport/icons/icon-11.png', name: 'Instagram', },
+    { imageURL: '/cussupport/icons/icon-12.png', name: 'Web Chat', },
   ],
 
   panels: [
@@ -112,7 +112,7 @@ const Enterprise = {
       title: 'Superior customer experiences',
       description: 'An individual customer’s data from any channel they have used is automatically stored on the same interface and database. It makes the customer experience a great one, as it eliminates the need for the customer to repeat information that has been mentioned before.  ',
     },
-    
+
   ],
 
   section_7: {

@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'partner',
-  title: 'Partner',
+  name: 'partnerPage',
+  title: 'Partner Page',
   type: 'document',
   fields: [
     defineField({
