@@ -79,17 +79,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - request-demo ( Talk to and expert)
 
 - ~~[ ] put correct footer ( FooterBottom ) ~~
-- [ ] put Navbar
+- [x] put Navbar
 
 ---
 
 - customer-support-solution ( products-1 )
 
-- [ ] add navbar
-- [ ] contact us button link
-- [ ] try it free button link ( top and bottom 2 places button given)
+- [x] add navbar
+- [x] contact us button link
+- [x] try it free button link ( top and bottom 2 places button given)
 
-> minors : keyFeaturePanel colored heading
+> [ ] minors : keyFeaturePanel colored heading
 
 ---
 
