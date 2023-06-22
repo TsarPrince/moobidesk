@@ -56,7 +56,7 @@ const Enterprise = {
 
   panels: [
     {
-      imageURL: '/enterprise/CustomerExperience.svg',
+      imageURL: '/enterprise/CustomerExperience.png',
       title: 'UNIFIED VOICE & CHAT CHANNELS',
       heading: 'A truly connected customer experience.',
       description: 'Orchestrate the best customer experience across all channels on one platform. With this customer engagement platform, you get to choose the right communication channels that best fit your business needs and respond to those enquiries from a single interface.',

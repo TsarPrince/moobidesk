@@ -95,10 +95,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - enterprise page ( products-2 )
 
-- [ ] add navbar
-- [ ] fix orange button text is SEE IT IN ACTION, link is /enterprise-demo
-- [ ] moobidesk enterprise first panel image not visible
-- [ ] blue section banner button text = REQUEST A DEMO , link is /enterprise-demo
+- [x] add navbar
+- [x] contact us button link
+- [x] fix orange button text is SEE IT IN ACTION, link is /enterprise-demo
+- [x] blue section banner button text = REQUEST A DEMO , link is /enterprise-demo
+- [x] moobidesk enterprise first panel image not visible
 
 ---
 
