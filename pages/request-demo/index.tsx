@@ -1,3 +1,4 @@
+import CommonNav from '@/components/CommonNav'
 import FooterSmall from '@/components/Footer/FooterSmall'
 import DemoForm from '@/components/requestDemo/DemoForm'
 import requestDemo from '@/constants/ReqDemo'
@@ -9,6 +10,7 @@ const RequestDemo: NextPage = () => {
   return (
     <>
       {/* NAVBAR */}
+      <CommonNav/>
 
       {/* SECTION 1 BANNER */}
       <section className=' py-24 relative'>

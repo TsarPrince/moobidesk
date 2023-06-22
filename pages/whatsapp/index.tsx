@@ -11,15 +11,21 @@ import Whatsapp from "@/constants/Whatsapp"
 import type { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import CommonNav from "@/components/CommonNav"
+import PhoneDisplay from "@/components/whatsapp/PhoneDisplay"
 
 
 
 const WhatsappPage: NextPage = () => {
   return (
     <>
+      
+      {/* Navbar */}
+      <CommonNav/>
+
       {/* SECTION 1 */}
       <MainBanner
-        bgURL="md:bg-[url('/hero-whatsapp.jpg')] bg-[url('/hero-whatsapp-mobile.jpg')] bg-center bg-cover"
+        bgURL="md:bg-[url('/hero-whatsapp.jpg')] bg-[url('/hero-whatsapp-mobile.jpg')] bg-center bg-cover -mt-6"
       >
         <div className="max-w-2xl lg:pl-16 lg:mt-24">
           <h1 className="text-center text-white px-2 mx-auto mb-8 text-3xl lg:mx-0 lg:text-4xl lg:text-left font-medium max-w-xl">{Whatsapp.section_1.heading}</h1>
@@ -109,37 +115,7 @@ const WhatsappPage: NextPage = () => {
       </section>
 
       {/* SECTION 6 */}
-      <section className="bg-tertiary pt-16">
-        <div className="max-w-[1280px] mx-auto px-4 relative flex flex-col lg:flex-row">
-
-          <div className="max-w-xl text-white lg:pl-16 mx-auto lg:mx-0">
-            <h1 className="text-2xl sm:text-3xl lg:text-left lg:mr-auto text-center mx-auto mb-6">{Whatsapp.section_6.heading}</h1>
-            <h3 className="text-center lg:text-left lg:mr-auto sm:text-lg">{Whatsapp.section_6.subheading}</h3>
-
-            <div className="hidden mx-4 lg:grid grid-cols-3 gap-y-3 mt-14">
-              {Whatsapp.section_6.icons.map((icon, index) => (
-                <div
-                  className="flex gap-3 items-center opacity-50 hover:opacity-100 cursor-pointer"
-                  key={index}>
-                  <Image
-                    className="w-12"
-                    src={icon.url}
-                    width={50} height={50}
-                    alt={icon.name} />
-                  <span className="text-sm">{icon.name}</span>
-                </div>
-              ))}
-
-            </div>
-          </div>
-
-          <Image
-            className="relative bottom-0 mx-auto lg:w-96 lg:mx-0 lg:ml-auto lg:mr-[7%] lg:-mt-8"
-            src={'/whatsapp/phone-ui.png'}
-            alt="phone"
-            width={500} height={1000} />
-        </div>
-      </section>
+      <PhoneDisplay/>
 
 
       {/* SECTION 7 CLIENTS WE SERVE */}
@@ -185,7 +161,7 @@ const WhatsappPage: NextPage = () => {
           <Link href={'/signup'}>
             <GeneralButton>TRY IT FREE</GeneralButton>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/request-demo'}>
             <GeneralButton
               twColor="bg-tertiary-dark-blue"
             >CONTACT US</GeneralButton>

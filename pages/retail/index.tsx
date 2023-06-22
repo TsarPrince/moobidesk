@@ -1,16 +1,18 @@
 import GeneralButton from "@/components/GeneralButton";
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Retail from "@/constants/Retail";
 import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
 import FooterSmall from "@/components/Footer/FooterSmall";
+import CommonNav from "@/components/CommonNav";
 
 const RetailPage: NextPage = () => {
   return (
     <>
       {/* NAVBAR to be added here*/}
-
+      <CommonNav/>
 
       {/* BANNER SECTION 1 */}
       {/* banner bg-image */}
@@ -27,12 +29,14 @@ const RetailPage: NextPage = () => {
             <div className="flex flex-col sm:flex-row gap-3 mt-8 items-center">
 
               {/* replace span with link */}
-              <span>
+              <Link href={'/signup'}>
                 <GeneralButton>TRY IT FREE</GeneralButton>
-              </span>
-              <span>
-                <GeneralButton>CONTACT US</GeneralButton>
-              </span>
+              </Link >
+              <Link href={'/request-demo'}>
+                <GeneralButton
+                  twColor="bg-tertiary-dark-blue"
+                >CONTACT US</GeneralButton>
+              </Link>
             </div>
           </div>
         </div>

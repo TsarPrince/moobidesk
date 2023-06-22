@@ -31,9 +31,9 @@ const EnterprisePage: NextPage = () => {
 
         <div className="flex justify-center gap-6">
           <Link href={'/signup'}>
-            <GeneralButton>TRY IT FREE</GeneralButton>
+            <GeneralButton>SEE IT IN ACTION</GeneralButton>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/request-demo'}>
             <GeneralButton
               twColor="bg-tertiary-dark-blue"
             >CONTACT US</GeneralButton>
@@ -259,9 +259,9 @@ const EnterprisePage: NextPage = () => {
 
       <MidBanner
         heading={Enterprise.midBanner.heading}
-        buttonText="TRY IT FREE"
+        buttonText="REQUEST A DEMO"
         bg="bg-tertiary"
-        link="/signup"
+        link="/request-demo"
       />
 
       <FooterSmall />

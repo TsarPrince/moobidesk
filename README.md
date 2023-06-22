@@ -49,3 +49,100 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] interactive components on whatsapp page
 - [ ] interactive components on pricing page
 - [ ] correct currency calculation for currency page
+- [ ] add SEO for all pages
+
+---
+
+- Partner Page
+
+- [x] become a partner redirects to /request-demo
+- [x] become tech / resell / whitelabel partner redirects to /request-demo
+
+---
+
+- Home Page
+
+- [x] contact us redirects to #footer-top at /
+- [x] talk to expert to /request-demo
+
+---
+
+- Navbar
+
+- [ ] talk-to-expert button redirects to /request-demo
+- [ ] white navbar (CommonNavbar) links when screen >= xl
+- [ ] fix all navbar issues
+- [ ] put navbar at every page
+
+---
+
+- request-demo ( Talk to and expert)
+
+- ~~[ ] put correct footer ( FooterBottom ) ~~
+- [x] put Navbar
+
+---
+
+- customer-support-solution ( products-1 )
+
+- [x] add navbar
+- [x] contact us button link
+- [x] try it free button link ( top and bottom 2 places button given)
+
+> [ ] minors : keyFeaturePanel colored heading
+
+---
+
+- enterprise page ( products-2 )
+
+- [x] add navbar
+- [x] contact us button link
+- [x] fix orange button text is SEE IT IN ACTION, link is /enterprise-demo
+- [x] blue section banner button text = REQUEST A DEMO , link is /enterprise-demo
+- [x] moobidesk enterprise first panel image not visible
+
+---
+
+- whatsapp solution page
+
+- [x] add navbar
+- [x] mid blue banner extract into sep component, it is interactive component. implement that
+
+---
+
+- /live-chat-solution
+
+- [x] add navbar
+- [x] mid blue banner try live chat free 
+
+---
+
+- /insurance 
+
+- [x] add navbar
+
+---
+
+- /retail
+
+- [x] add navbar
+- [x] contact us button blue
+
+---
+
+/pricing
+
+- [x] add navbar
+- [x] contact us buttons link
+- [x] currency correction
+- [x] discount addition
+
+> changes while implementation
+
+1. Pricing.section_2.discountPercentage new field
+2. Pricing.currencyList renamed, and values changed
+---
+
+- footer top 
+
+- [x] refactor

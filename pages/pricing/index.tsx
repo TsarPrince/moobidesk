@@ -6,11 +6,14 @@ import FooterBig from "@/components/Footer/FooterBig";
 import MidBanner from "@/components/MidBanner";
 import Question from "@/components/whatsapp/Question";
 import Image from "next/image";
+import CommonNav from "@/components/CommonNav";
 
 const PricingPage: NextPage = () => {
   return (
     <>
 
+      <CommonNav/>
+      
       {/* SECTION 1 */}
       <MainBanner
         bgURL="bg-[url('/hero-pricing.png')] bg-cover bg-center sm:bg-[url('/hero-pricing-2.jpg')]">
@@ -98,6 +101,7 @@ const PricingPage: NextPage = () => {
       {/* SECTION 5 */}
       <MidBanner
         buttonText="CONTACT US"
+        link="/request-demo"
         bg="bg-tertiary"
         heading={Pricing.section_5.heading}
       />

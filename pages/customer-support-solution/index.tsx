@@ -33,7 +33,7 @@ const CustomerSupportPage: NextPage = () => {
           <Link href={'/signup'}>
             <GeneralButton>TRY IT FREE</GeneralButton>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/request-demo'}>
             <GeneralButton
               twColor="bg-tertiary-dark-blue"
             >CONTACT US</GeneralButton>

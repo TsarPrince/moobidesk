@@ -1,55 +1,145 @@
 import Image from "next/image";
 import { useState } from "react";
 import Navbar from "@/constants/Navbar";
+import Link from "next/link";
+import Home from "@/constants/Home";
+import DropDownCard from "./home/DropDownCard";
+import IndustryDropdownCard from "./home/IndustryDropdownCard";
+import GeneralButton from "./GeneralButton";
 
 const CommonNav = ({ hideAtXL=false } : { hideAtXL?: boolean }) => {
   
   const [showMenu, setShowMenu] = useState(false);
+
+  // ! state = false, but might be true while debugging
+  const [productsDropdown, setProductsDropdown ] = useState(false);
+  const [industriesDropdown, setIndustriesDropdown] = useState(false);
+
   const showMenuClass = (showMenu ? 'right-0' : '-right-0');
-
   const menuWidth = (showMenu ? 'w-full' : 'w-0 overflow-hidden');
-
   const hiderClass = (hideAtXL) ? 'xl:hidden' : '';
 
   return (
 
     <>
-    <nav className={`${hiderClass} sticky z-20 top-0 bg-white shadow-lg overflow-x-hidden`}>
-
-      <div className="2xl:container mx-auto p-7 flex">
-
+    <nav className={`${hiderClass} sticky z-40 top-0 bg-white shadow-lg`}>
+      <div className="2xl:container mx-auto p-7 flex z-40">
 
         {/* logo div */}
         <div className="w-max flex ">
           <Image className="w-36 mx-auto my-auto" src={'/black-logo.png'} alt="moobidesk" width={1000} height={200} />
         </div>
 
+          {/* LINKS TO PAGES , UL  LI */}
+        <div className="hidden xl:flex z-40 overflow-y-visible">
+            {/* NAVBAR UL LI */}
+        <div className="flex items-center cursor-pointer h-12 z-40">
+          <ul className="flex h-full items-center justify-center gap-5 ml-10 2xl:ml-20 z-40">
+
+            {/* products dropdown button */}
+            <li className="flex items-center justify-center h-full px-2 relative z-40 hover:bg-white hover:text-gray-800"
+
+            // ! below line might be commented for debugging
+            onMouseOver={() => setProductsDropdown(true)}
+            onMouseOut={() => setProductsDropdown(false)}
+            >
+
+            
+
+              <span className="h-full flex items-center justify-center ">Products</span>
+              <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M7 10l5 5 5-5z" fill="black"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+
+              {productsDropdown && 
+                <div className="border absolute top-12 z-40 -left-10 p-2 bg-white flex" id="products_dropdown">
+
+                  {/* MAP THE PRODUCT CARDS */}
+                  {Home.productDropdownCards.map((card, index) => (
+
+                    <Link href={card.link} key={index}>
+                      <DropDownCard
+                        key={card.imageURL}
+                        imageURL={card.imageURL}
+                        heading={card.heading}
+                        description={card.description}
+                      />
+                    </Link>
+                  ))}
+                </div>
+              }
+            </li>
+
+            {/* industries dropdown button */}
+            <li className="flex items-center justify-center h-full px-2 relative hover:bg-white hover:text-gray-800"
+              onMouseOver={() => setIndustriesDropdown(true)}
+              onMouseOut={() => setIndustriesDropdown(false)}
+              >
+              <span>Industries</span>
+              <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M7 10l5 5 5-5z" fill="black"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+
+              {industriesDropdown && 
+                <div className="border absolute top-12 -left-10 bg-white flex flex-col p-2 w-max gap-1" id="industries_dropdown">
+
+                  {/* MAP THE INDUSTRY CARDS */}
+                  {Home.industryDropdownCards.map((card, index) => (
+                    <Link href={card.link} key={index}>
+                      <IndustryDropdownCard
+                        key={card.imageURL}
+                        imageURL={card.imageURL}
+                        heading={card.heading}
+                      />
+                    </Link>
+                  ))}
+                    
+                </div>
+              }
+            </li>
+            <li>
+              <Link href={Home.pageLinks.pricing}>
+                <span>Pricing</span>
+              </Link>
+            </li>
+            <li>
+              <Link href={Home.pageLinks.partner}>
+                <span>Partner</span>
+              </Link>
+            </li>
+            <li>
+              <Link href={Home.pageLinks.home}>
+                <span>About Us</span>
+              </Link>
+            </li>
+            <li>
+              <Link href={Home.pageLinks.home}>
+                <span>Blog</span>
+              </Link>
+            </li>
+            <li>
+              <Link href={Home.pageLinks.home}>
+                <span>Contact Us</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        </div>
 
         {/* <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><path d="M7 10l5 5 5-5z" fill="white"></path><path d="M0 0h24v24H0z" fill="none"></path></svg> */}
 
-        {/* when vp > xl */}
-        <div className="hidden xl:flex">
-
+        {/* LOGIN + BUTTON */}
+        <div className="ml-auto gap-6 h-12 items-center hidden xl:flex">
+          <Link href={'#'} className="mr-0">Login</Link>
+          <Link href={Home.pageLinks.talk_to_expert}>
+            <GeneralButton>TALK TO AN EXPERT</GeneralButton>
+          </Link>
         </div>
 
-        {/* when vp < xl */}
-
-        {/* hamburger div */}
-        <div className=" flex xl:hidden ml-auto"
-          // onClick={() => setShowMenu((true))}
-        >
-            <HamburgerMenu
-              setShowMenu={setShowMenu}
-            />
+          {/* hamburger div */}
+          <div className=" flex xl:hidden ml-auto"
+          >
+              <HamburgerMenu
+                setShowMenu={setShowMenu}
+              />
+          </div>
         </div>
-
-
-
-        </div>
-        
-
-
-        
       </nav>
 
         <div className="sticky top-[4.8rem] z-50">
@@ -95,12 +185,13 @@ const MenuPopup = (props: MenuPopupProps) => {
             <>
             <div className="ml-4 border-l-2 pl-6 flex flex-col gap-6 mt-4 mb-6 text-sub-text-color">
               {Navbar.dropdown_links[0].dropdown.map((bar, index) => (
-                  <div key={bar.title} className="relative after:content-['']after:w-4 after:h-2 after:block after-bg-gray-400">
-
+                  <div key={index} className="relative after:block after-bg-gray-400 cursor-pointer">
+                  <Link href={bar.url}>
                     <span className="absolute my-auto h-[0.125rem] w-4 top-4 -left-6 bg-gray-300"></span>
 
                     <h2 className="">{bar.title}</h2>
                     <h2 className="text-xs max-w-xl">{bar.description}</h2>
+                  </Link>
                   </div>
               ))}
             </div>  
@@ -119,11 +210,12 @@ const MenuPopup = (props: MenuPopupProps) => {
             <>
             <div className="ml-4 pl-6 flex flex-col border-l-2 gap-6 mt-4 mb-6 text-sub-text-color">
               {Navbar.dropdown_links[1].dropdown.map((bar, index) => (
-                  <div key={index} className="relative after:content-['']after:w-4 after:h-2 after:block after-bg-gray-400">
+                  <div key={index} className="cursor-pointer relative after:content-['']after:w-4 after:h-2 after:block after-bg-gray-400">
 
+                  <Link href={bar.url}>
                     <span className="absolute my-auto h-[0.125rem] w-4 top-3 -left-6 bg-gray-300"></span>
-
                     <h2 className="">{bar.title}</h2>
+                  </Link>
                   </div>
               ))}
             </div>  
@@ -132,8 +224,10 @@ const MenuPopup = (props: MenuPopupProps) => {
                 
           
                 {Navbar.links.map((link, index) => (
-                    <div key={index} className="py-2 flex px-4 my-2">
+                  <div key={index} className="py-2 flex px-4 my-2">
+                    <Link href={link.link}>
                       <h1 className="cursor-pointer hover:text-blue-400 transition-all">{link.name}</h1>
+                    </Link>
                     </div>
                 ))}
           </div>
