@@ -7,10 +7,16 @@ import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
 import FooterSmall from "@/components/Footer/FooterSmall";
 import CommonNav from "@/components/CommonNav";
+import SEO from "@/components/SEO";
 
 const RetailPage: NextPage = () => {
   return (
     <>
+      
+      <SEO
+        title="Moobidesk Retail"
+        description="Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better."
+      />
       {/* NAVBAR to be added here*/}
       <CommonNav/>
 

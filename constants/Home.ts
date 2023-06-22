@@ -15,6 +15,8 @@ const Home = {
     partner: '/partner',
     pricing: '/pricing',
 
+    contactUS: '/#contactus',
+
     talk_to_expert: '/request-demo',
     watch_video: '/',
 

@@ -7,10 +7,15 @@ import InsuranceCard from "@/components/insurance/InsuranceCard";
 import FooterSmall from "@/components/Footer/FooterSmall";
 import Link from "next/link";
 import CommonNav from "@/components/CommonNav";
+import SEO from "@/components/SEO";
 
 const InsurancePage: NextPage = () => {
   return (
     <>
+      <SEO
+        title="Moobidesk Insurance"
+        description={'Say More to Customer Growth, Loyalty and Sales with Moobidesk’s Live Chat Solution in Singapore. Moobidesk’s Live Chat Solution in Singapore is Your Ideal Customer Support Tool. Live Chat for Customer-Focused Businesses'}
+      />
       {/* NAVBAR to be added here*/}
       <CommonNav/>
 

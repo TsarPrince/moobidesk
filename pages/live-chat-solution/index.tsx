@@ -10,11 +10,16 @@ import MidBanner from "@/components/MidBanner";
 import FooterSmall from "@/components/Footer/FooterSmall";
 import Question from "@/components/whatsapp/Question";
 import CommonNav from "@/components/CommonNav";
+import SEO from "@/components/SEO";
 
 const LiveChatPage: NextPage = () => {
   return (
     <>
-
+      <SEO
+        title="Live Chat Solution Singapore | Live Chat Customer Support for Your Website"
+        description="Say More to Customer Growth, Loyalty and Sales with Moobidesk’s Live Chat Solution in Singapore. Moobidesk’s Live Chat Solution in Singapore is Your Ideal Customer Support Tool. Live Chat for Customer-Focused Businesses"
+      />
+      
       {/* NAVBAR */}
       <CommonNav/>
 

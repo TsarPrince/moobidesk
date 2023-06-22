@@ -114,7 +114,7 @@ const CommonNav = ({ hideAtXL=false } : { hideAtXL?: boolean }) => {
               </Link>
             </li>
             <li>
-              <Link href={Home.pageLinks.home}>
+              <Link href={Home.pageLinks.contactUS}>
                 <span>Contact Us</span>
               </Link>
             </li>
