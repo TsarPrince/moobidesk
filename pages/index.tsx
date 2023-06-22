@@ -12,8 +12,7 @@ import TopBannerButton from '@/components/home/TopBannerButton'
 import StatCard from '@/components/home/StatCard'
 import KeyFeaturePanel from '@/components/KeyFeaturePanel'
 import BenefitCard from '@/components/BenefitCard'
-import FooterTop from '@/components/home/FooterTop'
-import FooterBottom from '@/components/home/FooterBottom'
+import FooterBig from '@/components/Footer/FooterBig'
 import MidBanner from '@/components/MidBanner'
 import SEO from '@/components/SEO'
 import Link from 'next/link'
@@ -27,7 +26,7 @@ const seo = {
 const Home: NextPage = () => {
   return (
     <>
-      
+
       {/* SEO */}
       <SEO {...seo} />
 
@@ -39,18 +38,18 @@ const Home: NextPage = () => {
       <CommonNav
         hideAtXL={true}
       />
-      
+
       <div className="bg-[url('/hero-homepage.jpg')] text-white bg-cover bg-center pt-20 sm:pt-72 pb-36">
         <h1 className=' text-3xl max-w-[25rem] mx-auto sm:max-w-[60rem] font-medium sm:text-5xl text-white text-center'>{HomeConstants.topBanner.heading}</h1>
         <p className='text-center text-lg mx-auto max-w-[30rem] sm:text-xl sm:max-w-[70rem] my-10'>
           {HomeConstants.topBanner.subheading}
         </p>
         <div className='flex mt-20'>
-              <Link className='mx-auto' href={HomeConstants.pageLinks.watch_video}>
-                <TopBannerButton>
-                  {HomeConstants.topBanner.bannerButton.text}
-                </TopBannerButton>
-              </Link>
+          <Link className='mx-auto' href={HomeConstants.pageLinks.watch_video}>
+            <TopBannerButton>
+              {HomeConstants.topBanner.bannerButton.text}
+            </TopBannerButton>
+          </Link>
         </div>
       </div>
 
@@ -63,7 +62,7 @@ const Home: NextPage = () => {
           <p className='max-w-sm text-center lg:text-left text-sm text-gray-700'>{HomeConstants.section_1.subheading}</p>
         </div>
 
-        
+
         <div className=' inline-grid grid-cols-2 lg:grid-cols-3 mx-auto my-8 lg:my-0 gap-x-16 gap-y-6 '>
           {HomeConstants.companyImages.map((imageURL) => (
 
@@ -77,7 +76,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <hr/> 
+      <hr />
 
       {/* SECTION-3 */}
       {/* SUCCESSFUL BUSINESSES */}
@@ -93,84 +92,84 @@ const Home: NextPage = () => {
               title={statCard.title}
               imageURL={statCard.imageURL}
               percentage={statCard.percentage} />
-            ))}
-          
+          ))}
+
         </div>
       </section>
-      
+
 
       {/* SECTION-4 */}
       <div className="py-24 bg-[url('/home/bg-section-4.jpg')] bg-cover bg-center ">
-      <div className='2xl:container mx-auto'>
-          
-      
-        
-        {/* heading and subheading and icons */}
-        <div className='text-white lg:hidden text-2xl max-w-full px-4 font-medium mx-auto'>
-          <h1>{HomeConstants.section_4.heading_1}</h1>
-          <h1>{HomeConstants.section_4.heading_2}</h1>
-          <p className='text-base font-normal my-10'>{HomeConstants.section_4.subheading}</p>
+        <div className='2xl:container mx-auto'>
 
-          {/* icons */}
-          <div className='flex'>
-            {/* grid which has the home-social-icons */}
-            <div className='grid gap-y-4 lg:hidden sm:gap-x-4 gap-4 mx-auto grid-cols-6 max-w-[25rem] justify-items-center '>
-              {HomeConstants.section_4.imageURLs.map((imageURL) => (
-                <Image className="w-7 h-7 sm:w-8 sm:h-8"
-                  key={imageURL}
-                  src={imageURL}
-                  alt={'image'}
-                  width={30} height={30} />
-                ))}
-            </div>
-          </div>
-        </div>
-    
 
-        <section className='w-full overflow-hidden'>
-            
 
-        <div className='p-2 my-8 max-w-[25rem] relative mx-auto lg:max-w-[70%] px-2'>
-          
-        {/* the laptop-image */}
-        <Image className='lg:w-[90%] lg:max-w-6xl w-full object-contain' src={'/home/img-laptop.png'} alt='laptop-image' width={500} height={200}>
-        </Image>
-
-          {/* change heading and subheading position when viewport changes */}
-          <div className='text-white lg:block absolute bottom-20 xl:right-16 -right-4 hidden text-2xl lg:text-4xl w-max font-medium mx-auto px-2'>
-            <h1 className='w-max-full'>{HomeConstants.section_4.heading_1}</h1>
+          {/* heading and subheading and icons */}
+          <div className='text-white lg:hidden text-2xl max-w-full px-4 font-medium mx-auto'>
+            <h1>{HomeConstants.section_4.heading_1}</h1>
             <h1>{HomeConstants.section_4.heading_2}</h1>
             <p className='text-base font-normal my-10'>{HomeConstants.section_4.subheading}</p>
 
             {/* icons */}
             <div className='flex'>
               {/* grid which has the home-social-icons */}
-              <div className='grid gap-y-4 sm:gap-x-4 mx-auto grid-cols-6 max-w-[20rem]'>
+              <div className='grid gap-y-4 lg:hidden sm:gap-x-4 gap-4 mx-auto grid-cols-6 max-w-[25rem] justify-items-center '>
                 {HomeConstants.section_4.imageURLs.map((imageURL) => (
                   <Image className="w-7 h-7 sm:w-8 sm:h-8"
-                  key={imageURL}
-                  src={imageURL}
-                  alt={'image'}
-                  width={30} height={30} />
-                  ))}
+                    key={imageURL}
+                    src={imageURL}
+                    alt={'image'}
+                    width={30} height={30} />
+                ))}
               </div>
             </div>
           </div>
 
-        </div>
-        </section>
 
-        <div className='flex flex-col mt-16 gap-4 px-4 max-w-sm mx-auto text-white text-xs lg:max-w-3xl lg:flex-row lg:gap-10'>
-          <div>{HomeConstants.section_4.desc_1}</div>
-          <div>{HomeConstants.section_4.desc_2}</div>
-        </div>
+          <section className='w-full overflow-hidden'>
+
+
+            <div className='p-2 my-8 max-w-[25rem] relative mx-auto lg:max-w-[70%] px-2'>
+
+              {/* the laptop-image */}
+              <Image className='lg:w-[90%] lg:max-w-6xl w-full object-contain' src={'/home/img-laptop.png'} alt='laptop-image' width={500} height={200}>
+              </Image>
+
+              {/* change heading and subheading position when viewport changes */}
+              <div className='text-white lg:block absolute bottom-20 xl:right-16 -right-4 hidden text-2xl lg:text-4xl w-max font-medium mx-auto px-2'>
+                <h1 className='w-max-full'>{HomeConstants.section_4.heading_1}</h1>
+                <h1>{HomeConstants.section_4.heading_2}</h1>
+                <p className='text-base font-normal my-10'>{HomeConstants.section_4.subheading}</p>
+
+                {/* icons */}
+                <div className='flex'>
+                  {/* grid which has the home-social-icons */}
+                  <div className='grid gap-y-4 sm:gap-x-4 mx-auto grid-cols-6 max-w-[20rem]'>
+                    {HomeConstants.section_4.imageURLs.map((imageURL) => (
+                      <Image className="w-7 h-7 sm:w-8 sm:h-8"
+                        key={imageURL}
+                        src={imageURL}
+                        alt={'image'}
+                        width={30} height={30} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <div className='flex flex-col mt-16 gap-4 px-4 max-w-sm mx-auto text-white text-xs lg:max-w-3xl lg:flex-row lg:gap-10'>
+            <div>{HomeConstants.section_4.desc_1}</div>
+            <div>{HomeConstants.section_4.desc_2}</div>
+          </div>
         </div>
       </div>
 
 
 
       {/* KEY FEATURES SECTION PANEL  */}
-      
+
       <div className='py-32'>
 
         <div className='mx-auto max-w-sm sm:max-w-6xl'>
@@ -182,8 +181,8 @@ const Home: NextPage = () => {
           {HomeConstants.section_5.panels.map((panel, index) => (
             <KeyFeaturePanel
               key={index}
-              pos_left={(index%2 ? false : true)}
-              {...panel }
+              pos_left={(index % 2 ? false : true)}
+              {...panel}
             />
           ))}
         </div>
@@ -210,13 +209,13 @@ const Home: NextPage = () => {
           <h3 className=' mt-8 max-w-[25rem] mx-auto sm:w-full sm:text-center text-sm sm:text-base px-4'>{HomeConstants.section_6.subheading}</h3>
           <div className=' pt-16 grid grid-cols-1 xl:grid-cols-3 xl:gap-6 gap-6 xl:px-28 max-w-full'>
 
-              {HomeConstants.section_6.cards.map((card, index) => (
-                <BenefitCard
+            {HomeConstants.section_6.cards.map((card, index) => (
+              <BenefitCard
                 key={index}
                 image={card.imageURL}
                 description={card.description}
                 heading={card.heading} />
-                ))}
+            ))}
 
           </div>
         </div>
@@ -237,7 +236,7 @@ const Home: NextPage = () => {
             <h3 className='text-sm sm:max-w-[32rem] sm:mx-auto lg:max-w-[28rem] mt-2 mb-6'>{HomeConstants.section_7.subheading_2}</h3>
           </div>
 
-            <Image className='w-96 sm:ml-auto relative sm:-right-28 lg:static lg:-mt-8 sm:w-[32rem] lg:w-[50%]' src={HomeConstants.section_7.imageURL} alt='why_choose_image' width={1000} height={1000}/>
+          <Image className='w-96 sm:ml-auto relative sm:-right-28 lg:static lg:-mt-8 sm:w-[32rem] lg:w-[50%]' src={HomeConstants.section_7.imageURL} alt='why_choose_image' width={1000} height={1000} />
         </div>
       </section>
 
@@ -250,10 +249,7 @@ const Home: NextPage = () => {
         link='/talk-to-an-expert'
       />
 
-      {/* FOOTER CONSISTS OF 2 PARTS */}
-      <FooterTop />
-      <FooterBottom/>
-
+      <FooterBig />
     </>
   )
 }

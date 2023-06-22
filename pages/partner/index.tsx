@@ -5,7 +5,7 @@ import Image from 'next/image';
 import BannerButton from '@/components/partner/BannerButton';
 import PartnerCard from '@/components/partner/PartnerCard';
 import PartnerExperienceCard from '@/components/partner/PartnerExperienceCard';
-import PartnerFooter from '@/components/partner/PartnerFooter';
+import FooterSmall from '@/components/Footer/FooterSmall';
 import SEO from '@/components/SEO';
 
 import { client, urlFor } from 'lib/client';
@@ -25,7 +25,7 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
       />
 
       {/* navbar */}
-      <CommonNav hideAtXL={false}/>
+      <CommonNav hideAtXL={false} />
 
       {/* FLOATING BUTTON */}
       {/* to be removed */}
@@ -115,7 +115,7 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
       </section>
 
       {/* PARTNER PAGE (DIFFERENT FOOTER) */}
-      <PartnerFooter />
+      <FooterSmall />
     </>
   )
 }

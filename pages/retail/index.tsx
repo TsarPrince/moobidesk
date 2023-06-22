@@ -4,13 +4,13 @@ import Image from "next/image";
 import Retail from "@/constants/Retail";
 import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
-import PartnerFooter from "@/components/partner/PartnerFooter";
+import FooterSmall from "@/components/Footer/FooterSmall";
 
 const RetailPage: NextPage = () => {
   return (
     <>
       {/* NAVBAR to be added here*/}
-      
+
 
       {/* BANNER SECTION 1 */}
       {/* banner bg-image */}
@@ -63,7 +63,7 @@ const RetailPage: NextPage = () => {
           <div className="flex flex-col gap-16">
             {Retail.panels.map((panel, index) => (
               <KeyFeaturePanel
-                pos_left={(index%2 ? false : true)}
+                pos_left={(index % 2 ? false : true)}
                 key={index}
                 {...panel}
                 extraLarge={true}
@@ -73,7 +73,7 @@ const RetailPage: NextPage = () => {
         </div>
       </section>
 
-      
+
       {/* SECTION 4 WHY CHOOSE MOBIDESK */}
       <section className=" bg-tertiary-dark-blue">
         <div className="2xl:container mx-auto py-20">
@@ -82,7 +82,7 @@ const RetailPage: NextPage = () => {
           <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 xl:justify-evenly  pt-16 px-6 justify-center items-center">
             {Retail.section_4.map((card, index) => (
               <InsuranceCard
-              key={index}
+                key={index}
                 {...card}
               />
             ))}
@@ -95,16 +95,16 @@ const RetailPage: NextPage = () => {
       <section className='bg-tertiary py-20'>
         <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>Get started with moobidesk today!</h1>
         <div className='flex flex-row justify-center gap-6'>
-        <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-button-color hover:bg-button-hover-color">
-          TRY IT FREE
-        </button>
-        <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-tertiary-dark-blue hover:bg-opacity-75">
-          CONTACT US
-        </button>
+          <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-button-color hover:bg-button-hover-color">
+            TRY IT FREE
+          </button>
+          <button className="mt-10 px-4 py-2 rounded-full sm:text-base text-sm text-white bg-tertiary-dark-blue hover:bg-opacity-75">
+            CONTACT US
+          </button>
         </div>
       </section>
 
-      <PartnerFooter/>
+      <FooterSmall />
     </>
   )
 }

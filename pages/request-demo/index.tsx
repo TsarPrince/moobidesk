@@ -1,11 +1,11 @@
-import FooterBottom from '@/components/home/FooterBottom'
+import FooterSmall from '@/components/Footer/FooterSmall'
 import DemoForm from '@/components/requestDemo/DemoForm'
 import requestDemo from '@/constants/ReqDemo'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import React from 'react'
 
-const RequestDemo:NextPage = () => {
+const RequestDemo: NextPage = () => {
   return (
     <>
       {/* NAVBAR */}
@@ -29,7 +29,7 @@ const RequestDemo:NextPage = () => {
       <section className='mb-16'>
         <div className='2xl:container mx-auto'>
           <div className='flex flex-col justify-center items-center xl:flex-row-reverse gap-12'>
-            <DemoForm/>
+            <DemoForm />
             <div className='flex flex-col my-4 items-center'>
 
               <div className='max-w-md p-4 mb-12 border rounded'>
@@ -40,7 +40,7 @@ const RequestDemo:NextPage = () => {
                       <Image src={card.imageURL}
                         alt='icon'
                         width={20} height={20}
-                        />
+                      />
                       <span className='text-sm'>{card.text}</span>
                     </div>
                   ))}
@@ -67,7 +67,7 @@ const RequestDemo:NextPage = () => {
         </div>
       </section>
 
-      <FooterBottom/>
+      <FooterSmall />
     </>
   )
 }

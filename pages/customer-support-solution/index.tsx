@@ -7,7 +7,7 @@ import KeyFeaturePanel from "@/components/KeyFeaturePanel"
 import BlueSeparator from "@/components/BlueSeparator"
 import InsuranceCard from "@/components/insurance/InsuranceCard"
 import MidBanner from "@/components/MidBanner"
-import PartnerFooter from "@/components/partner/PartnerFooter"
+import FooterSmall from "@/components/Footer/FooterSmall"
 
 // NextJS utils
 import type { NextPage } from "next"
@@ -17,7 +17,7 @@ import Image from "next/image"
 const CustomerSupportPage: NextPage = () => {
   return (
     <>
-      <CommonNav/>
+      <CommonNav />
 
       <MainBanner>
 
@@ -28,7 +28,7 @@ const CustomerSupportPage: NextPage = () => {
         <p className="mb-9 mx-auto px-1 max-w-lg sm:max-w-xl text-center">
           {CustomerSupport.section_1.description}
         </p>
-  
+
         <div className="flex justify-center gap-6">
           <Link href={'/signup'}>
             <GeneralButton>TRY IT FREE</GeneralButton>
@@ -36,7 +36,7 @@ const CustomerSupportPage: NextPage = () => {
           <Link href={'/'}>
             <GeneralButton
               twColor="bg-tertiary-dark-blue"
-              >CONTACT US</GeneralButton>
+            >CONTACT US</GeneralButton>
           </Link>
         </div>
 
@@ -50,7 +50,7 @@ const CustomerSupportPage: NextPage = () => {
           <div className=" px-4 inline-grid mx-auto gap-y-3 gap-x-4 sm:gap-x-8 grid-cols-2 sm:grid-cols-4 xl:flex xl:justify-evenly">
             {CustomerSupport.client_images.map((imageURL, index) => (
               <div key={index}
-              className=" w-32 h-20"
+                className=" w-32 h-20"
               >
                 <Image
                   src={imageURL}
@@ -82,7 +82,7 @@ const CustomerSupportPage: NextPage = () => {
         </div>
       </section>
 
-      
+
       {/* SECTION 4 */}
       <section className="bg-gray-200 py-10 px-4">
         <div className="2xl:container mx-auto flex flex-col">
@@ -102,7 +102,7 @@ const CustomerSupportPage: NextPage = () => {
                 />
                 <h1 className="text-xs text-gray-700 my-1">{social[1]}</h1>
               </div>
-              
+
             ))}
           </div>
         </div>
@@ -127,13 +127,13 @@ const CustomerSupportPage: NextPage = () => {
                 extraLarge={true}
               />
             ))}
-          
+
           </div>
         </div>
       </section>
 
       <BlueSeparator>
-        {CustomerSupport.section_7.title  }
+        {CustomerSupport.section_7.title}
       </BlueSeparator>
 
       {/* SECTION 6 */}
@@ -149,7 +149,7 @@ const CustomerSupportPage: NextPage = () => {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 pt-16 px-6 justify-center items-center">
             {CustomerSupport.section_6.map((card, index) => (
               <InsuranceCard
-              key={index}
+                key={index}
                 {...card}
               />
             ))}
@@ -233,7 +233,7 @@ const CustomerSupportPage: NextPage = () => {
           {/* description */}
           <div className="p-4 max-w-[48rem] mx-auto">
             <p className="text-center text-lg">
-              {CustomerSupport.section_10.description}  
+              {CustomerSupport.section_10.description}
             </p>
           </div>
 
@@ -247,7 +247,7 @@ const CustomerSupportPage: NextPage = () => {
             </em></span>
             <span>
               <em>
-              {CustomerSupport.section_10.person_title}
+                {CustomerSupport.section_10.person_title}
               </em>
             </span>
           </div>
@@ -261,7 +261,7 @@ const CustomerSupportPage: NextPage = () => {
         link="/signup"
       />
 
-      <PartnerFooter/>
+      <FooterSmall />
     </>
   )
 }

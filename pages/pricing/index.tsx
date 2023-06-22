@@ -2,8 +2,7 @@ import MainBanner from "@/components/MainBanner";
 import Pricing from "@/constants/Pricing";
 import type { NextPage } from "next";
 import PriceCard from "@/components/pricing/PriceCard";
-import FooterTop from "@/components/home/FooterTop";
-import FooterBottom from "@/components/home/FooterBottom";
+import FooterBig from "@/components/Footer/FooterBig";
 import MidBanner from "@/components/MidBanner";
 import Question from "@/components/whatsapp/Question";
 import Image from "next/image";
@@ -11,7 +10,7 @@ import Image from "next/image";
 const PricingPage: NextPage = () => {
   return (
     <>
-      
+
       {/* SECTION 1 */}
       <MainBanner
         bgURL="bg-[url('/hero-pricing.png')] bg-cover bg-center sm:bg-[url('/hero-pricing-2.jpg')]">
@@ -25,11 +24,11 @@ const PricingPage: NextPage = () => {
       {/* SECTION 2 */}
       <section className="bg-white py-16">
         <div className="2xl:container mx-auto px-4">
-          <PriceCard/>
+          <PriceCard />
         </div>
       </section>
 
-      
+
       {/* SECTION 3 */}
       <section className="bg-white py-16">
         <div className="2xl:container mx-auto px-4">
@@ -50,13 +49,13 @@ const PricingPage: NextPage = () => {
                     {table.rows.map((row, index) => {
 
                       const img_1 = (row.c1) ?
-                        (<Image src={'/pricing/check.svg'} alt="✅" width={25} height={25} /> ) :
+                        (<Image src={'/pricing/check.svg'} alt="✅" width={25} height={25} />) :
                         (<Image src={'/pricing/uncheck.svg'} alt="❌" width={25} height={25} />);
 
                       const img_2 = (row.c2) ?
-                        (<Image src={'/pricing/check.svg'} alt="✅" width={25} height={25} /> ) :
+                        (<Image src={'/pricing/check.svg'} alt="✅" width={25} height={25} />) :
                         (<Image src={'/pricing/uncheck.svg'} alt="❌" width={25} height={25} />);
-                      
+
                       return (
                         <div key={index} className="text-slate-600">
                           <div className="flex p-4 bg-white text-sm border-b border-b-gray-300">
@@ -75,7 +74,7 @@ const PricingPage: NextPage = () => {
         </div>
       </section>
 
-      
+
       {/* SECTION 4 FAQ */}
       <section className=" bg-tertiary-dark-blue py-16">
         <div className="2xl:container mx-auto text-white">
@@ -105,8 +104,7 @@ const PricingPage: NextPage = () => {
 
       {/*  */}
       <hr />
-      <FooterTop />
-      <FooterBottom />
+      <FooterBig />
     </>
   )
 }

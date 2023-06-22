@@ -7,7 +7,7 @@ import type { NextPage } from "next"
 import Link from "next/link";
 import Image from "next/image";
 import MidBanner from "@/components/MidBanner";
-import PartnerFooter from "@/components/partner/PartnerFooter";
+import FooterSmall from "@/components/Footer/FooterSmall";
 import Question from "@/components/whatsapp/Question";
 
 const LiveChatPage: NextPage = () => {
@@ -26,7 +26,7 @@ const LiveChatPage: NextPage = () => {
             <Link href={'/'}>
               <GeneralButton
                 twColor="bg-tertiary-dark-blue"
-                >CONTACT US</GeneralButton>
+              >CONTACT US</GeneralButton>
             </Link>
           </div>
         </div>
@@ -60,7 +60,7 @@ const LiveChatPage: NextPage = () => {
           <div className="flex flex-col gap-16">
             {Livechat.section_3.panels.map((panel, index) => (
               <KeyFeaturePanel
-                
+
                 pos_left={Boolean(index % 2)}
                 {...panel}
                 key={index}
@@ -115,19 +115,19 @@ const LiveChatPage: NextPage = () => {
         heading={Livechat.section_6.heading}
         bg="bg-tertiary"
       >
-            <Link href={'/signup'} className="ml-auto mr-4">
-              <GeneralButton>TRY IT FREE</GeneralButton>
-            </Link>
-            <Link href={'/'} className="mr-auto ml-4">
-              <GeneralButton
-                twColor="bg-tertiary-dark-blue"
-                >CONTACT US</GeneralButton>
-            </Link>
+        <Link href={'/signup'} className="ml-auto mr-4">
+          <GeneralButton>TRY IT FREE</GeneralButton>
+        </Link>
+        <Link href={'/'} className="mr-auto ml-4">
+          <GeneralButton
+            twColor="bg-tertiary-dark-blue"
+          >CONTACT US</GeneralButton>
+        </Link>
       </MidBanner>
 
 
       {/* SECTION 7 */}
-      <PartnerFooter/>
+      <FooterSmall />
     </>
   )
 }

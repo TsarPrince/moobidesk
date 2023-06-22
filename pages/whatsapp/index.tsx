@@ -4,7 +4,7 @@ import KeyFeaturePanel from "@/components/KeyFeaturePanel"
 import MainBanner from "@/components/MainBanner"
 import MidBanner from "@/components/MidBanner"
 import PartnerExperienceCard from "@/components/partner/PartnerExperienceCard"
-import PartnerFooter from "@/components/partner/PartnerFooter"
+import FooterSmall from "@/components/Footer/FooterSmall"
 import Question from "@/components/whatsapp/Question"
 import TabularSection from "@/components/whatsapp/TabularSection"
 import Whatsapp from "@/constants/Whatsapp"
@@ -19,7 +19,7 @@ const WhatsappPage: NextPage = () => {
     <>
       {/* SECTION 1 */}
       <MainBanner
-      bgURL="md:bg-[url('/hero-whatsapp.jpg')] bg-[url('/hero-whatsapp-mobile.jpg')] bg-center bg-cover"
+        bgURL="md:bg-[url('/hero-whatsapp.jpg')] bg-[url('/hero-whatsapp-mobile.jpg')] bg-center bg-cover"
       >
         <div className="max-w-2xl lg:pl-16 lg:mt-24">
           <h1 className="text-center text-white px-2 mx-auto mb-8 text-3xl lg:mx-0 lg:text-4xl lg:text-left font-medium max-w-xl">{Whatsapp.section_1.heading}</h1>
@@ -34,7 +34,7 @@ const WhatsappPage: NextPage = () => {
             <Link href={'/'}>
               <GeneralButton
                 twColor="bg-tertiary-dark-blue"
-                >CONTACT US</GeneralButton>
+              >CONTACT US</GeneralButton>
             </Link>
           </div>
         </div>
@@ -47,7 +47,7 @@ const WhatsappPage: NextPage = () => {
         description={Whatsapp.section_2.description}
       />
 
-      
+
       {/* SECTION 3  */}
       <section className="bg-gray-100 py-16 ">
         <div className="2xl:container mx-auto px-4">
@@ -71,7 +71,7 @@ const WhatsappPage: NextPage = () => {
         </div>
       </section>
 
-      
+
       {/* SECTION 4 */}
       <section className="bg-white py-16">
         <div className="2xl:container mx-auto px-4">
@@ -142,7 +142,7 @@ const WhatsappPage: NextPage = () => {
       </section>
 
 
-    {/* SECTION 7 CLIENTS WE SERVE */}
+      {/* SECTION 7 CLIENTS WE SERVE */}
       <section className="bg-white py-16">
         <div className="2xl:container mx-auto px-4">
           <h1 className="text-2xl text-center mb-12 text-slate-700">{Whatsapp.section_7.heading}</h1>
@@ -182,20 +182,20 @@ const WhatsappPage: NextPage = () => {
       {/* SECTION 9 */}
       <BlueSection heading="Ready to transform your business?">
         <div className="flex justify-center gap-6">
-            <Link href={'/signup'}>
-              <GeneralButton>TRY IT FREE</GeneralButton>
-            </Link>
-            <Link href={'/'}>
-              <GeneralButton
-                twColor="bg-tertiary-dark-blue"
-                >CONTACT US</GeneralButton>
-            </Link>
-          </div>
+          <Link href={'/signup'}>
+            <GeneralButton>TRY IT FREE</GeneralButton>
+          </Link>
+          <Link href={'/'}>
+            <GeneralButton
+              twColor="bg-tertiary-dark-blue"
+            >CONTACT US</GeneralButton>
+          </Link>
+        </div>
       </BlueSection>
 
 
       {/* SECTION 10 */}
-      <PartnerFooter/>
+      <FooterSmall />
     </>
   )
 }

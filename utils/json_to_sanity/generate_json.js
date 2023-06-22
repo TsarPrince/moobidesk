@@ -1,5 +1,4 @@
-
-const Partner = {
+const partner = {
 
   heading: 'Moobidesk partnership programs',
   subheading: 'Reveal new opportunities to help your clients create incredible customer experiences and accelerate your business growth.',
@@ -69,7 +68,12 @@ const Partner = {
   endBanner: {
     heading: 'There are no limits to what we can achieve as a team',
   },
-};
 
+  footer: {
+    footer_line: '© 2023 All rights reserved. Moobidesk is a product of Maven Lab Pte Ltd',
 
-export default Partner;
+  }
+}
+
+const fs = require('fs')
+fs.writeFileSync('./partner.json', JSON.stringify(partner, null, 2))

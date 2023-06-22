@@ -4,14 +4,14 @@ import Image from "next/image";
 import Insurance from "@/constants/Insurance";
 import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
-import PartnerFooter from "@/components/partner/PartnerFooter";
+import FooterSmall from "@/components/Footer/FooterSmall";
 import Link from "next/link";
 
 const InsurancePage: NextPage = () => {
   return (
     <>
       {/* NAVBAR to be added here*/}
-      
+
 
       {/* BANNER SECTION 1 */}
       {/* banner bg-image */}
@@ -70,7 +70,7 @@ const InsurancePage: NextPage = () => {
           <div className="flex flex-col gap-16">
             {Insurance.panels.map((panel, index) => (
               <KeyFeaturePanel
-                pos_left={(index%2 ? false : true)}
+                pos_left={(index % 2 ? false : true)}
                 key={index}
                 {...panel}
                 extraLarge={true}
@@ -80,7 +80,7 @@ const InsurancePage: NextPage = () => {
         </div>
       </section>
 
-      
+
       {/* SECTION 4 WHY CHOOSE MOBIDESK */}
       <section className=" bg-tertiary-dark-blue">
         <div className="2xl:container mx-auto py-20">
@@ -89,7 +89,7 @@ const InsurancePage: NextPage = () => {
           <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 xl:justify-evenly  pt-16 px-6 justify-center items-center">
             {Insurance.section_4.map((card, index) => (
               <InsuranceCard
-              key={index}
+                key={index}
                 {...card}
               />
             ))}
@@ -115,7 +115,7 @@ const InsurancePage: NextPage = () => {
         </div>
       </section>
 
-      <PartnerFooter/>
+      <FooterSmall />
     </>
   )
 }
