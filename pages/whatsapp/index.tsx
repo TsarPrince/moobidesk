@@ -11,15 +11,21 @@ import Whatsapp from "@/constants/Whatsapp"
 import type { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import CommonNav from "@/components/CommonNav"
+import PhoneDisplay from "@/components/whatsapp/PhoneDisplay"
 
 
 
 const WhatsappPage: NextPage = () => {
   return (
     <>
+      
+      {/* Navbar */}
+      <CommonNav/>
+
       {/* SECTION 1 */}
       <MainBanner
-        bgURL="md:bg-[url('/hero-whatsapp.jpg')] bg-[url('/hero-whatsapp-mobile.jpg')] bg-center bg-cover"
+        bgURL="md:bg-[url('/hero-whatsapp.jpg')] bg-[url('/hero-whatsapp-mobile.jpg')] bg-center bg-cover -mt-6"
       >
         <div className="max-w-2xl lg:pl-16 lg:mt-24">
           <h1 className="text-center text-white px-2 mx-auto mb-8 text-3xl lg:mx-0 lg:text-4xl lg:text-left font-medium max-w-xl">{Whatsapp.section_1.heading}</h1>
@@ -109,7 +115,8 @@ const WhatsappPage: NextPage = () => {
       </section>
 
       {/* SECTION 6 */}
-      <section className="bg-tertiary pt-16">
+      <PhoneDisplay/>
+      {/* <section className="bg-tertiary pt-16">
         <div className="max-w-[1280px] mx-auto px-4 relative flex flex-col lg:flex-row">
 
           <div className="max-w-xl text-white lg:pl-16 mx-auto lg:mx-0">
@@ -139,7 +146,7 @@ const WhatsappPage: NextPage = () => {
             alt="phone"
             width={500} height={1000} />
         </div>
-      </section>
+      </section> */}
 
 
       {/* SECTION 7 CLIENTS WE SERVE */}

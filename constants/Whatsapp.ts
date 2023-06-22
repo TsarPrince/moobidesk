@@ -137,26 +137,32 @@ const Whatsapp = {
       {
         url: '/whatsapp/phone-icon/icon-1.svg',
         name: 'retail',
+        photo: '/whatsapp/ui-r1.png',
       },
       {
         url: '/whatsapp/phone-icon/icon-2.svg',
         name: 'travel',
+        photo: '/whatsapp/ui-r2.png',
       },
       {
         url: '/whatsapp/phone-icon/icon-3.svg',
         name: 'restaurant',
+        photo: '/whatsapp/ui-r3.png',
       },
       {
         url: '/whatsapp/phone-icon/icon-4.svg',
         name: 'insurance',
+        photo: '/whatsapp/ui-r4.png',
       },
       {
         url: '/whatsapp/phone-icon/icon-5.svg',
         name: 'beauty',
+        photo: '/whatsapp/ui-r5.png',
       },
       {
         url: '/whatsapp/phone-icon/icon-6.svg',
         name: 'more',
+        photo: '/whatsapp/ui-r6.png',
       },
     ],
   },

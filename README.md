@@ -105,8 +105,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - whatsapp solution page
 
-- [ ] add navbar
-- [ ] mid blue banner extract into sep component, it is interactive component. implement that
+- [x] add navbar
+- [x] mid blue banner extract into sep component, it is interactive component. implement that
 
 ---
 
