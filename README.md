@@ -137,6 +137,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] currency correction
 - [ ] discount addition
 
+> changes while implementation
+
+1. Pricing.section_2.discountPercentage new field
+2. Pricing.currencyList renamed, and values changed
 ---
 
 - footer top 

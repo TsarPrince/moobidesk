@@ -1,26 +1,22 @@
 import Pricing from "@/constants/Pricing";
-import { currencyMultiplier } from "@/constants/Pricing";
+import { currencyList } from "@/constants/Pricing";
 import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 import GeneralButton from "../GeneralButton";
 
-type Props = {
-
-};
-
-const PriceCard = (props: Props) => {
+const PriceCard = () => {
 
   // true : yearly
   // false : monthly
   const [pricing, setPricing] = useState(true);
   const [currency, setCurrency] = useState('SGD');
 
-  let price = getPrice(Pricing.SGDMonthlyPrice, pricing, currency);
+  let price = getPrice(Pricing.SGDMonthlyPrice, pricing, currency, Pricing.section_2.discountPercentage);
 
   // styling
-  const selectorClass = (pricing) ? 'mr-auto' : 'ml-auto';
-  const fader = (pricing) ? 'opacity-50' : '';
-  const faderx = (!pricing) ? 'opacity-50' : '';
+  const selectorClass = (pricing) ? 'ml-auto' : 'mr-auto';
+  const fader = (!pricing) ? 'opacity-50' : '';
+  const faderx = (pricing) ? 'opacity-50' : '';
 
   function handleCurrencyChange(event: ChangeEvent<HTMLSelectElement>) {
     setCurrency(event.target.value);
@@ -52,7 +48,7 @@ const PriceCard = (props: Props) => {
             </div>
 
             <div className={`text-xs px-4 py-3 bg-blue-200 rounded ${fader}`}>
-              20% discount
+              {`${Pricing.section_2.discountPercentage}% discount`}
             </div>
           </div>
 
@@ -168,9 +164,6 @@ const PriceCard = (props: Props) => {
               <option
                 value="ZAR">South African rand (ZAR)</option>
             </select>
-
-            <div></div>
-
           </div>
 
         </div>
@@ -270,12 +263,15 @@ const PriceCard = (props: Props) => {
   )
 }
 
-function getPrice(price: number, pricing: boolean, currency: string) {
-  if (pricing) {
-    price *= 0.8;
-  }
+function getPrice(price: number, pricing: boolean, currency: string, discountPercentage: number) {
+  
+  // get the price in currency
+  price = (currencyList[currency])
 
-  price *= (currencyMultiplier[currency])
+  // if discount then apply it
+  if (pricing) {
+    price = price * (discountPercentage/100.00);
+  }
   return price.toFixed(2);
 }
 
