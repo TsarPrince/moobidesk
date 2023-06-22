@@ -78,7 +78,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - request-demo ( Talk to and expert)
 
-- [ ] put correct footer ( FooterBottom ) 
+- ~~[ ] put correct footer ( FooterBottom ) ~~
 - [ ] put Navbar
 
 ---
