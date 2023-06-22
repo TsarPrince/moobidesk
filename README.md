@@ -49,3 +49,93 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] interactive components on whatsapp page
 - [ ] interactive components on pricing page
 - [ ] correct currency calculation for currency page
+
+---
+
+- Partner Page
+
+- [ ] become a partner redirects to /request-demo
+- [ ] become tech / resell / whitelabel partner redirects to /request-demo
+
+---
+
+- Home Page
+
+- [ ] contact us redirects to #footer-top at /
+
+---
+
+- Navbar
+
+- [ ] talk-to-expert button redirects to /request-demo
+- [ ] white navbar (CommonNavbar) links when screen >= xl
+- [ ] fix all navbar issues
+- [ ] put navbar at every page
+
+---
+
+- request-demo ( Talk to and expert)
+
+- [ ] put correct footer ( FooterBottom ) 
+- [ ] put Navbar
+
+---
+
+- customer-support-solution ( products-1 )
+
+- [ ] add navbar
+- [ ] contact us button link
+- [ ] try it free button link ( top and bottom 2 places button given)
+
+> minors : keyFeaturePanel colored heading
+
+---
+
+- enterprise page ( products-2 )
+
+- [ ] add navbar
+- [ ] fix orange button text is SEE IT IN ACTION, link is /enterprise-demo
+- [ ] moobidesk enterprise first panel image not visible
+- [ ] blue section banner button text = REQUEST A DEMO , link is /enterprise-demo
+
+---
+
+- whatsapp solution page
+
+- [ ] add navbar
+- [ ] mid blue banner extract into sep component, it is interactive component. implement that
+
+---
+
+- /live-chat-solution
+
+- [ ] add navbar
+- [ ] mid blue banner try live chat free 
+
+---
+
+- /insurance 
+
+- [ ] add navbar
+
+---
+
+- /retail
+
+- [ ] add navbar
+- contact us button blue
+
+---
+
+/pricing
+
+- [ ] add navbar
+- [ ] contact us buttons link
+- [ ] currency correction
+- [ ] discount addition
+
+---
+
+- footer top 
+
+- [ ] link hai ek wo nhi hai
