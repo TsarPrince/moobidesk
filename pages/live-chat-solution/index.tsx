@@ -9,11 +9,16 @@ import Image from "next/image";
 import MidBanner from "@/components/MidBanner";
 import FooterSmall from "@/components/Footer/FooterSmall";
 import Question from "@/components/whatsapp/Question";
+import CommonNav from "@/components/CommonNav";
 
 const LiveChatPage: NextPage = () => {
   return (
     <>
-      <MainBanner bgURL="bg-[url('/livechat/mobile-banner.jpg')] bg-cover bg-center lg:bg-[url('/livechat/full-banner.png')]">
+
+      {/* NAVBAR */}
+      <CommonNav/>
+
+      <MainBanner bgURL="bg-[url('/livechat/mobile-banner.jpg')] pt-20 bg-cover bg-center lg:bg-[url('/livechat/full-banner.png')]">
         <div className="text-white px-2 max-w-3xl mx-auto lg:mx-0 lg:mr-auto">
           <h1 className="text-3xl text-center mb-6 sm:text-4xl lg:hidden">{Livechat.section_1.heading}</h1>
           <h3 className="text-center px-4 mb-12 lg:hidden">{Livechat.section_1.subheading}</h3>
@@ -116,9 +121,9 @@ const LiveChatPage: NextPage = () => {
         bg="bg-tertiary"
       >
         <Link href={'/signup'} className="ml-auto mr-4">
-          <GeneralButton>TRY IT FREE</GeneralButton>
+          <GeneralButton>TRY LIVECHAT FREE</GeneralButton>
         </Link>
-        <Link href={'/'} className="mr-auto ml-4">
+        <Link href={'/request-demo'} className="mr-auto ml-4">
           <GeneralButton
             twColor="bg-tertiary-dark-blue"
           >CONTACT US</GeneralButton>
