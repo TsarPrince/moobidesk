@@ -11,6 +11,7 @@ import SEO from '@/components/SEO';
 import { client, urlFor } from 'lib/client';
 import { Partner as PartnerType } from 'sanity/schema';
 import CommonNav from '@/components/CommonNav';
+import Link from 'next/link';
 
 type PageProps = {
   Partner: PartnerType
@@ -45,7 +46,9 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
             </h1>
           </div>
           <div className='flex'>
-            <BannerButton>{Partner?.button?.partner}</BannerButton>
+            <Link href={'/request-demo'} className='mx-auto'>
+              <BannerButton>{Partner?.button?.partner}</BannerButton>
+            </Link>
           </div>
         </div>
       </div>
@@ -110,7 +113,9 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
       <section className='bg-tertiary py-20'>
         <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>{Partner.endBanner?.heading}</h1>
         <div className='flex'>
+        <Link href={'/request-demo'} className='mx-auto'>
           <BannerButton>{Partner.button?.partner}</BannerButton>
+        </Link>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { PartnerCardType } from "@/interfaces/PartnerCard";
 import BannerButton from "./BannerButton";
+import Link from "next/link";
 
 const PartnerCard = (props: PartnerCardType) => {
   return (
@@ -12,7 +13,9 @@ const PartnerCard = (props: PartnerCardType) => {
         <h2 className="text-center font-semibold text-lg">{props.heading}</h2>
         <p className="text-gray-600 h-[15rem] text-center px-4 mt-6">{props.description}</p>
         <div className="flex pb-12">
-          <BannerButton>{props.btn_text}</BannerButton>
+          <Link href={'/request-demo'} className="mx-auto">
+            <BannerButton>{props.btn_text}</BannerButton>
+          </Link>
         </div>
       </div>
     </div>
