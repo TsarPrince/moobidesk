@@ -20,7 +20,7 @@ const FooterBig = () => {
 
   return (
     <>
-      <section className="my-12 pt-10 bg-white">
+      <section id="contactus" className="my-12 pt-10 bg-white">
         <div className="2xl:container mx-auto xl:flex xl:flex-row px-6">
 
           {/* heading + subheading */}

@@ -49,6 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] interactive components on whatsapp page
 - [ ] interactive components on pricing page
 - [ ] correct currency calculation for currency page
+- [ ] add SEO for all pages
 
 ---
 
@@ -61,7 +62,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - Home Page
 
-- [ ] contact us redirects to #footer-top at /
+- [x] contact us redirects to #footer-top at /
+- [x] talk to expert to /request-demo
 
 ---
 

@@ -195,7 +195,7 @@ const Home: NextPage = () => {
       <MidBanner
         heading={HomeConstants.endBanner.heading}
         buttonText={HomeConstants.endBanner.buttonText}
-        link='/talk-to-an-expert'
+        link='/#contactus'
       />
 
 
@@ -246,7 +246,7 @@ const Home: NextPage = () => {
       <MidBanner
         heading={HomeConstants.midBanner.heading}
         buttonText={HomeConstants.midBanner.buttonText}
-        link='/talk-to-an-expert'
+        link='/request-demo'
       />
 
       <FooterBig />
