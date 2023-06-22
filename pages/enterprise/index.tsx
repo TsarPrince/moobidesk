@@ -95,12 +95,12 @@ const EnterprisePage: NextPage = () => {
                 className="border rounded-full flex flex-col items-center"
               >
                 <Image
-                  src={social[0]}
-                  alt={social[1]}
+                  src={social.imageURL}
+                  alt={social.name}
                   width={400} height={400}
                   className="w-14 h-14"
                 />
-                <h1 className="text-xs text-gray-700 my-1">{social[1]}</h1>
+                <h1 className="text-xs text-gray-700 my-1">{social.name}</h1>
               </div>
 
             ))}
