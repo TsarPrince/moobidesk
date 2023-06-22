@@ -48,7 +48,7 @@ const CustomerSupportPage: NextPage = () => {
         <div className="2xl:container mx-auto flex flex-col">
           <h1 className=" mb-12 text-center text-3xl text-gray-600">{CustomerSupport.section_2.heading}</h1>
           <div className=" px-4 inline-grid mx-auto gap-y-3 gap-x-4 sm:gap-x-8 grid-cols-2 sm:grid-cols-4 xl:flex xl:justify-evenly">
-            {CustomerSupport.client_images.map((imageURL, index) => (
+            {CustomerSupport.section_2.client_images.map((imageURL, index) => (
               <div key={index}
                 className=" w-32 h-20"
               >
@@ -90,7 +90,7 @@ const CustomerSupportPage: NextPage = () => {
             {CustomerSupport.section_4.heading}
           </h1>
           <div className="grid flex-1 px-4 lg:max-w-full grid-cols-6 gap-y-4 lg:flex lg:justify-center justify-items-center lg:gap-6">
-            {CustomerSupport.social_urls.map((social, index) => (
+            {CustomerSupport.section_4.social_urls.map((social, index) => (
               <div key={index}
                 className="border rounded-full flex flex-col items-center"
               >
@@ -119,7 +119,7 @@ const CustomerSupportPage: NextPage = () => {
           </p>
 
           <div className="gap-20 flex flex-col">
-            {CustomerSupport.panels.map((panel, index) => (
+            {CustomerSupport.section_5.panels.map((panel, index) => (
               <KeyFeaturePanel
                 key={index}
                 {...panel}

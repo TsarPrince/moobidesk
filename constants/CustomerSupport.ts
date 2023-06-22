@@ -8,7 +8,16 @@ const CustomerSupport = {
 
   section_2: {
     heading: 'Our Clients',
-
+    client_images: [
+      '/home/client/client-comfort@2x.png',
+      '/home/client/client-fullerton.png',
+      '/home/client/client-smu@2x.png',
+      '/home/client/client-certis@2x.png',
+      '/home/client/client-eurokars@1x.png',
+      '/home/client/client-volkswangen.png',
+      '/home/client/client-etiqua@2x.png',
+      '/home/client/client-accord@2x.png',
+    ],
   },
 
   section_3: {
@@ -18,62 +27,46 @@ const CustomerSupport = {
 
   section_4: {
     heading: 'Integration with all major communication platforms',
+    social_urls: [
+      { imageURL: '/cussupport/icons/icon-1.png', name: 'Twitter', },
+      { imageURL: '/cussupport/icons/icon-2.png', name: 'Line', },
+      { imageURL: '/cussupport/icons/icon-3.png', name: 'Voice', },
+      { imageURL: '/cussupport/icons/icon-4.png', name: 'Telegram', },
+      { imageURL: '/cussupport/icons/icon-5.png', name: 'Email', },
+      { imageURL: '/cussupport/icons/icon-6.png', name: 'SMS', },
+      { imageURL: '/cussupport/icons/icon-7.png', name: 'WhatsApp', },
+      { imageURL: '/cussupport/icons/icon-8.png', name: 'Facebook', },
+      { imageURL: '/cussupport/icons/icon-9.png', name: 'WeChat', },
+      { imageURL: '/cussupport/icons/icon-10.png', name: 'Messenger', },
+      { imageURL: '/cussupport/icons/icon-11.png', name: 'Instagram', },
+      { imageURL: '/cussupport/icons/icon-12.png', name: 'Web Chat', },
+    ],
   },
 
   section_5: {
     heading: 'Key features of Moobidesk ',
     description: 'Learn how Moobidesk makes your agents’ lives easier, your customer support more efficient, and your customers happier ',
+    panels: [
+      {
+        imageURL: '/home/panels/panel-img-1.png',
+        title: 'UNIFIED VOICE & CHAT CHANNELS',
+        heading: 'A truly connected customer experience.',
+        description: 'Orchestrate the best customer experience across all channels on one platform. With this customer engagement platform, you get to choose the right communication channels that best fit your business needs and respond to those enquiries from a single interface.',
+      },
+      {
+        imageURL: '/home/panels/panel-img-2.png',
+        title: 'AUTOMATED SMART RESPONSE SUGGESTION',
+        heading: 'Speed up customer service response time.',
+        description: 'A fast response makes customers feel valued. With our help desk software, Moobidesk analyses the incoming message and automatically suggests the best responses to your agents, removing the potential for human error and allowing agents to respond quickly to customer issues.',
+      },
+      {
+        imageURL: '/home/panels/panel-img-3.png',
+        title: 'SMART AI OMINICHANNEL ROUTING',
+        heading: 'Seamless bot to agent transition.',
+        description: 'As soon as someone connects with your business, the Moobidesk bot intelligently engages and services the customer. When it comes to complex requests, the Moobidesk bot transfers control of the chat or call to a live agent automatically.',
+      },
+    ],
   },
-
-
-  client_images: [
-    '/home/client/client-comfort@2x.png',
-    '/home/client/client-fullerton.png',
-    '/home/client/client-smu@2x.png',
-    '/home/client/client-certis@2x.png',
-    '/home/client/client-eurokars@1x.png',
-    '/home/client/client-volkswangen.png',
-    '/home/client/client-etiqua@2x.png',
-    '/home/client/client-accord@2x.png',
-  ],
-
-  // * format :-
-  // [social_platform_image_url, social_platform_name]
-  social_urls: [
-    { imageURL: '/cussupport/icons/icon-1.png', name: 'Twitter', },
-    { imageURL: '/cussupport/icons/icon-2.png', name: 'Line', },
-    { imageURL: '/cussupport/icons/icon-3.png', name: 'Voice', },
-    { imageURL: '/cussupport/icons/icon-4.png', name: 'Telegram', },
-    { imageURL: '/cussupport/icons/icon-5.png', name: 'Email', },
-    { imageURL: '/cussupport/icons/icon-6.png', name: 'SMS', },
-    { imageURL: '/cussupport/icons/icon-7.png', name: 'WhatsApp', },
-    { imageURL: '/cussupport/icons/icon-8.png', name: 'Facebook', },
-    { imageURL: '/cussupport/icons/icon-9.png', name: 'WeChat', },
-    { imageURL: '/cussupport/icons/icon-10.png', name: 'Messenger', },
-    { imageURL: '/cussupport/icons/icon-11.png', name: 'Instagram', },
-    { imageURL: '/cussupport/icons/icon-12.png', name: 'Web Chat', },
-  ],
-
-  panels: [
-    {
-      imageURL: '/home/panels/panel-img-1.png',
-      title: 'UNIFIED VOICE & CHAT CHANNELS',
-      heading: 'A truly connected customer experience.',
-      description: 'Orchestrate the best customer experience across all channels on one platform. With this customer engagement platform, you get to choose the right communication channels that best fit your business needs and respond to those enquiries from a single interface.',
-    },
-    {
-      imageURL: '/home/panels/panel-img-2.png',
-      title: 'AUTOMATED SMART RESPONSE SUGGESTION',
-      heading: 'Speed up customer service response time.',
-      description: 'A fast response makes customers feel valued. With our help desk software, Moobidesk analyses the incoming message and automatically suggests the best responses to your agents, removing the potential for human error and allowing agents to respond quickly to customer issues.',
-    },
-    {
-      imageURL: '/home/panels/panel-img-3.png',
-      title: 'SMART AI OMINICHANNEL ROUTING',
-      heading: 'Seamless bot to agent transition.',
-      description: 'As soon as someone connects with your business, the Moobidesk bot intelligently engages and services the customer. When it comes to complex requests, the Moobidesk bot transfers control of the chat or call to a live agent automatically.',
-    },
-  ],
 
   section_6: [
     {
