@@ -26,7 +26,7 @@ const CustomerSupportPage: NextPage = () => {
 
       <MainBanner>
 
-        <Image src={'/black-logo.png'} alt="moobidesk" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
+        <Image src={CustomerSupport.section_1.logoURL} alt="''" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
         <h1 className="mb-6 text-center text-3xl sm:max-w-xl px-6 max-w-lg mx-auto font-medium">
           {CustomerSupport.section_1.heading}
         </h1>
@@ -35,13 +35,16 @@ const CustomerSupportPage: NextPage = () => {
         </p>
 
         <div className="flex justify-center gap-6">
-          <Link href={'/signup'}>
-            <GeneralButton>TRY IT FREE</GeneralButton>
+
+          <Link href={CustomerSupport.section_1.buttons[0]?.url}>
+            <GeneralButton>
+              {CustomerSupport.section_1.buttons[0]?.text}
+            </GeneralButton>
           </Link>
-          <Link href={'/request-demo'}>
-            <GeneralButton
-              twColor="bg-tertiary-dark-blue"
-            >CONTACT US</GeneralButton>
+          <Link href={CustomerSupport.section_1.buttons[1]?.url}>
+            <GeneralButton twColor="bg-tertiary-dark-blue">
+              {CustomerSupport.section_1.buttons[1]?.text}
+            </GeneralButton>
           </Link>
         </div>
 
@@ -78,7 +81,7 @@ const CustomerSupportPage: NextPage = () => {
         <div className="flex flex-col-reverse gap-4 mt-8 max-w-[60rem] mx-auto">
           <Image
             className=" w-[90%] mx-auto"
-            src={'/cussupport/example.png'}
+            src={CustomerSupport.section_3.imageURL}
             alt="customer relation image"
             width={1000} height={600} />
           <p className="px-3 sm:text-lg mb-4 text-center text-white">
@@ -221,7 +224,7 @@ const CustomerSupportPage: NextPage = () => {
               />
             </div>
             <div className="w-max flex justify-center items-center">
-              <Image src={'/cussupport/icons/mid-comma.png'} alt="''"
+              <Image src={CustomerSupport.section_10.companyImage} alt="''"
                 width={200} height={200}
                 className="w-40"
               />
@@ -261,7 +264,7 @@ const CustomerSupportPage: NextPage = () => {
 
       <MidBanner
         heading={CustomerSupport.midBanner.heading}
-        buttonText="TRY IT FREE"
+        buttonText={CustomerSupport.midBanner.btn_text}
         bg="bg-tertiary"
         link="/signup"
       />

@@ -26,7 +26,7 @@ const EnterprisePage: NextPage = () => {
 
       <MainBanner>
 
-        <Image src={'/black-logo.png'} alt="moobidesk" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
+        <Image src={Enterprise.section_1.logoURL} alt="moobidesk" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
         <h1 className="mb-6 text-center text-3xl sm:max-w-xl px-6 max-w-lg mx-auto font-medium">
           {Enterprise.section_1.heading}
         </h1>
@@ -35,13 +35,13 @@ const EnterprisePage: NextPage = () => {
         </p>
 
         <div className="flex justify-center gap-6">
-          <Link href={'/signup'}>
-            <GeneralButton>SEE IT IN ACTION</GeneralButton>
+          <Link href={Enterprise.section_1.buttons[0]?.url}>
+            <GeneralButton>{Enterprise.section_1.buttons[0]?.text}</GeneralButton>
           </Link>
-          <Link href={'/request-demo'}>
+          <Link href={Enterprise.section_1.buttons[1]?.url}>
             <GeneralButton
               twColor="bg-tertiary-dark-blue"
-            >CONTACT US</GeneralButton>
+            >{Enterprise.section_1.buttons[1]?.text}</GeneralButton>
           </Link>
         </div>
 
@@ -53,7 +53,7 @@ const EnterprisePage: NextPage = () => {
         <div className="2xl:container mx-auto flex flex-col">
           <h1 className=" mb-12 text-center text-3xl text-gray-600">{Enterprise.section_2.heading}</h1>
           <div className=" px-4 inline-grid mx-auto gap-y-3 gap-x-4 sm:gap-x-8 grid-cols-2 sm:grid-cols-4 xl:flex xl:justify-evenly">
-            {Enterprise.client_images.map((imageURL, index) => (
+            {Enterprise.section_2.client_images.map((imageURL, index) => (
               <div key={index}
                 className=" w-32 h-20"
               >
@@ -78,7 +78,7 @@ const EnterprisePage: NextPage = () => {
         <div className="flex flex-col-reverse gap-4 mt-8 max-w-[60rem] mx-auto">
           <Image
             className=" w-[90%] mx-auto"
-            src={'/cussupport/example.png'}
+            src={Enterprise.section_3.imageURL}
             alt="customer relation image"
             width={1000} height={600} />
           <p className="px-3 sm:text-lg mb-4 text-center text-white">
@@ -95,7 +95,7 @@ const EnterprisePage: NextPage = () => {
             {Enterprise.section_4.heading}
           </h1>
           <div className="grid flex-1 px-4 lg:max-w-full grid-cols-6 gap-y-4 lg:flex lg:justify-center justify-items-center lg:gap-6">
-            {Enterprise.social_urls.map((social, index) => (
+            {Enterprise.section_4.social_urls.map((social, index) => (
               <div key={index}
                 className="border rounded-full flex flex-col items-center"
               >
@@ -124,7 +124,7 @@ const EnterprisePage: NextPage = () => {
           </p>
 
           <div className="gap-20 flex flex-col">
-            {Enterprise.panels.map((panel, index) => (
+            {Enterprise.section_5.panels.map((panel, index) => (
               <KeyFeaturePanel
                 key={index}
                 {...panel}
@@ -221,7 +221,7 @@ const EnterprisePage: NextPage = () => {
               />
             </div>
             <div className="w-max flex justify-center items-center">
-              <Image src={'/enterprise/logo-sfexpress.png'} alt="''"
+              <Image src={Enterprise.section_10.companyImage} alt="''"
                 width={200} height={200}
                 className="w-40"
               />
@@ -264,7 +264,7 @@ const EnterprisePage: NextPage = () => {
 
       <MidBanner
         heading={Enterprise.midBanner.heading}
-        buttonText="REQUEST A DEMO"
+        buttonText={Enterprise.midBanner.btn_text}
         bg="bg-tertiary"
         link="/request-demo"
       />

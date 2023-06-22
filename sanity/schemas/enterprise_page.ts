@@ -11,6 +11,11 @@ export default defineType({
       "type": "object",
       "fields": [
         {
+          "name": "logo",
+          "title": "Logo",
+          "type": "image"
+        },
+        {
           "name": "heading",
           "title": "Heading",
           "type": "string"
@@ -19,6 +24,28 @@ export default defineType({
           "name": "description",
           "title": "Description",
           "type": "string"
+        },
+        {
+          "name": "buttons",
+          "title": "Buttons",
+          "type": "array",
+          "of": [
+            {
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     }),
@@ -31,6 +58,16 @@ export default defineType({
           "name": "heading",
           "title": "Heading",
           "type": "string"
+        },
+        {
+          "name": "client_images",
+          "title": "Client images",
+          "type": "array",
+          "of": [
+            {
+              "type": "image"
+            }
+          ]
         }
       ]
     }),
@@ -48,6 +85,11 @@ export default defineType({
           "name": "description",
           "title": "Description",
           "type": "string"
+        },
+        {
+          "name": "image",
+          "title": "Image",
+          "type": "image"
         }
       ]
     }),
@@ -60,6 +102,28 @@ export default defineType({
           "name": "heading",
           "title": "Heading",
           "type": "string"
+        },
+        {
+          "name": "social_urls",
+          "title": "Social urls",
+          "type": "array",
+          "of": [
+            {
+              "type": "object",
+              "fields": [
+                {
+                  "name": "image",
+                  "title": "Image",
+                  "type": "image"
+                },
+                {
+                  "name": "name",
+                  "title": "Name",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     }),
@@ -77,68 +141,36 @@ export default defineType({
           "name": "description",
           "title": "Description",
           "type": "string"
-        }
-      ]
-    }),
-    defineField({
-      "name": "client_images",
-      "title": "Client images",
-      "type": "array",
-      "of": [
+        },
         {
-          "type": "string"
-        }
-      ]
-    }),
-    defineField({
-      "name": "social_urls",
-      "title": "Social urls",
-      "type": "array",
-      "of": [
-        {
-          "type": "object",
-          "fields": [
+          "name": "panels",
+          "title": "Panels",
+          "type": "array",
+          "of": [
             {
-              "name": "iamgeURL",
-              "title": "Iamge U R L",
-              "type": "string"
-            },
-            {
-              "name": "name",
-              "title": "Name",
-              "type": "string"
-            },
-          ]
-        }
-      ]
-    }),
-    defineField({
-      "name": "panels",
-      "title": "Panels",
-      "type": "array",
-      "of": [
-        {
-          "type": "object",
-          "fields": [
-            {
-              "name": "imageURL",
-              "title": "Image U R L",
-              "type": "string"
-            },
-            {
-              "name": "title",
-              "title": "Title",
-              "type": "string"
-            },
-            {
-              "name": "heading",
-              "title": "Heading",
-              "type": "string"
-            },
-            {
-              "name": "description",
-              "title": "Description",
-              "type": "string"
+              "type": "object",
+              "fields": [
+                {
+                  "name": "image",
+                  "title": "Image",
+                  "type": "image"
+                },
+                {
+                  "name": "title",
+                  "title": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "heading",
+                  "title": "Heading",
+                  "type": "string"
+                },
+                {
+                  "name": "description",
+                  "title": "Description",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
@@ -153,9 +185,9 @@ export default defineType({
           "type": "object",
           "fields": [
             {
-              "name": "imageURL",
-              "title": "Image U R L",
-              "type": "string"
+              "name": "image",
+              "title": "Image",
+              "type": "image"
             },
             {
               "name": "title",
@@ -262,6 +294,11 @@ export default defineType({
           "type": "string"
         },
         {
+          "name": "companyImage",
+          "title": "Company Image",
+          "type": "image"
+        },
+        {
           "name": "person_name",
           "title": "Person name",
           "type": "string"
@@ -281,6 +318,11 @@ export default defineType({
         {
           "name": "heading",
           "title": "Heading",
+          "type": "string"
+        },
+        {
+          "name": "btn_text",
+          "title": "Btn text",
           "type": "string"
         }
       ]

@@ -26,7 +26,7 @@ const WhatsappPage: NextPage = () => {
       />
 
       {/* Navbar */}
-      <CommonNav/>
+      <CommonNav />
 
       {/* SECTION 1 */}
       <MainBanner
@@ -39,13 +39,15 @@ const WhatsappPage: NextPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-3 sm:gap-6">
-            <Link href={'/signup'}>
-              <GeneralButton>TRY IT FREE</GeneralButton>
+            <Link href={Whatsapp.section_1.buttons[0]?.url}>
+              <GeneralButton>
+                {Whatsapp.section_1.buttons[0]?.text}
+              </GeneralButton>
             </Link>
-            <Link href={'/'}>
-              <GeneralButton
-                twColor="bg-tertiary-dark-blue"
-              >CONTACT US</GeneralButton>
+            <Link href={Whatsapp.section_1.buttons[1]?.url}>
+              <GeneralButton twColor="bg-tertiary-dark-blue">
+                {Whatsapp.section_1.buttons[1]?.text}
+              </GeneralButton>
             </Link>
           </div>
         </div>
@@ -120,7 +122,7 @@ const WhatsappPage: NextPage = () => {
       </section>
 
       {/* SECTION 6 */}
-      <PhoneDisplay/>
+      <PhoneDisplay />
 
 
       {/* SECTION 7 CLIENTS WE SERVE */}
@@ -161,15 +163,17 @@ const WhatsappPage: NextPage = () => {
 
 
       {/* SECTION 9 */}
-      <BlueSection heading="Ready to transform your business?">
+      <BlueSection heading={Whatsapp.section_9.heading}>
         <div className="flex justify-center gap-6">
-          <Link href={'/signup'}>
-            <GeneralButton>TRY IT FREE</GeneralButton>
+          <Link href={Whatsapp.section_9.buttons[0]?.url}>
+            <GeneralButton>
+              {Whatsapp.section_9.buttons[0]?.text}
+            </GeneralButton>
           </Link>
-          <Link href={'/request-demo'}>
-            <GeneralButton
-              twColor="bg-tertiary-dark-blue"
-            >CONTACT US</GeneralButton>
+          <Link href={Whatsapp.section_9.buttons[1]?.url}>
+            <GeneralButton twColor="bg-tertiary-dark-blue">
+              {Whatsapp.section_9.buttons[1]?.text}
+            </GeneralButton>
           </Link>
         </div>
       </BlueSection>

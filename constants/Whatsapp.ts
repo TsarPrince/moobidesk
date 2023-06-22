@@ -3,6 +3,10 @@ const Whatsapp = {
   section_1: {
     heading: 'Your Trusted WhatsApp Marketing Solution Provider in Singapore',
     subheading: 'Customer support made smarter and easier with WhatsApp Business API',
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
   },
 
   section_2: {
@@ -45,7 +49,7 @@ const Whatsapp = {
         description: 'Gain insight into your team’s performance and use the metrics to anticipate customer needs and increase satisfaction through our interactive dashboard.',
         image: '/whatsapp/icon-6.svg',
       },
-      
+
     ],
   },
 
@@ -75,56 +79,56 @@ const Whatsapp = {
   section_5: {
     heading: 'Let’s Compare',
     subheading: 'Moobidesk + WhatsApp Business VS WhatsApp Web',
-    
+
     tabular: {
       topic1: ' Moobidesk + WhatsApp Business',
       topic2: 'WhatsApp Web',
       rowDetails: [
-          {
-            title: 'Send/receive messages',
-            isTopic1: true,
-            isTopic2: true,
-          },
-          {
-            title: 'Auto replies',
-            isTopic1: true,
-            isTopic2: true,
-          },
-          {
-            title: 'Multiple agents',
-            isTopic1: true,
-            isTopic2: false,
-          },
-          {
-            title: 'Ticket management',
-            isTopic1: true,
-            isTopic2: false,
-          },
-          {
-            title: '360-degree customer view',
-            isTopic1: true,
-            isTopic2: false,
-          },
-          {
-            title: 'Transfer chats between agents',
-            isTopic1: true,
-            isTopic2: false,
-          },
-          {
-            title: 'Skill-based routing',
-            isTopic1: true,
-            isTopic2: false,
-          },
-          {
-            title: 'Chat and agent reports',
-            isTopic1: true,
-            isTopic2: false,
-          },
-          {
-            title: 'API',
-            isTopic1: true,
-            isTopic2: false,
-          },
+        {
+          title: 'Send/receive messages',
+          isTopic1: true,
+          isTopic2: true,
+        },
+        {
+          title: 'Auto replies',
+          isTopic1: true,
+          isTopic2: true,
+        },
+        {
+          title: 'Multiple agents',
+          isTopic1: true,
+          isTopic2: false,
+        },
+        {
+          title: 'Ticket management',
+          isTopic1: true,
+          isTopic2: false,
+        },
+        {
+          title: '360-degree customer view',
+          isTopic1: true,
+          isTopic2: false,
+        },
+        {
+          title: 'Transfer chats between agents',
+          isTopic1: true,
+          isTopic2: false,
+        },
+        {
+          title: 'Skill-based routing',
+          isTopic1: true,
+          isTopic2: false,
+        },
+        {
+          title: 'Chat and agent reports',
+          isTopic1: true,
+          isTopic2: false,
+        },
+        {
+          title: 'API',
+          isTopic1: true,
+          isTopic2: false,
+        },
       ],
     },
   },
@@ -248,6 +252,13 @@ const Whatsapp = {
       },
     ],
   },
+  section_9: {
+    heading: "Ready to transform your business?",
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
+  }
 };
 
 export default Whatsapp;

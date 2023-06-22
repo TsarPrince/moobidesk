@@ -77,7 +77,7 @@ const generateSchema = (docName, inputFilePath, outputFilePath) => {
 }
 
 generateSchema(
-  'navbar',
+  'whatsappPage',
   path.join(__dirname, 'data.json'),
-  path.join('./sanity/schemas', 'navbar.ts')
+  path.join('./sanity/schemas', 'whatsapp_page.ts')
 )

@@ -249,7 +249,10 @@ const Home: NextPage = () => {
         link='/request-demo'
       />
 
-      <FooterBig />
+      {/* Internal link for contact us */}
+      <div id='contact-us'>
+        <FooterBig />
+      </div>
     </>
   )
 }
