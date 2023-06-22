@@ -6,17 +6,18 @@ import Footer from "@/constants/FooterBig";
 
 const FooterBig = () => {
 
-  const footerDetails = Footer.topFooter;
-  const heading = footerDetails.heading;
-  const subheading = footerDetails.subheading;
-  const description = footerDetails.description;
-  const websiteURL = footerDetails.websiteURL;
-  const downloadOnImage = footerDetails.downloadOnImage;
-  const contactUsSection = footerDetails.contactUsSection;
+const footerDetails = Footer.topFooter;
 
-  const socials = Footer.footerBottom.socials;
-  const copyright = Footer.footerBottom.copyrightText;
-  const links = Footer.footerBottom.links;
+const {
+    heading,
+    subheading,
+    description,
+    websiteURL,
+    downloadOnImage,
+    contactUsSection
+} = footerDetails;
+  
+  const { socials, copyrightText, links } = Footer.footerBottom;
 
   return (
     <>
@@ -129,7 +130,7 @@ const FooterBig = () => {
           </div>
 
           <div>
-            <p className="text-[0.7rem] text-gray-50 text-center">{copyright}</p>
+            <p className="text-[0.7rem] text-gray-50 text-center">{copyrightText}</p>
           </div>
         </div>
       </footer>

@@ -132,10 +132,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 /pricing
 
-- [ ] add navbar
-- [ ] contact us buttons link
-- [ ] currency correction
-- [ ] discount addition
+- [x] add navbar
+- [x] contact us buttons link
+- [x] currency correction
+- [x] discount addition
 
 > changes while implementation
 
@@ -145,4 +145,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - footer top 
 
-- [ ] link hai ek wo nhi hai
+- [x] refactor
