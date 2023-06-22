@@ -7,18 +7,22 @@ const Navbar = {
         {
           title: 'Moobidesk',
           description: 'Simple, flexible and versatile Omnichannel Customer Support Platform',
+          url: '/customer-support-solution',
         },
         {
           title: 'Moobidesk Enterprise',
           description: 'Intuitive, unified and powerful Omnichannel Contact Center Platform',
+          url: '/enterprise',
         },
         {
           title: 'WhatsApp Solution',
           description: 'Customer support made smarter and easier with WhatsApp Business API',
+          url: '/whatsapp',
         },
         {
           title: 'Live Chat Solution',
           description: 'Live chat customer support for your website',
+          url: '/live-chat-solution',
         },
       ]
     },
@@ -28,10 +32,12 @@ const Navbar = {
         {
           title: 'Insurance',
           description: null,
+          url: '/insurance',
         },
         {
           title: 'Retail',
           description: null,
+          url: '/retail',
         },
       ],
     },
