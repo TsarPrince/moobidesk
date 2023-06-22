@@ -13,13 +13,18 @@ import Image from "next/image"
 import Link from "next/link"
 import CommonNav from "@/components/CommonNav"
 import PhoneDisplay from "@/components/whatsapp/PhoneDisplay"
+import SEO from "@/components/SEO"
 
 
 
 const WhatsappPage: NextPage = () => {
   return (
     <>
-      
+      <SEO
+        title="WhatsApp Marketing Solution Singapore - Web API & Sales Solution"
+        description="Moobidesk is your trusted WhatsApp Marketing Solution provider in Singapore. Learn how WhatsApp Web & Business API can transform your customer support now."
+      />
+
       {/* Navbar */}
       <CommonNav/>
 

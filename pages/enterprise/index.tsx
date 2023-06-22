@@ -13,10 +13,15 @@ import FooterSmall from "@/components/Footer/FooterSmall"
 import type { NextPage } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import SEO from "@/components/SEO"
 
 const EnterprisePage: NextPage = () => {
   return (
     <>
+      <SEO
+        title='Cloud Contact Center and Call Center Solutions | Moobidesk Enterprise'
+        description="As a leading cloud contact center and call center solutions provider, Moobidesk helps you manage, track and build the perfect customer relationship."
+      />
       <CommonNav />
 
       <MainBanner>

@@ -13,10 +13,15 @@ import FooterSmall from "@/components/Footer/FooterSmall"
 import type { NextPage } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import SEO from "@/components/SEO"
 
 const CustomerSupportPage: NextPage = () => {
   return (
     <>
+      <SEO
+        description="Modern customer support software solutions that help you grow your business. Moobidesk is an all-in-one customer service & engagement platform that streamlines the help desk support process with modern customer support software solutions."
+        title='Customer Support Solution & Software |  Modern Engagement Platform | Moobidesk'
+      />
       <CommonNav />
 
       <MainBanner>

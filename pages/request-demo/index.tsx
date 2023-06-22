@@ -1,5 +1,6 @@
 import CommonNav from '@/components/CommonNav'
 import FooterSmall from '@/components/Footer/FooterSmall'
+import SEO from '@/components/SEO'
 import DemoForm from '@/components/requestDemo/DemoForm'
 import requestDemo from '@/constants/ReqDemo'
 import type { NextPage } from 'next'
@@ -9,6 +10,11 @@ import React from 'react'
 const RequestDemo: NextPage = () => {
   return (
     <>
+      
+      <SEO
+        title='Moobidesk Request Demo'
+        description='Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better.'
+      />
       {/* NAVBAR */}
       <CommonNav/>
 

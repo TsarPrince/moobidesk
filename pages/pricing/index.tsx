@@ -7,10 +7,15 @@ import MidBanner from "@/components/MidBanner";
 import Question from "@/components/whatsapp/Question";
 import Image from "next/image";
 import CommonNav from "@/components/CommonNav";
+import SEO from "@/components/SEO";
 
 const PricingPage: NextPage = () => {
   return (
     <>
+      <SEO
+        title="Moobidesk Pricing"
+        description="Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better."
+      />
 
       <CommonNav/>
       
