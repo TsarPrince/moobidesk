@@ -7,8 +7,45 @@ export default defineType({
   "fields": [
     defineField({
       "name": "SGDMonthlyPrice",
-      "title": " S G D Monthly Price",
+      "title": " SGD Monthly Price",
       "type": "number"
+    }),
+    defineField({
+      "name": "currencyList",
+      "title": "Currency List",
+      "type": "object",
+      "fields": [
+        {
+          "name": "ARS",
+          "title": "ARS",
+          "type": "number"
+        },
+        {
+          "name": "AUD",
+          "title": "AUD",
+          "type": "number"
+        },
+        {
+          "name": "BGN",
+          "title": "BGN",
+          "type": "number"
+        },
+        {
+          "name": "Rp",
+          "title": "Rp",
+          "type": "number"
+        },
+        {
+          "name": "BRL",
+          "title": "BRL",
+          "type": "number"
+        },
+        {
+          "name": "SGD",
+          "title": " SGD",
+          "type": "number"
+        }
+      ]
     }),
     defineField({
       "name": "section_1",
@@ -33,6 +70,11 @@ export default defineType({
           "type": "string"
         },
         {
+          "name": "discountPercentage",
+          "title": "Discount Percentage",
+          "type": "number"
+        },
+        {
           "name": "plan_1",
           "title": "Plan 1",
           "type": "object",
@@ -51,9 +93,9 @@ export default defineType({
                   "type": "object",
                   "fields": [
                     {
-                      "name": "imageURL",
-                      "title": "Image U R L",
-                      "type": "string"
+                      "name": "image",
+                      "title": "Image",
+                      "type": "image"
                     },
                     {
                       "name": "name",
@@ -61,6 +103,23 @@ export default defineType({
                       "type": "string"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "button",
+              "title": "Button",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
                 }
               ]
             }
@@ -90,9 +149,9 @@ export default defineType({
                   "type": "object",
                   "fields": [
                     {
-                      "name": "imageURL",
-                      "title": "Image U R L",
-                      "type": "string"
+                      "name": "image",
+                      "title": "Image",
+                      "type": "image"
                     },
                     {
                       "name": "name",
@@ -100,6 +159,23 @@ export default defineType({
                       "type": "string"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "button",
+              "title": "Button",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
                 }
               ]
             }
@@ -221,6 +297,28 @@ export default defineType({
           "name": "heading",
           "title": "Heading",
           "type": "string"
+        },
+        {
+          "name": "buttons",
+          "title": "Buttons",
+          "type": "array",
+          "of": [
+            {
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     })

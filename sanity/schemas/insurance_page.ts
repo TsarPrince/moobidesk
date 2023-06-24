@@ -24,6 +24,28 @@ export default defineType({
           "name": "description",
           "title": "Description",
           "type": "string"
+        },
+        {
+          "name": "buttons",
+          "title": "Buttons",
+          "type": "array",
+          "of": [
+            {
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     }),
@@ -41,6 +63,11 @@ export default defineType({
           "name": "description",
           "title": "Description",
           "type": "string"
+        },
+        {
+          "name": "image",
+          "title": "Image",
+          "type": "image"
         }
       ]
     }),
@@ -53,9 +80,9 @@ export default defineType({
           "type": "object",
           "fields": [
             {
-              "name": "imageURL",
-              "title": "Image U R L",
-              "type": "string"
+              "name": "image",
+              "title": "Image",
+              "type": "image"
             },
             {
               "name": "heading",
@@ -74,25 +101,71 @@ export default defineType({
     defineField({
       "name": "section_4",
       "title": "Section 4",
-      "type": "array",
-      "of": [
+      "type": "object",
+      "fields": [
         {
-          "type": "object",
-          "fields": [
+          "name": "heading",
+          "title": "Heading",
+          "type": "string"
+        },
+        {
+          "name": "reasons",
+          "title": "Reasons",
+          "type": "array",
+          "of": [
             {
-              "name": "imageURL",
-              "title": "Image U R L",
-              "type": "string"
-            },
+              "type": "object",
+              "fields": [
+                {
+                  "name": "image",
+                  "title": "Image",
+                  "type": "image"
+                },
+                {
+                  "name": "title",
+                  "title": "Title",
+                  "type": "string"
+                },
+                {
+                  "name": "description",
+                  "title": "Description",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }),
+    defineField({
+      "name": "section_5",
+      "title": "Section 5",
+      "type": "object",
+      "fields": [
+        {
+          "name": "heading",
+          "title": "Heading",
+          "type": "string"
+        },
+        {
+          "name": "buttons",
+          "title": "Buttons",
+          "type": "array",
+          "of": [
             {
-              "name": "title",
-              "title": "Title",
-              "type": "string"
-            },
-            {
-              "name": "description",
-              "title": "Description",
-              "type": "string"
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }

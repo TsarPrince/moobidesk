@@ -5,12 +5,16 @@ const Insurance = {
     title: 'INSURANCE',
     heading: 'Simplify Complexities of your customer support process',
     description: 'The complete helpdesk that manages everything from general enquiries to insurance claims.',
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
   },
 
   section_2: {
     heading: 'Build customer relationships that lasts',
     description: 'Customers prioritize trust when engaging insurers and will subconsciously decide how much they are willing to trust your business based on their first interactions which is usually with your customer support team. Hence, many insurance providers are looking for a platform that allows effortless management of communications to maintain quality customer service. With Moobidesk, conversations from all channels are organized in one place – enabling seamless interactions. And customer context can be easily accessed – allowing agents to deliver personalized responses to establish a strong foundation of trust with your customers.',
-
+    imageURL: '/images/insurance/section_2.png',
   },
 
   // todo: replace with appropriate data, this is dummy data
@@ -37,29 +41,38 @@ const Insurance = {
     },
   ],
 
-  section_4: [
-    {
-      imageURL: '/icons/insurance/icon-1.svg',
-      title: 'Robust security',
-      description: 'Within an insurance company, customer data is shared and circulated. To protect businesses, Moobidesk takes great effort to employ security measures of global standards for information safety and customer confidence. ',
-    },
-    {
-      imageURL: '/icons/insurance/icon-2.svg',
-      title: 'Customizable interface',
-      description: 'With Moobidesk, you can make extensive customizations according to your preferences. Set up a customer support system unique to your needs in a flash and achieve significant customer support structural enhancements.',
-    },
-    {
-      imageURL: '/icons/insurance/icon-3.svg',
-      title: 'Global support',
-      description: 'At Moobidesk, we make ourselves accessible to businesses for quality support round the clock. We cater to companies worldwide and ensure global availability so that you can enjoy excellent assistance regardless of geographical boundaries.',
-    },
-    {
-      imageURL: '/icons/insurance/icon-4.svg',
-      title: 'Straightforward navigation',
-      description: 'Moobidesk is proactively designed to ensure consistent and easy navigation. This way, your agents can explore independently and pick up the new technology quickly. Make handling insurance simple with Moobidesk.',
-    },
-    
-  ]
+  section_4: {
+    heading: 'Why choose Moobidesk',
+    reasons: [
+      {
+        imageURL: '/icons/insurance/icon-1.svg',
+        title: 'Robust security',
+        description: 'Within an insurance company, customer data is shared and circulated. To protect businesses, Moobidesk takes great effort to employ security measures of global standards for information safety and customer confidence. ',
+      },
+      {
+        imageURL: '/icons/insurance/icon-2.svg',
+        title: 'Customizable interface',
+        description: 'With Moobidesk, you can make extensive customizations according to your preferences. Set up a customer support system unique to your needs in a flash and achieve significant customer support structural enhancements.',
+      },
+      {
+        imageURL: '/icons/insurance/icon-3.svg',
+        title: 'Global support',
+        description: 'At Moobidesk, we make ourselves accessible to businesses for quality support round the clock. We cater to companies worldwide and ensure global availability so that you can enjoy excellent assistance regardless of geographical boundaries.',
+      },
+      {
+        imageURL: '/icons/insurance/icon-4.svg',
+        title: 'Straightforward navigation',
+        description: 'Moobidesk is proactively designed to ensure consistent and easy navigation. This way, your agents can explore independently and pick up the new technology quickly. Make handling insurance simple with Moobidesk.',
+      },
+    ]
+  },
+  section_5: {
+    heading: "Ready to transform your business?",
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
+  },
 };
 
 export default Insurance;

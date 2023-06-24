@@ -4,6 +4,10 @@ const Livechat = {
   section_1: {
     heading: 'Offer Instant Help with Live ',
     subheading: 'Give customers the help they need, close sales and resolve issues in no time on your website.',
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
   },
 
   section_2: {
@@ -126,7 +130,10 @@ const Livechat = {
 
   section_6: {
     heading: 'Keep customers engaged and win them over',
-
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
   },
 
 

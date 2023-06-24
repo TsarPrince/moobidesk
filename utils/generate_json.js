@@ -1,265 +1,399 @@
 const data = {
+  SGDMonthlyPrice: 45.00,
+  currencyList: {
+    'ARS': 8349.30,
+    'AUD': 49.50,
+    'BGN': 59.85,
+    'Rp': 5000.00,
+    'BRL': 160.20,
+    'SGD': 45.00,
+  },
+
   section_1: {
-    heading: 'Your Trusted WhatsApp Marketing Solution Provider in Singapore',
-    subheading: 'Customer support made smarter and easier with WhatsApp Business API',
-    buttons: [
-      { text: 'TRY IT FREE', url: '/request-demo', },
-      { text: 'CONTACT US', url: '/#contact-us', },
-    ]
+    heading: 'With Moobidesk, anyone can deliver outstanding customer engagement effortlessly',
   },
 
   section_2: {
-    heading: 'Get Access to WhatsApp Business API with Moobidesk',
-    description: 'As of August 1, 2018, WhatsApp has opened up Application Program Interface (API) for business accounts. As an official WhatsApp Business Solution Partner, we offer a communication and business marketing platform that integrates WhatsApp Business Solutions to take your customer support, sales and marketing in Singapore and beyond to the next level. We will guide you through the entire WhatsApp onboarding process, and help you get your account verified by WhatsApp.',
+    subheading: 'For teams of up to 3 people looking to engage customers on multiple channels',
+    discountPercentage: 20,
+
+    plan_1: {
+      title: 'Plan includes:',
+      features: [
+        {
+          imageURL: '/pricing/plan-1.svg',
+          name: 'A unified easy-to-use interface for all channels',
+        },
+        {
+          imageURL: '/pricing/plan-2.svg',
+          name: 'Get real-time analytics to monitor performance',
+        },
+        {
+          imageURL: '/pricing/plan-3.svg',
+          name: 'Dedicated account manager who can assist and work with you',
+        },
+        {
+          imageURL: '/pricing/plan-4.svg',
+          name: 'Recommended for more than 3 agents',
+        },
+      ],
+      button: { text: 'CONTACT US NOW', url: '/#contact-us', },
+    },
+
+    plan_2: {
+      title: 'All Standard plus:',
+      subheading: 'Advanced features for large teams looking to track, manage and assign chat messages',
+      features: [
+        {
+          imageURL: '/pricing/plan-1x.svg',
+          name: 'Benefit from powerful omnichannel routing',
+        },
+        {
+          imageURL: '/pricing/plan-2x.svg',
+          name: 'Configurable workflow and SLAs to define metrics and optimise business performance',
+        },
+        {
+          imageURL: '/pricing/plan-3x.svg',
+          name: 'Monitor conversations and effectively train agents to achieve the best results.',
+        },
+        {
+          imageURL: '/pricing/plan-4x.svg',
+          name: 'Recommended for up to 10 agents',
+        },
+      ],
+      button: { text: 'CONTACT US NOW', url: '/#contact-us', },
+    },
+
+
   },
 
   section_3: {
-    heading: 'Achieve More with Moobidesk’s WhatsApp Business Marketing & Business Solution in Singapore',
-    subheading: 'Powerful features, Unlimited possibilities',
+    heading: 'Full Plan Comparision',
 
-    cards: [
+    tables: [
       {
-        heading: 'Easy to Use WhatsApp Business API',
-        description: 'Seamless WhatsApp and web API integration to your own apps, sites or systems to send and receive text messages, pictures, audio, links and emojis in Singapore and across the globe.',
-        image: '/whatsapp/icon-1.svg',
+        c1: 'Communication Channels',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: 'SMS',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Voice',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Email',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Line',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Instagram',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Facebook',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Telegram',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Wechat',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'WhatsApp',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Twitter',
+            c1: true,
+            c2: true,
+          },
+          {
+            name: 'Webchat',
+            c1: true,
+            c2: true,
+          },
+        ],
       },
       {
-        heading: 'Fast & Reliable Messaging',
-        description: 'Leverage WhatsApp Business API to send WhatsApp alerts and notifications reliably to communicate and provide great support to your customers.',
-        image: '/whatsapp/icon-2.svg',
+        c1: 'Customer Relationship Management',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "Customer profile",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Contact list management",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Import & export contacts",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Unified omnichannel conversations",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Audit trail",
+            c1: false,
+            c2: true,
+          },
+          {
+            name: "Broadcast messaging",
+            c1: false,
+            c2: true,
+          },
+        ],
       },
       {
-        heading: 'Multi-Agent Support',
-        description: 'Customer queries, requests or feedback sent via WhatsApp can be managed and handled by several agents at the same time.',
-        image: '/whatsapp/icon-3.svg',
+        c1: 'Agent Productivity',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "Suggested responses",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Unified search",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Agent collision detection",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Auto responders",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Agent collaboration",
+            c1: false,
+            c2: true,
+          }
+
+        ],
       },
       {
-        heading: 'AI Powered Chatbots',
-        description: 'Use chatbots to answer customer queries automatically and cut customer service overhead costs. Automate answers to repetitive questions and let your team focus on more important tasks.',
-        image: '/whatsapp/icon-4.svg',
+        c1: 'Contact Center Features',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "SLA management",
+            c1: false,
+            c2: true,
+          },
+          {
+            name: "SLA alerts",
+            c1: false,
+            c2: true,
+          },
+          {
+            name: "Call/Message transfer",
+            c1: false,
+            c2: true,
+          },
+          {
+            name: "Custom aux code",
+            c1: false,
+            c2: true,
+          },
+          {
+            name: "Agent management",
+            c1: false,
+            c2: true,
+          },
+          {
+            name: "Queue management",
+            c1: false,
+            c2: true,
+          }
+
+        ],
       },
       {
-        heading: 'Secure End-To-End Messaging',
-        description: 'Communicate securely with your customers using WhatsApp Business API’s reliable end-to-end encryption which ensures messages are turned into a secret message and decoded only by its final recipient.',
-        image: '/whatsapp/icon-5.svg',
+        c1: 'Intelligent Routing',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "Multichannel priority routing",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Chat routing using round-robin and pick-me method",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Skills-based routing",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Smart omnichannel routing & artificial intelligence",
+            c1: true,
+            c2: true,
+          }
+
+        ],
       },
       {
-        heading: 'Analytics & Reporting',
-        description: 'Gain insight into your team’s performance and use the metrics to anticipate customer needs and increase satisfaction through our interactive dashboard.',
-        image: '/whatsapp/icon-6.svg',
+        c1: 'Analytics and Reporting',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "Chat and agent reports",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Agent dashboard",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Supervisor dashboard",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Wallboard",
+            c1: true,
+            c2: true,
+          }
+
+        ],
+      },
+      {
+        c1: 'Integration',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "CRM integration",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "API",
+            c1: true,
+            c2: true,
+          }
+
+        ],
+      },
+      {
+        c1: 'Customer Support',
+        c2: 'Standard',
+        c3: 'Enterprise',
+
+        rows: [
+          {
+            name: "Email support",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Web Chat support",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "SMS support",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "WhatsApp support",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "Dedicated account manager",
+            c1: true,
+            c2: true,
+          },
+          {
+            name: "One-to-one onboarding session",
+            c1: true,
+            c2: true,
+          }
+
+        ],
       },
 
     ],
   },
 
   section_4: {
-    heading: 'Benefits of Moobidesk’s WhatsApp Business Solution in Singapore',
-
-    panels: [
-      {
-        heading: 'Drive High-Level Customer Experience',
-        description: 'Having a comprehensive understanding of your customer is key to creating great customer experiences and customer-driven business marketing. With Moobidesk’s WhatsApp Business API, your agents will obtain access to customer profile and preferences such as their purchase history, preferred flight seating, or if they go by Bella instead of Isabella.',
-        imageURL: '/whatsapp/panel-1.jpg',
-      },
-      {
-        heading: 'Accelerate your Team’s Productivity',
-        description: 'With Moobidesk’s WhatsApp sales solution, several agents can now easily handle multiple, simultaneous chats at once, and escalate chats to a supervisor whenever they require further assistance. This is unlike WhatsApp web where only one agent can serve customers at any given time.',
-        imageURL: '/whatsapp/panel-2.jpg',
-      },
-      {
-        heading: 'Enhance Customer Engagement at Scale',
-        description: 'Even the most sophisticated bot will eventually encounter a complex issue it can’t solve. Moobidesk’s WhatsApp Business Solution leverages the bot + human hybrid to empower your customer support in Singapore and overseas to reduce customer fallouts and response time. WhatsApp messages are intelligently and seamlessly routed to the right agent when the bot encounters a problem.',
-        imageURL: '/whatsapp/panel-3.jpg',
-      },
-    ],
-  },
-
-
-  section_5: {
-    heading: 'Let’s Compare',
-    subheading: 'Moobidesk + WhatsApp Business VS WhatsApp Web',
-
-    tabular: {
-      topic1: ' Moobidesk + WhatsApp Business',
-      topic2: 'WhatsApp Web',
-      rowDetails: [
-        {
-          title: 'Send/receive messages',
-          isTopic1: true,
-          isTopic2: true,
-        },
-        {
-          title: 'Auto replies',
-          isTopic1: true,
-          isTopic2: true,
-        },
-        {
-          title: 'Multiple agents',
-          isTopic1: true,
-          isTopic2: false,
-        },
-        {
-          title: 'Ticket management',
-          isTopic1: true,
-          isTopic2: false,
-        },
-        {
-          title: '360-degree customer view',
-          isTopic1: true,
-          isTopic2: false,
-        },
-        {
-          title: 'Transfer chats between agents',
-          isTopic1: true,
-          isTopic2: false,
-        },
-        {
-          title: 'Skill-based routing',
-          isTopic1: true,
-          isTopic2: false,
-        },
-        {
-          title: 'Chat and agent reports',
-          isTopic1: true,
-          isTopic2: false,
-        },
-        {
-          title: 'API',
-          isTopic1: true,
-          isTopic2: false,
-        },
-      ],
-    },
-  },
-
-  section_6: {
-    heading: 'Perfect for All Businesses',
-    subheading: 'Let’s take a look at some creative ways’ our clients are using our WhatsApp business API today.',
-
-    icons: [
-      {
-        url: '/whatsapp/phone-icon/icon-1.svg',
-        name: 'retail',
-        photo: '/whatsapp/ui-r1.png',
-      },
-      {
-        url: '/whatsapp/phone-icon/icon-2.svg',
-        name: 'travel',
-        photo: '/whatsapp/ui-r2.png',
-      },
-      {
-        url: '/whatsapp/phone-icon/icon-3.svg',
-        name: 'restaurant',
-        photo: '/whatsapp/ui-r3.png',
-      },
-      {
-        url: '/whatsapp/phone-icon/icon-4.svg',
-        name: 'insurance',
-        photo: '/whatsapp/ui-r4.png',
-      },
-      {
-        url: '/whatsapp/phone-icon/icon-5.svg',
-        name: 'beauty',
-        photo: '/whatsapp/ui-r5.png',
-      },
-      {
-        url: '/whatsapp/phone-icon/icon-6.svg',
-        name: 'more',
-        photo: '/whatsapp/ui-r6.png',
-      },
-    ],
-  },
-
-  section_7: {
-    heading: 'Clients We Serve',
-    clients: [
-      '/whatsapp/clients/client-1.png',
-      '/whatsapp/clients/client-2.png',
-      '/whatsapp/clients/client-3.png',
-      '/whatsapp/clients/client-4.png',
-      '/whatsapp/clients/client-5.png',
-      '/whatsapp/clients/client-6.png',
-      '/whatsapp/clients/client-7.png',
-      '/whatsapp/clients/client-8.png',
-      '/whatsapp/clients/client-9.png',
-      '/whatsapp/clients/client-10.png',
-      '/whatsapp/clients/client-11.png',
-      '/whatsapp/clients/client-12.png',
-      '/whatsapp/clients/client-13.png',
-      '/whatsapp/clients/client-14.png',
-      '/whatsapp/clients/client-15.png',
-      '/whatsapp/clients/client-16.png',
-      '/whatsapp/clients/client-17.png',
-      '/whatsapp/clients/client-18.png',
-      '/whatsapp/clients/client-19.png',
-      '/whatsapp/clients/client-20.png',
-      '/whatsapp/clients/client-21.png',
-      '/whatsapp/clients/client-22.png',
-      '/whatsapp/clients/client-23.png',
-      '/whatsapp/clients/client-24.png',
-    ],
-  },
-
-  section_8: {
     heading: 'A Few Frequently Asked Questions',
-    subheading: 'Looking for something else? Let’s talk.',
 
     questions: [
       {
-        question: 'How long does it take to get my WhatsApp Business account verified?',
-        answer: [`We work with WhatsApp partners to seamlessly onboard you on to WhatsApp. It takes about a week for WhatsApp to approve your WhatsApp Business account.`],
+        question: 'What’s an agent?',
+        answer: ['An agent is anyone in your company that will interact with customers. Each rep, admin, manager and supervisor needs their own agent account. Add as many agents as you want on any plan.'],
       },
       {
-        question: 'Why do I need to use Moobidesk with my WhatsApp business account?',
-        answer: ['Moobidesk has everything a business needs to effectively manage, track and build better customer relationships. Customer requests will become tickets within Moobidesk, and agents can respond efficiently through WhatsApp within Moobicast.'],
+        question: 'Will my data be private and safe?',
+        answer: ['Absolutely! All your records are private, therefore only you can view and use them.'],
       },
       {
-        question: 'How do I start using the Moobidesk’s WhatsApp Solution in Singapore?',
-        answer: ['Simply head to the top of the page, enter your work email and hit “Try it today” to apply. Once you\'ve signed up, you will receive more information about the next steps and be contacted by one of our sales representatives to guide you through the process.'],
+        question: 'Can I cancel my plan at any time?',
+        answer: ['Yes. Even if we hope that it won’t be necessary, you can cancel your subscription whenever you believe Moobidesk is no longer helping you with your business.'],
       },
       {
-        question: 'What is the difference between WhatsApp Business and WhatsApp Business API account?',
-        answer: [
-          'There are two types of WhatsApp business APP. ',
-          'WhatsApp Business : WhatsApp Business is catered to small businesses and it is limited to just one user. You have to utilise a smartphone to engage with your customers or prospects.',
-          ' WhatsApp Business API :  WhatsApp Business API is for medium to large enterprises that have more than one user who needs to engage with your audience. Moobidesk is an ideal customer engagement and business marketing solution for you to connect with your customers or prospects via WhatsApp Web API.',
-        ],
-      },
-      {
-        question: 'How do I set up a WhatsApp Business API account?',
-        answer: [
-          ' You have to apply through a WhatsApp business partner and your account has to be approved before you can start using WhatsApp Business. ',
-          'Feel free to contact us if you are looking to apply for a WhatsApp Business API account.',
-        ],
-      },
-      {
-        question: 'How much does it cost for WhatsApp Business and WhatsApp Business API?',
-        answer: [
-          'WhatsApp Business : You can send FREE unlimited messages and no approval of content is required.',
-          'WhatsApp Business API : There are two types of content that you can send. Session Messages - Any message sent from your audience and responded by your team within 24hrs is considered as a Session message and you can send any message that you want with no approval of content required from WhatsApp. After 24hrs, you can only send template messages and template messages are chargeable by WhatsApp. ',
-          'Template Messages - Template messages must be pre-approved by WhatsApp. To initiate a conversation with your audience without them first messaging you, you have to use a template message. ',
-          'For more information on WhatsApp template message cost, see https://developers.facebook.com/docs/whatsapp/pricing/.',
-        ],
-      },
-      {
-        question: 'Can I use WhatsApp Business API account to send a broadcast?',
-        answer: ['Yes, you can. However, you can only use your approved template messages by WhatsApp to send broadcast messages.'],
-      },
-      {
-        question: 'Can I enable a Chatbot for my WhatsApp Business API account? ',
-        answer: ['Yes, you can. If you are looking for a Chatbot solution, please feel free to contact us.'],
+        question: 'Can I integrate Moobidesk with my CRM?',
+        answer: ['Currently Moobidesk only provides integration with SugarCRM. If you wish to integrate with a different CRM solution, please contact us.'],
       },
     ],
   },
-  section_9: {
-    heading: "Ready to transform your business?",
+
+  section_5: {
+    heading: "Contact our sales team to find out more.",
     buttons: [
-      { text: 'TRY IT FREE', url: '/request-demo', },
       { text: 'CONTACT US', url: '/#contact-us', },
     ]
-  }
+  },
 };
-
-
 const fs = require('fs')
 fs.writeFileSync('./utils/data.json', JSON.stringify(data, null, 2))

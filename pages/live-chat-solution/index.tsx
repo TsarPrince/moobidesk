@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MidBanner from "@/components/MidBanner";
 import FooterSmall from "@/components/Footer/FooterSmall";
-import Question from "@/components/whatsapp/Question";
+import Question from "@/components/Whatsapp/Question";
 import CommonNav from "@/components/CommonNav";
 import SEO from "@/components/SEO";
 
@@ -19,9 +19,9 @@ const LiveChatPage: NextPage = () => {
         title="Live Chat Solution Singapore | Live Chat Customer Support for Your Website"
         description="Say More to Customer Growth, Loyalty and Sales with Moobidesk’s Live Chat Solution in Singapore. Moobidesk’s Live Chat Solution in Singapore is Your Ideal Customer Support Tool. Live Chat for Customer-Focused Businesses"
       />
-      
+
       {/* NAVBAR */}
-      <CommonNav/>
+      <CommonNav />
 
       <MainBanner bgURL="bg-[url('/livechat/mobile-banner.jpg')] pt-20 bg-cover bg-center lg:bg-[url('/livechat/full-banner.png')]">
         <div className="text-white px-2 max-w-3xl mx-auto lg:mx-0 lg:mr-auto">
@@ -30,13 +30,15 @@ const LiveChatPage: NextPage = () => {
 
           {/* buttons */}
           <div className="flex flex-col lg:relative lg:top-80 lg:left-44 pb-48  sm:flex-row items-center lg:justify-start justify-center gap-3 sm:gap-6">
-            <Link href={'/signup'}>
-              <GeneralButton>TRY IT FREE</GeneralButton>
+            <Link href={Livechat.section_1.buttons[0]?.url}>
+              <GeneralButton>
+                {Livechat.section_1.buttons[0]?.text}
+              </GeneralButton>
             </Link>
-            <Link href={'/'}>
-              <GeneralButton
-                twColor="bg-tertiary-dark-blue"
-              >CONTACT US</GeneralButton>
+            <Link href={Livechat.section_1.buttons[1]?.url}>
+              <GeneralButton twColor="bg-tertiary-dark-blue">
+                {Livechat.section_1.buttons[1]?.text}
+              </GeneralButton>
             </Link>
           </div>
         </div>
@@ -125,13 +127,16 @@ const LiveChatPage: NextPage = () => {
         heading={Livechat.section_6.heading}
         bg="bg-tertiary"
       >
-        <Link href={'/signup'} className="ml-auto mr-4">
-          <GeneralButton>TRY LIVECHAT FREE</GeneralButton>
+
+        <Link href={Livechat.section_6.buttons[0]?.url}>
+          <GeneralButton>
+            {Livechat.section_6.buttons[0]?.text}
+          </GeneralButton>
         </Link>
-        <Link href={'/request-demo'} className="mr-auto ml-4">
-          <GeneralButton
-            twColor="bg-tertiary-dark-blue"
-          >CONTACT US</GeneralButton>
+        <Link href={Livechat.section_6.buttons[1]?.url}>
+          <GeneralButton twColor="bg-tertiary-dark-blue">
+            {Livechat.section_6.buttons[1]?.text}
+          </GeneralButton>
         </Link>
       </MidBanner>
 

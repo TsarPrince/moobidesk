@@ -19,6 +19,28 @@ export default defineType({
           "name": "subheading",
           "title": "Subheading",
           "type": "string"
+        },
+        {
+          "name": "buttons",
+          "title": "Buttons",
+          "type": "array",
+          "of": [
+            {
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     }),
@@ -58,7 +80,7 @@ export default defineType({
                 {
                   "name": "image",
                   "title": "Image",
-                  "type": "string"
+                  "type": "image"
                 }
               ]
             }
@@ -100,9 +122,9 @@ export default defineType({
                   "type": "string"
                 },
                 {
-                  "name": "imageURL",
-                  "title": "Image U R L",
-                  "type": "string"
+                  "name": "image",
+                  "title": "Image",
+                  "type": "image"
                 }
               ]
             }
@@ -131,7 +153,7 @@ export default defineType({
           "type": "array",
           "of": [
             {
-              "type": "string"
+              "type": "image"
             }
           ]
         }
@@ -190,6 +212,28 @@ export default defineType({
           "name": "heading",
           "title": "Heading",
           "type": "string"
+        },
+        {
+          "name": "buttons",
+          "title": "Buttons",
+          "type": "array",
+          "of": [
+            {
+              "type": "object",
+              "fields": [
+                {
+                  "name": "text",
+                  "title": "Text",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "title": "Url",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     })

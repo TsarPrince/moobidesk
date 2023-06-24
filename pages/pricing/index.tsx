@@ -17,8 +17,8 @@ const PricingPage: NextPage = () => {
         description="Moobidesk integrates all the essential communication touchpoints such as WhatsApp, SMS, Voice, Email, Facebook, Instagram and many more channels into one common interface for you to engage your customers better."
       />
 
-      <CommonNav/>
-      
+      <CommonNav />
+
       {/* SECTION 1 */}
       <MainBanner
         bgURL="bg-[url('/hero-pricing.png')] bg-cover bg-center sm:bg-[url('/hero-pricing-2.jpg')]">
@@ -105,8 +105,8 @@ const PricingPage: NextPage = () => {
 
       {/* SECTION 5 */}
       <MidBanner
-        buttonText="CONTACT US"
-        link="/request-demo"
+        buttonText={Pricing.section_5.buttons[0]?.text}
+        link={Pricing.section_5.buttons[0]?.url}
         bg="bg-tertiary"
         heading={Pricing.section_5.heading}
       />

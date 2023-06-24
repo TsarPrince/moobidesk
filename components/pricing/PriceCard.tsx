@@ -1,15 +1,28 @@
 import Pricing from "@/constants/Pricing";
-import { currencyList } from "@/constants/Pricing";
 import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 import GeneralButton from "../GeneralButton";
+import Link from "next/link";
+
+
+function getPrice(price: number, pricing: boolean, currency: string, discountPercentage: number) {
+
+  // get the price in currency
+  price = Pricing.currencyList[currency as keyof typeof Pricing.currencyList];
+
+  // if discount then apply it
+  if (pricing) {
+    price = price * (discountPercentage / 100.00);
+  }
+  return price.toFixed(2);
+}
 
 const PriceCard = () => {
 
   // true : yearly
   // false : monthly
   const [pricing, setPricing] = useState(true);
-  const [currency, setCurrency] = useState('SGD');
+  const [currency, setCurrency] = useState('Rp');
 
   let price = getPrice(Pricing.SGDMonthlyPrice, pricing, currency, Pricing.section_2.discountPercentage);
 
@@ -20,13 +33,13 @@ const PriceCard = () => {
 
   function handleCurrencyChange(event: ChangeEvent<HTMLSelectElement>) {
     setCurrency(event.target.value);
-  } 
+  }
 
   return (
 
     <>
       <div className="flex flex-col justify-center items-center">
-      
+
         {/* selectors */}
         <div className="flex flex-col lg:flex-row lg:gap-20 items-center justify-center">
           {/* pricing toggler  */}
@@ -37,7 +50,7 @@ const PriceCard = () => {
 
             <div className="w-14 p-1 rounded-full bg-tertiary flex mr-4"
               onClick={() => setPricing(((pricing) => !pricing))}
-              >
+            >
               <div className={`transition-all w-7 h-7 bg-white rounded-full ${selectorClass}`}>
 
               </div>
@@ -55,14 +68,12 @@ const PriceCard = () => {
           {/* currency selector */}
           <div className="flex gap-4 items-center mb-10 text-sm lg:mb-16">
             <div>Currency</div>
-            
+
             <select id="to_currency"
-              className="p-2"
-              defaultValue={'SGD'}
+              className="p-2 min-w-[16rem]"
+              defaultValue={'Rp'}
               onChange={(ev) => handleCurrencyChange(ev)}
-              >
-              <option
-                value="AED">Arab Emirates Dirham (AED)</option>
+            >
               <option
                 value="ARS">Argentina (ARS)</option>
               <option
@@ -72,97 +83,9 @@ const PriceCard = () => {
               <option
                 value="BRL">BRL (Brazil)</option>
               <option
-                value="BSD">BSD (Bahamas)</option>
-              <option
-                value="CAD">Canada (CAD)</option>
-              <option
-                value="CHF">Switzerland (CHF)</option>
-              <option
-                value="CLP">Chile (CLP)</option>
-              <option
-                value="CNY">China (CNY)</option>
-              <option
-                value="COP">Colombia (COP)</option>
-              <option
-                value="CZK"> Czechia (CZK)</option>
-              <option
-                value="DKK">Denmark (DKK)</option>
-              <option
-                value="DOP">Dominican Republic (DOP)</option>
-              <option
-                value="EGP">Egypt (EGP)</option>
-              <option
-                value="EUR">European Union (EUR)</option>
-              <option
-                value="FJD">Fiji (FJD)</option>
-              <option
-                value="GBP"> Britain (GBP)</option>
-              <option
-                value="GTQ">Guatemala (GTQ)</option>
-              <option
-                value="HKD">Hong Kong (HKD)</option>
-              <option
-                value="HRK">Croatia (HRK)</option>
-              <option
-                value="HUF">Hungary (HUF)</option>
-              <option
-                value="IDR">Indonesian (IDR)</option>
-              <option
-                value="ILS">Israel (ILS)</option>
-              <option
-                value="INR">India (INR)</option>
-              <option
-                value="ISK">Iceland (ISK)</option>
-              <option
-                value="JPY">Japan (JPY)</option>
-              <option
-                value="KRW">Korea (KRW)</option>
-              <option
-                value="KZT">Kazakhstan (KZT)</option>
-              <option
-                value="MXN">Mexico (MXN)</option>
-              <option
-                value="MYR">Malaysia (MYR)</option>
-              <option
-                value="NOK">Norway (NOK)</option>
-              <option
-                value="NZD">New Zealand (NZD)</option>
-              <option
-                value="PAB">Panama (PAB)</option>
-              <option
-                value="PEN">Peru (PEN)</option>
-              <option
-                value="PHP">Philippine (PHP)</option>
-              <option
-                value="PKR">Pakistani (PKR)</option>
-              <option
-                value="PLN">Poland (PLN)</option>
-              <option
-                value="PYG">Paraguay (PYG)</option>
-              <option
-                value="RON">Romanian (RON)</option>
-              <option
-                value="RUB">Russia (RUB)</option>
-              <option
-                value="SAR">Saudi Arabia (SAR)</option>
-              <option
-                value="SEK">Sweden (SEK)</option>
+                value="Rp"> Indonesian Rupiah (Rp)</option>
               <option
                 value="SGD"> Singapore (SGD)</option>
-              <option
-                value="THB">Thailand (THB)</option>
-              <option
-                value="TRY">Turkish Republic (TRY)</option>
-              <option
-                value="TWD">the Republic of China (TWD)</option>
-              <option
-                value="UAH">Ukraine (UAH)</option>
-              <option
-                value="USD">The United States (USD)</option>
-              <option
-                value="UYU">Uruguayan (UYU)</option>
-              <option
-                value="ZAR">South African rand (ZAR)</option>
             </select>
           </div>
 
@@ -206,7 +129,9 @@ const PriceCard = () => {
             </div>
 
             <div className=" mt-auto">
-              <GeneralButton>CONTACT US NOW</GeneralButton>
+              <Link href={Pricing.section_2.plan_1.button.url}>
+                <GeneralButton>{Pricing.section_2.plan_1.button.text}</GeneralButton>
+              </Link>
             </div>
           </div>
 
@@ -251,28 +176,15 @@ const PriceCard = () => {
               </div>
             </div>
             <div className="mt-auto">
-              <GeneralButton>CONTACT US NOW</GeneralButton>
+              <Link href={Pricing.section_2.plan_2.button.url}>
+                <GeneralButton>{Pricing.section_2.plan_2.button.text}</GeneralButton>
+              </Link>
             </div>
           </div>
-
         </div>
       </div>
-
-      
     </>
   )
-}
-
-function getPrice(price: number, pricing: boolean, currency: string, discountPercentage: number) {
-  
-  // get the price in currency
-  price = (currencyList[currency])
-
-  // if discount then apply it
-  if (pricing) {
-    price = price * (discountPercentage/100.00);
-  }
-  return price.toFixed(2);
 }
 
 

@@ -5,13 +5,16 @@ const Retail = {
     cap_heading: 'RETAIL',
     heading: 'The simple solution for seamless customer support',
     subheading: 'The all-in-one platform to help you keep conversations organized and customers satisfied.',
-
-  },  
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
+  },
 
   section_2: {
     heading: 'Establish lasting customer connections',
     subheading: 'Today, consumers view customer interactions as an increasingly important factor when making purchases. Retailers have also witnessed a greater volume of enquiries as customers seek to grasp as much information as possible to make well-informed purchases. With Moobidesk, conversations are systematically organized in one place – for timely responses to customer enquiries. Conversation histories across channels and customer information are also instantly accessible – allowing you to deliver experiences that grows customer loyalty and strengthens relationships.',
-
+    imageURL: '/images/insurance/section_2.png',
   },
 
   // todo: replace with appropriate data, this is dummy data
@@ -37,35 +40,44 @@ const Retail = {
       description: 'Moobidesk allows you to import customer contacts onto the platform alongside instant access to chat histories for agents to paint a concise picture of who is at the other end of the line. Agents can accurately address each customers’ concerns and deliver continuous conversations for an interpersonal experience that exceeds customer expectations.',
     },
     {
-      imageURL: '/retail/panel-4.png',
+      imageURL: '/retail/panel-5.png',
       heading: 'Centralized omnichannel interaction',
       description: 'Giving customers the freedom to choose between channels may often result in increased efforts and confusion on your end. Moobidesk integrates various channels into one interface and directs all enquiries to the same platform so that you can give customers the optimal omnichannel experience while reducing effort in handling customer communications.',
     },
   ],
 
-  section_4: [
-    {
-      imageURL: '/icons/icon-retail-1.svg',
-      title: 'User-friendly interface',
-      description: 'Our platform is designed to ensure efficiency from the beginning with smooth user flow and straightforward navigation. With Moobidesk, your customer support team will be able to familiarize themselves with the new interface promptly and start interacting with your customers in no time.',
-    },
-    {
-      imageURL: '/icons/icon-retail-2.svg',
-      title: 'Customer oriented service',
-      description: 'At Moobidesk, customer service is never an afterthought. We are here for you every step of the way to answer your queries and ensure that your interface runs smoothly. Catering to a global audience, we extend our support to wherever your business is for comprehensive coverage and accessible support at all times.',
-    },
-    {
-      imageURL: '/icons/icon-retail-3.svg',
-      title: 'Fuss-free set up',
-      description: 'Our ready-to-go platform has all the necessary infrastructures put in place for easy set up on your end. We offer self-onboarding for various channels so that you can get your interface up and going without back-end activation. Set up your channels, make some customizations and you are done – it’s that simple.',
-    },
-    {
-      imageURL: '/icons/icon-retail-4.svg',
-      title: 'Advanced information security',
-      description: 'In view of ever-evolving cyberthreats, we take extensive measures to keep your information safe. The world class security infrastructures put in place give our clients the confidence they need to store valuable customer information and manage customer relationships using Moobidesk.',
-    },
-    
-  ]
+  section_4: {
+    heading: 'Why choose Moobidesk',
+    reasons: [
+      {
+        imageURL: '/icons/icon-retail-1.svg',
+        title: 'User-friendly interface',
+        description: 'Our platform is designed to ensure efficiency from the beginning with smooth user flow and straightforward navigation. With Moobidesk, your customer support team will be able to familiarize themselves with the new interface promptly and start interacting with your customers in no time.',
+      },
+      {
+        imageURL: '/icons/icon-retail-2.svg',
+        title: 'Customer oriented service',
+        description: 'At Moobidesk, customer service is never an afterthought. We are here for you every step of the way to answer your queries and ensure that your interface runs smoothly. Catering to a global audience, we extend our support to wherever your business is for comprehensive coverage and accessible support at all times.',
+      },
+      {
+        imageURL: '/icons/icon-retail-3.svg',
+        title: 'Fuss-free set up',
+        description: 'Our ready-to-go platform has all the necessary infrastructures put in place for easy set up on your end. We offer self-onboarding for various channels so that you can get your interface up and going without back-end activation. Set up your channels, make some customizations and you are done – it’s that simple.',
+      },
+      {
+        imageURL: '/icons/icon-retail-4.svg',
+        title: 'Advanced information security',
+        description: 'In view of ever-evolving cyberthreats, we take extensive measures to keep your information safe. The world class security infrastructures put in place give our clients the confidence they need to store valuable customer information and manage customer relationships using Moobidesk.',
+      },
+    ]
+  },
+  section_5: {
+    heading: "Ready to transform your business?",
+    buttons: [
+      { text: 'TRY IT FREE', url: '/request-demo', },
+      { text: 'CONTACT US', url: '/#contact-us', },
+    ]
+  },
 };
 
 export default Retail;
