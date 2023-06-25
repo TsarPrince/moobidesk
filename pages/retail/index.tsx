@@ -2,7 +2,7 @@ import GeneralButton from "@/components/GeneralButton";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Retail from "@/constants/Retail";
+// import Retail from "@/constants/Retail";
 import KeyFeaturePanel from "@/components/KeyFeaturePanel";
 import InsuranceCard from "@/components/insurance/InsuranceCard";
 import FooterSmall from "@/components/Footer/FooterSmall";
@@ -10,7 +10,21 @@ import CommonNav from "@/components/CommonNav";
 import SEO from "@/components/SEO";
 import BlueSection from "@/components/BlueSection";
 
+import { useContext } from 'react'
+import { AppContext } from 'context/appContext'
+import { RetailPage } from 'sanity/schema'
+import { urlFor } from 'lib/client'
+
 const RetailPage: NextPage = () => {
+  const { data } = useContext(AppContext)
+  let Retail: RetailPage | undefined
+  if (data) {
+    data?.forEach(doc => {
+      if (doc?._type === 'retailPage') {
+        Retail = doc
+      }
+    })
+  }
   return (
     <>
 
@@ -28,21 +42,21 @@ const RetailPage: NextPage = () => {
 
           {/* banner content */}
           <div className="flex flex-col sm:mt-16 gap-4 sm:gap-6 xl:mx-[7%]">
-            <h5 className="text-xs sm:text-sm text-center sm:text-left">{Retail.section_1.cap_heading}</h5>
-            <h1 className="text-2xl sm:text-4xl text-center sm:text-left w-max-[60%] sm:max-w-[40rem]">{Retail.section_1.heading}</h1>
-            <h3 className="text-center sm:text-xl sm:text-left w-max-[60%] sm:max-w-[40rem]">{Retail.section_1.subheading}</h3>
+            <h5 className="text-xs sm:text-sm text-center sm:text-left">{Retail?.section_1?.cap_heading}</h5>
+            <h1 className="text-2xl sm:text-4xl text-center sm:text-left w-max-[60%] sm:max-w-[40rem]">{Retail?.section_1?.heading}</h1>
+            <h3 className="text-center sm:text-xl sm:text-left w-max-[60%] sm:max-w-[40rem]">{Retail?.section_1?.subheading}</h3>
 
-            {/* 2 banner buttons */}
+            {/* 2 banner buttons?. */}
             <div className="flex flex-col sm:flex-row gap-3 mt-8 items-center">
 
-              <Link href={Retail.section_1.buttons[0]?.url}>
+              <Link href={Retail?.section_1?.buttons?.[0]?.url || '/'}>
                 <GeneralButton>
-                  {Retail.section_1.buttons[0]?.text}
+                  {Retail?.section_1?.buttons?.[0]?.text}
                 </GeneralButton>
               </Link>
-              <Link href={Retail.section_1.buttons[1]?.url}>
+              <Link href={Retail?.section_1?.buttons?.[1]?.url || '/'}>
                 <GeneralButton twColor="bg-tertiary-dark-blue">
-                  {Retail.section_1.buttons[1]?.text}
+                  {Retail?.section_1?.buttons?.[1]?.text}
                 </GeneralButton>
               </Link>
             </div>
@@ -53,16 +67,16 @@ const RetailPage: NextPage = () => {
 
       {/* SECTION 2 BUILD CUSTOMER RELATIONSHIP */}
       <section className="py-14 bg-tertiary px-4 sm:px-0">
-        <h1 className="text-white text-center text-2xl max-w-md mx-auto sm:max-w-4xl sm:text-3xl">{Retail.section_2.heading}</h1>
+        <h1 className="text-white text-center text-2xl max-w-md mx-auto sm:max-w-4xl sm:text-3xl">{Retail?.section_2?.heading}</h1>
 
         <div className="flex flex-col sm:flex-col-reverse gap-4 mt-8 max-w-[60rem] mx-auto">
           <Image
             className=" w-[90%] mx-auto"
-            src={Retail.section_2.imageURL}
+            src={urlFor(Retail?.section_2?.image).url()}
             alt="customer relation image"
             width={1000} height={600} />
           <p className="px-3 sm:text-lg text-center text-white">
-            {Retail.section_2.subheading}
+            {Retail?.section_2?.subheading}
           </p>
         </div>
       </section>
@@ -73,11 +87,13 @@ const RetailPage: NextPage = () => {
         <div className="2xl:container mx-auto">
 
           <div className="flex flex-col gap-16">
-            {Retail.panels.map((panel, index) => (
+            {Retail?.panels?.map((panel, index) => (
               <KeyFeaturePanel
                 pos_left={(index % 2 ? false : true)}
                 key={index}
-                {...panel}
+                description={panel.description}
+                heading={panel.heading}
+                imageURL={urlFor(panel.image).url()}
                 extraLarge={true}
               />
             ))}
@@ -89,13 +105,15 @@ const RetailPage: NextPage = () => {
       {/* SECTION 4 WHY CHOOSE MOBIDESK */}
       <section className=" bg-tertiary-dark-blue">
         <div className="2xl:container mx-auto py-20">
-          <h1 className="text-2xl text-center text-white font-medium">{Retail.section_4.heading}</h1>
+          <h1 className="text-2xl text-center text-white font-medium">{Retail?.section_4?.heading}</h1>
 
           <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 xl:justify-evenly  pt-16 px-6 justify-center items-center">
-            {Retail.section_4.reasons.map((card, index) => (
+            {Retail?.section_4?.reasons?.map((card, index) => (
               <InsuranceCard
                 key={index}
-                {...card}
+                title={card.title}
+                description={card.description}
+                imageURL={urlFor(card.image).url()}
               />
             ))}
           </div>
@@ -104,16 +122,16 @@ const RetailPage: NextPage = () => {
 
 
       {/* END BANNER DARK BLUE */}
-      <BlueSection heading={Retail.section_5.heading}>
+      <BlueSection heading={Retail?.section_5?.heading}>
         <div className="flex justify-center gap-6">
-          <Link href={Retail.section_5.buttons[0]?.url}>
+          <Link href={Retail?.section_5?.buttons?.[0]?.url || '/'}>
             <GeneralButton>
-              {Retail.section_5.buttons[0]?.text}
+              {Retail?.section_5?.buttons?.[0]?.text}
             </GeneralButton>
           </Link>
-          <Link href={Retail.section_5.buttons[1]?.url}>
+          <Link href={Retail?.section_5?.buttons?.[1]?.url || '/'}>
             <GeneralButton twColor="bg-tertiary-dark-blue">
-              {Retail.section_5.buttons[1]?.text}
+              {Retail?.section_5?.buttons?.[1]?.text}
             </GeneralButton>
           </Link>
         </div>

@@ -2,8 +2,8 @@ import { useState } from "react";
 import Image from "next/image";
 
 type Props = {
-  question: string,
-  answer : string[],
+  question?: string,
+  answer?: string[],
 };
 
 const Question = (props: Props) => {
@@ -42,7 +42,7 @@ const Question = (props: Props) => {
         </div>
 
         {showAns && <div className="max-w-md sm:max-w-xl">
-          {props.answer.map((answer, index) => (
+          {props.answer?.map((answer, index) => (
             <div key={index} className="my-2">
               <p className="text-sm sm:text-base">{answer}</p>
             </div>

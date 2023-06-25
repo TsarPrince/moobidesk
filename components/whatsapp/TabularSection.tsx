@@ -2,12 +2,12 @@
 import Image from "next/image";
 
 type Props = {
-  topic1: string,
-  topic2: string,
-  rowDetails: {
-    title: string,
-    isTopic1: boolean,
-    isTopic2: boolean
+  topic1?: string,
+  topic2?: string,
+  rowDetails?: {
+    title?: string,
+    isTopic1?: boolean,
+    isTopic2?: boolean
   }[],
 };
 
@@ -30,20 +30,20 @@ const TabularSection = (props: Props) => {
               {props.topic2}
             </div>
           </div>
-          <hr/>
-          {props.rowDetails.map((row, index) => {
+          <hr />
+          {props.rowDetails?.map((row, index) => {
 
             const sideRowCol = (index % 2) ? 'bg-gray-100' : 'bg-white';
             const midRowCol = (index % 2) ? 'bg-gray-100' : 'bg-tertiary-dark-blue';
-            
+
             return (
               <div
                 className={`flex`}
                 key={index}>
 
                 <div className={`${sideRowCol} py-6 pl-8 flex-grow text-sm text-slate-800 sm:text-lg`}>{row.title}</div>
-                <div className={`${midRowCol} flex justify-center ml-auto  min-w-[8rem] sm:min-w-[10rem] lg:min-w-[12rem] items-center`}>{(row.isTopic1) ? tick : cross }</div>
-                <div className={`${sideRowCol} flex justify-center  min-w-[8rem] sm:min-w-[10rem] lg:min-w-[12rem] items-center`}>{(row.isTopic2) ? tick : cross }</div>
+                <div className={`${midRowCol} flex justify-center ml-auto  min-w-[8rem] sm:min-w-[10rem] lg:min-w-[12rem] items-center`}>{(row.isTopic1) ? tick : cross}</div>
+                <div className={`${sideRowCol} flex justify-center  min-w-[8rem] sm:min-w-[10rem] lg:min-w-[12rem] items-center`}>{(row.isTopic2) ? tick : cross}</div>
 
               </div>
             );

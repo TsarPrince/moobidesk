@@ -1,7 +1,7 @@
 
 
 type Props = {
-  heading: string,
+  heading?: string,
   children: React.ReactNode,
 };
 
@@ -10,7 +10,7 @@ const BlueSection = (props: Props) => {
     <section className=" bg-tertiary py-16">
       <div className="2xl:container mx-auto px-4">
         <h1 className="text-white text-4xl mb-12 text-center mx-auto font-medium">{props.heading}</h1>
-          {props.children}
+        {props.children}
       </div>
     </section>
   )

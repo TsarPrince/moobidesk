@@ -2,7 +2,7 @@ import Link from "next/link";
 import GeneralButton from "./GeneralButton";
 
 type Props = {
-  heading: string,
+  heading?: string,
   buttonText?: string,
   description?: string,
   link?: string,
@@ -19,15 +19,15 @@ const MidBanner = (props: Props) => {
       <div className='2xl:container mx-auto'>
         <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-3xl max-w-5xl mx-auto'>{props.heading}</h1>
 
-        {props.description && 
+        {props.description &&
           <p className="text-white mt-6 px-10 mx-auto max-w-5xl text-center">{props.description}</p>
         }
 
         <div className='flex mt-10'>
 
           {/* if link mentioned, then provide the link */}
-            {
-              props.link ?
+          {
+            props.link ?
               <Link href={props.link} className="mx-auto">
                 <GeneralButton>
                   {props.buttonText}
@@ -38,7 +38,7 @@ const MidBanner = (props: Props) => {
                 {props.buttonText}
               </GeneralButton>)
           }
-          
+
           {props.children}
         </div>
       </div>

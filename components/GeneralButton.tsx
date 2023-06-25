@@ -2,6 +2,7 @@
 type Props = {
   children: React.ReactNode,
   twColor?: string,
+  disabled?: boolean,
 };
 
 
@@ -17,7 +18,7 @@ const GeneralButton = (props: Props) => {
   }
 
   return (
-    <button className={`mx-auto px-4 py-2 rounded-full sm:text-base text-sm text-white ${bgColor} ${hoverBgColor}`}>
+    <button className={`mx-auto px-4 py-2 rounded-full sm:text-base text-sm text-white ${bgColor} ${hoverBgColor} ${props.disabled ? ' opacity-50 cursor-not-allowedx ' : ''}`} disabled={props.disabled}>
       {props.children}
     </button>
   )

@@ -2,8 +2,8 @@ import Image from "next/image"
 
 const InsuranceCard = (props: {
   imageURL: string,
-  title: string,
-  description: string,
+  title?: string,
+  description?: string,
 }) => {
   return (
     <div className="flex flex-col gap-4 max-w-md text-white">

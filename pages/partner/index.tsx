@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from 'next';
+import type { NextPage } from 'next';
 import Image from 'next/image';
 
 // import Partner from '@/constants/Partner';
@@ -8,16 +8,24 @@ import PartnerExperienceCard from '@/components/partner/PartnerExperienceCard';
 import FooterSmall from '@/components/Footer/FooterSmall';
 import SEO from '@/components/SEO';
 
-import { client, urlFor } from 'lib/client';
-import { Partner as PartnerType } from 'sanity/schema';
 import CommonNav from '@/components/CommonNav';
 import Link from 'next/link';
 
-type PageProps = {
-  Partner: PartnerType
-}
+import { useContext } from 'react'
+import { AppContext } from 'context/appContext'
+import { PartnerPage } from 'sanity/schema'
+import { urlFor } from 'lib/client'
 
-const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
+const PartnerPage: NextPage = () => {
+  const { data } = useContext(AppContext)
+  let Partner: PartnerPage | undefined
+  if (data) {
+    data.forEach(doc => {
+      if (doc._type === 'partnerPage') {
+        Partner = doc
+      }
+    })
+  }
   return (
     <>
       <SEO
@@ -38,11 +46,11 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
       <div className="bg-[url('/hero-partner.jpg')] h-[40rem] overflow-hidden bg-clip-content bg-cover bg-center">
         <div className=' bg-blue-partner-overlay h-[125%] w-full pt-40'>
           <h1 className='text-center text-3xl sm:text-5xl font-bold text-white'>
-            {Partner.heading}
+            {Partner?.heading}
           </h1>
           <div className=' max-w-[50rem] mx-auto  mt-5'>
             <h1 className='text-white text-center sm:text-2xl px-6 sm:mt-10'>
-              {Partner.subheading}
+              {Partner?.subheading}
             </h1>
           </div>
           <div className='flex'>
@@ -59,10 +67,10 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
         {/* TOGETHER WE GO FURTHUR SECTION-1 */}
         <section className=''>
           <div className=' mx-auto'>
-            <h1 className='text-center text-2xl sm:text-4xl font-bold'>{Partner.section_1?.heading}</h1>
+            <h1 className='text-center text-2xl sm:text-4xl font-bold'>{Partner?.section_1?.heading}</h1>
             <p className='mx-auto text-center max-w-[55rem] px-6 text-gray-600 mt-8 sm:text-lg'>{Partner?.section_1?.subheading}</p>
           </div>
-          <h2 className='mt-14 font-bold text-center text-lg sm:text-3xl'>{Partner.section_2?.heading}</h2>
+          <h2 className='mt-14 font-bold text-center text-lg sm:text-3xl'>{Partner?.section_2?.heading}</h2>
         </section>
 
         {/* PARTNERSHIP PROGRAM SECTION-2 */}
@@ -71,7 +79,7 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
 
             {/* todo : LOOP AND MAP ALL THE CARDS cards.map() */}
             {/* DONE ! */}
-            {Partner.section_2?.cards?.map((card, index) => (
+            {Partner?.section_2?.cards?.map((card, index) => (
               <PartnerCard
                 key={index}
                 image={urlFor(card.image).url()}
@@ -90,11 +98,11 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
         <div className='2xl:container mx-auto'>
 
           <h1 className='text-2xl sm:text-4xl font-bold text-center'>
-            {Partner.section_3?.heading}
+            {Partner?.section_3?.heading}
           </h1>
           <div className=' pt-16 flex flex-col xl:flex-row xl:gap-0 gap-6 xl:px-28 justify-center'>
 
-            {Partner.section_3?.cards?.map((card, index) => (
+            {Partner?.section_3?.cards?.map((card, index) => (
               <PartnerExperienceCard
                 key={index}
                 image={urlFor(card.image).url()}
@@ -111,11 +119,11 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
 
       {/* END BANNER */}
       <section className='bg-tertiary py-20'>
-        <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>{Partner.endBanner?.heading}</h1>
+        <h1 className='text-white font-semibold px-14 text-center  text-2xl sm:text-4xl'>{Partner?.endBanner?.heading}</h1>
         <div className='flex'>
-        <Link href={'/request-demo'} className='mx-auto'>
-          <BannerButton>{Partner.button?.partner}</BannerButton>
-        </Link>
+          <Link href={'/request-demo'} className='mx-auto'>
+            <BannerButton>{Partner?.button?.partner}</BannerButton>
+          </Link>
         </div>
       </section>
 
@@ -126,12 +134,3 @@ const PartnerPage: NextPage<PageProps> = ({ Partner }) => {
 }
 
 export default PartnerPage;
-
-export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-  const Partner: PartnerType = await client.fetch(`*[_type in ['partner']][0]`);
-  return {
-    props: {
-      Partner
-    }
-  }
-}

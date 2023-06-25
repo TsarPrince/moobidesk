@@ -2,8 +2,8 @@ import Image from "next/image";
 
 interface StatCardProps {
   imageURL: string;
-  percentage: number;
-  title: string;
+  percentage?: number;
+  title?: string;
 };
 
 const StatCard = (props: StatCardProps) => {

@@ -23,7 +23,7 @@ const KeyFeaturePanel = (props: PanelInterface) => {
   return (
     <div className={`max-w-sm mx-auto sm:max-w-md flex flex-col lg:flex-row ${extraLarge.panelWidth} lg:gap-20 px-2`}>
       <div className={`${ordering[0]}`}>
-        <Image className="w-full" src={props.imageURL} alt={props.heading} width={500} height={500}/>
+        <Image className="w-full" src={props.imageURL} alt={props.heading || ''} width={500} height={500} />
       </div>
       <div className={`flex flex-col justify-center gap-4 my-10 ${extraLarge.textSize.sm} text-sub-text-color ${extraLarge.divWidth} ${ordering[1]}`}>
         <h1 className={`font-medium ${extraLarge.textSize.mid}`}>{props.title}</h1>

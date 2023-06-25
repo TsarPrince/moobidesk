@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { Configuration, OpenAIApi } from "openai"
+import { supabase } from '../../lib/supabase'
 
 const config = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -40,6 +41,14 @@ const generate = async function (req: NextApiRequest, res: NextApiResponse) {
       messages: [{ role: "user", content: prompt }],
     })
     const result = completion.data.choices[0].message?.content
+
+
+    // store values in supabase
+    const { data, error } = await supabase.from('knowledge-base').insert([{ question: prompt, answer: result }])
+    console.log(data)
+    if (error) console.error(error)
+
+
     res.status(200).json({ result })
 
   } catch (error: any) {

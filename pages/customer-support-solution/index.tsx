@@ -2,7 +2,7 @@
 import CommonNav from "@/components/CommonNav"
 import GeneralButton from "@/components/GeneralButton"
 import MainBanner from "@/components/MainBanner"
-import CustomerSupport from "@/constants/CustomerSupport"
+// import CustomerSupport from "@/constants/CustomerSupport"
 import KeyFeaturePanel from "@/components/KeyFeaturePanel"
 import BlueSeparator from "@/components/BlueSeparator"
 import InsuranceCard from "@/components/insurance/InsuranceCard"
@@ -15,7 +15,21 @@ import Link from "next/link"
 import Image from "next/image"
 import SEO from "@/components/SEO"
 
+import { useContext } from 'react'
+import { AppContext } from 'context/appContext'
+import { CustomerSupportPage } from 'sanity/schema'
+import { urlFor } from 'lib/client'
+
 const CustomerSupportPage: NextPage = () => {
+  const { data } = useContext(AppContext)
+  let CustomerSupport: CustomerSupportPage | undefined
+  if (data) {
+    data.forEach(doc => {
+      if (doc._type === 'customerSupportPage') {
+        CustomerSupport = doc
+      }
+    })
+  }
   return (
     <>
       <SEO
@@ -26,24 +40,24 @@ const CustomerSupportPage: NextPage = () => {
 
       <MainBanner>
 
-        <Image src={CustomerSupport.section_1.logoURL} alt="''" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
+        <Image src={urlFor(CustomerSupport?.section_1?.logo).url()} alt="''" width={500} height={200} className="w-40 mx-auto mb-10"></Image>
         <h1 className="mb-6 text-center text-3xl sm:max-w-xl px-6 max-w-lg mx-auto font-medium">
-          {CustomerSupport.section_1.heading}
+          {CustomerSupport?.section_1?.heading}
         </h1>
         <p className="mb-9 mx-auto px-1 max-w-lg sm:max-w-xl text-center">
-          {CustomerSupport.section_1.description}
+          {CustomerSupport?.section_1?.description}
         </p>
 
         <div className="flex justify-center gap-6">
 
-          <Link href={CustomerSupport.section_1.buttons[0]?.url}>
+          <Link href={CustomerSupport?.section_1?.buttons?.[0]?.url || ''}>
             <GeneralButton>
-              {CustomerSupport.section_1.buttons[0]?.text}
+              {CustomerSupport?.section_1?.buttons?.[0]?.text}
             </GeneralButton>
           </Link>
-          <Link href={CustomerSupport.section_1.buttons[1]?.url}>
+          <Link href={CustomerSupport?.section_1?.buttons?.[1]?.url || ''}>
             <GeneralButton twColor="bg-tertiary-dark-blue">
-              {CustomerSupport.section_1.buttons[1]?.text}
+              {CustomerSupport?.section_1?.buttons?.[1]?.text}
             </GeneralButton>
           </Link>
         </div>
@@ -54,14 +68,14 @@ const CustomerSupportPage: NextPage = () => {
       {/* SECTION -2  */}
       <section className="bg-gray-200 py-12">
         <div className="2xl:container mx-auto flex flex-col">
-          <h1 className=" mb-12 text-center text-3xl text-gray-600">{CustomerSupport.section_2.heading}</h1>
+          <h1 className=" mb-12 text-center text-3xl text-gray-600">{CustomerSupport?.section_2?.heading}</h1>
           <div className=" px-4 inline-grid mx-auto gap-y-3 gap-x-4 sm:gap-x-8 grid-cols-2 sm:grid-cols-4 xl:flex xl:justify-evenly">
-            {CustomerSupport.section_2.client_images.map((imageURL, index) => (
+            {CustomerSupport?.section_2?.client_images?.map((image, index) => (
               <div key={index}
                 className=" w-32 h-20"
               >
                 <Image
-                  src={imageURL}
+                  src={urlFor(image).url()}
                   alt={'client image'}
                   width={1000} height={400}
                   className="w-full grayscale hover:grayscale-0" />
@@ -75,17 +89,17 @@ const CustomerSupportPage: NextPage = () => {
       {/* SECTION 3 */}
       <section className="py-14 bg-tertiary px-4 sm:px-0">
         <h1 className="text-white text-center text-2xl max-w-md mx-auto sm:max-w-4xl sm:text-3xl">
-          {CustomerSupport.section_3.heading}
+          {CustomerSupport?.section_3?.heading}
         </h1>
 
         <div className="flex flex-col-reverse gap-4 mt-8 max-w-[60rem] mx-auto">
           <Image
             className=" w-[90%] mx-auto"
-            src={CustomerSupport.section_3.imageURL}
+            src={urlFor(CustomerSupport?.section_3?.image).url()}
             alt="customer relation image"
             width={1000} height={600} />
           <p className="px-3 sm:text-lg mb-4 text-center text-white">
-            {CustomerSupport.section_3.description}
+            {CustomerSupport?.section_3?.description}
           </p>
         </div>
       </section>
@@ -95,20 +109,20 @@ const CustomerSupportPage: NextPage = () => {
       <section className="bg-gray-200 py-10 px-4">
         <div className="2xl:container mx-auto flex flex-col">
           <h1 className="text-center text-gray-600 text-xl mb-6">
-            {CustomerSupport.section_4.heading}
+            {CustomerSupport?.section_4?.heading}
           </h1>
           <div className="grid flex-1 px-4 lg:max-w-full grid-cols-6 gap-y-4 lg:flex lg:justify-center justify-items-center lg:gap-6">
-            {CustomerSupport.section_4.social_urls.map((social, index) => (
+            {CustomerSupport?.section_4?.social_urls?.map((social, index) => (
               <div key={index}
                 className="border rounded-full flex flex-col items-center"
               >
                 <Image
-                  src={social.imageURL}
-                  alt={social.name}
+                  src={urlFor(social?.image).url()}
+                  alt={social?.name || ''}
                   width={400} height={400}
                   className="w-14 h-14"
                 />
-                <h1 className="text-xs text-gray-700 my-1">{social.name}</h1>
+                <h1 className="text-xs text-gray-700 my-1">{social?.name}</h1>
               </div>
 
             ))}
@@ -120,17 +134,20 @@ const CustomerSupportPage: NextPage = () => {
       <section className="bg-white py-14 px-2">
         <div className="2xl:container mx-auto text-slate-800">
           <h1 className="mb-8 text-2xl font-medium text-center mx-auto">
-            {CustomerSupport.section_5.heading}
+            {CustomerSupport?.section_5?.heading}
           </h1>
           <p className=" mb-12 text-center max-w-md mx-auto text-lg">
-            {CustomerSupport.section_5.description}
+            {CustomerSupport?.section_5?.description}
           </p>
 
           <div className="gap-20 flex flex-col">
-            {CustomerSupport.section_5.panels.map((panel, index) => (
+            {CustomerSupport?.section_5?.panels?.map((panel, index) => (
               <KeyFeaturePanel
                 key={index}
-                {...panel}
+                description={panel.description}
+                heading={panel.heading}
+                imageURL={urlFor(panel.image).url() || ''}
+                title={panel.title}
                 pos_left={Boolean(index % 2)}
                 extraLarge={true}
               />
@@ -141,24 +158,26 @@ const CustomerSupportPage: NextPage = () => {
       </section>
 
       <BlueSeparator>
-        {CustomerSupport.section_7.title}
+        {CustomerSupport?.section_7?.title}
       </BlueSeparator>
 
       {/* SECTION 6 */}
       <section className=" bg-tertiary-dark-blue">
         <div className="2xl:container mx-auto py-20">
           <h1 className="text-2xl text-center mb-6 text-white font-medium">
-            {CustomerSupport.section_8.heading}
+            {CustomerSupport?.section_8?.heading}
           </h1>
           <h2 className="text-lg text-center text-white">
-            {CustomerSupport.section_8.subheading}
+            {CustomerSupport?.section_8?.subheading}
           </h2>
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 pt-16 px-6 justify-center items-center">
-            {CustomerSupport.section_6.map((card, index) => (
+            {CustomerSupport?.section_6?.map((card, index) => (
               <InsuranceCard
                 key={index}
-                {...card}
+                title={card.title}
+                description={card.description}
+                imageURL={urlFor(card.image).url()}
               />
             ))}
           </div>
@@ -170,7 +189,7 @@ const CustomerSupportPage: NextPage = () => {
       <section className="bg-slate-200 py-14  ">
         <div className="2xl:container mx-auto">
           <h1 className="text-center font-medium text-tertiary-dark-blue text-2xl sm:text-3xl mb-16">
-            {CustomerSupport.section_9.heading}
+            {CustomerSupport?.section_9?.heading}
           </h1>
 
           {/* the 2 blocks design */}
@@ -179,11 +198,11 @@ const CustomerSupportPage: NextPage = () => {
             {/* light blue block (with moobidesk) */}
             <div className="lg:flex-1 p-16 lg:h-60 max-w-xl text-white  bg-gradient-to-br from-tertiary to-blue-200 relative lg:-top-10 lg:ml-auto">
               <h1 className="font-medium text-3xl mb-4">
-                {CustomerSupport.section_9.card_1.heading}
+                {CustomerSupport?.section_9?.card_1?.heading}
               </h1>
               <div className="h-[2px] bg-white mb-3"></div>
               <p className="text-sm">
-                {CustomerSupport.section_9.card_1.description}
+                {CustomerSupport?.section_9?.card_1?.description}
 
               </p>
 
@@ -196,11 +215,11 @@ const CustomerSupportPage: NextPage = () => {
             {/* dark blue block (with moobidesk) */}
             <div className="lg:flex-1 p-16 lg:h-60 max-w-xl text-white  bg-gradient-to-br from-tertiary-dark-blue to-tertiary lg:mr-auto">
               <h1 className="font-medium text-3xl mb-4">
-                {CustomerSupport.section_9.card_2.heading}
+                {CustomerSupport?.section_9?.card_2?.heading}
               </h1>
               <div className="h-[2px] bg-white mb-3"></div>
               <p className="text-sm">
-                {CustomerSupport.section_9.card_2.description}
+                {CustomerSupport?.section_9?.card_2?.description}
               </p>
             </div>
 
@@ -212,7 +231,7 @@ const CustomerSupportPage: NextPage = () => {
 
 
       {/* SECTION 10 */}
-      <section className="bg-[url('/cussupport/section-bg.png')] py-10 px-2">
+      <section className="bg-[url('/cussupport/section-bg?.png')] py-10 px-2">
         <div className="2xl:contianer mx-auto">
 
           {/* top part */}
@@ -224,7 +243,7 @@ const CustomerSupportPage: NextPage = () => {
               />
             </div>
             <div className="w-max flex justify-center items-center">
-              <Image src={CustomerSupport.section_10.companyImage} alt="''"
+              <Image src={urlFor(CustomerSupport?.section_10?.companyImage).url()} alt="''"
                 width={200} height={200}
                 className="w-40"
               />
@@ -241,7 +260,7 @@ const CustomerSupportPage: NextPage = () => {
           {/* description */}
           <div className="p-4 max-w-[48rem] mx-auto">
             <p className="text-center text-lg">
-              {CustomerSupport.section_10.description}
+              {CustomerSupport?.section_10?.description}
             </p>
           </div>
 
@@ -251,11 +270,11 @@ const CustomerSupportPage: NextPage = () => {
           {/* owner */}
           <div className="text-gray-700 flex flex-col justify-center items-center mx-auto">
             <span><em>
-              {CustomerSupport.section_10.person_name}
+              {CustomerSupport?.section_10?.person_name}
             </em></span>
             <span>
               <em>
-                {CustomerSupport.section_10.person_title}
+                {CustomerSupport?.section_10?.person_title}
               </em>
             </span>
           </div>
@@ -263,8 +282,8 @@ const CustomerSupportPage: NextPage = () => {
       </section>
 
       <MidBanner
-        heading={CustomerSupport.midBanner.heading}
-        buttonText={CustomerSupport.midBanner.btn_text}
+        heading={CustomerSupport?.midBanner?.heading}
+        buttonText={CustomerSupport?.midBanner?.btn_text}
         bg="bg-tertiary"
         link="/signup"
       />
