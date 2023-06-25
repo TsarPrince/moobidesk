@@ -77,7 +77,7 @@ const generateSchema = (docName, inputFilePath, outputFilePath) => {
 }
 
 generateSchema(
-  'pricingPage',
+  'navbar',
   path.join(__dirname, 'data.json'),
-  path.join('./sanity/schemas', 'pricing_page.ts')
+  path.join('./sanity/schemas', 'navbar.ts')
 )

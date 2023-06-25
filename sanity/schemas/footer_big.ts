@@ -27,7 +27,7 @@ export default defineType({
         },
         {
           "name": "websiteURL",
-          "title": "Website U R L",
+          "title": "Website URL",
           "type": "object",
           "fields": [
             {
@@ -50,12 +50,12 @@ export default defineType({
             {
               "name": "appstore",
               "title": "Appstore",
-              "type": "string"
+              "type": "image"
             },
             {
               "name": "googleplay",
               "title": "Googleplay",
-              "type": "string"
+              "type": "image"
             }
           ]
         },
@@ -91,7 +91,12 @@ export default defineType({
                       "name": "value",
                       "title": "Value",
                       "type": "string"
-                    }
+                    },
+                    {
+                      "name": "URL",
+                      "title": "URL",
+                      "type": "string"
+                    },
                   ]
                 }
               ]
@@ -114,9 +119,9 @@ export default defineType({
               "type": "object",
               "fields": [
                 {
-                  "name": "imageURL",
-                  "title": "Image U R L",
-                  "type": "string"
+                  "name": "image",
+                  "title": "Image",
+                  "type": "image"
                 },
                 {
                   "name": "link",
@@ -155,6 +160,16 @@ export default defineType({
           ]
         }
       ]
-    })
+    }),
+    defineField({
+      "name": "app_store",
+      "title": "App Store",
+      "type": "string",
+    }),
+    defineField({
+      "name": "google_play",
+      "title": "Google Play",
+      "type": "string",
+    }),
   ]
 })

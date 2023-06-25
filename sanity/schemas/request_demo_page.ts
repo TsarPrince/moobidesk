@@ -46,9 +46,9 @@ export default defineType({
                   "type": "object",
                   "fields": [
                     {
-                      "name": "imageURL",
-                      "title": "Image U R L",
-                      "type": "string"
+                      "name": "image",
+                      "title": "Image",
+                      "type": "image"
                     },
                     {
                       "name": "text",
@@ -77,7 +77,7 @@ export default defineType({
               "type": "array",
               "of": [
                 {
-                  "type": "string"
+                  "type": "image"
                 }
               ]
             }
