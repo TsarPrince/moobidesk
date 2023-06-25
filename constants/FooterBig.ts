@@ -92,7 +92,7 @@ const footer = {
       },
       {
         text: 'Industries',
-        url: '/industries',
+        url: '/insurance',
       },
       {
         text: 'Partner',
@@ -103,20 +103,25 @@ const footer = {
         url: '/pricing',
       },
       {
-        text: 'About Us',
-        url: '/',
+        text: 'Contact Us',
+        url: '/#contact-us',
+      },
+      {
+        text: 'Knowledge Base',
+        url: '/knowledge-base',
       },
       {
         text: 'Blog',
-        url: '/blog',
-      },
-      {
-        text: 'Contact Us',
-        url: '/',
+        url: 'https://moobidesk-blog.vercel.app/',
       },
     ],
 
   },
+
+
+
+  app_store: 'https://itunes.apple.com/sg/app/moobidesk/id1220287272?mt=8',
+  google_play: 'https://play.google.com/store/apps/details?id=com.mavenlab.moobidesk&hl=en',
 }
 
 export default footer

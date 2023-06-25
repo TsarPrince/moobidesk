@@ -6,17 +6,17 @@ import Footer from "@/constants/FooterBig";
 
 const FooterBig = () => {
 
-const footerDetails = Footer.topFooter;
+  const footerDetails = Footer.topFooter;
 
-const {
+  const {
     heading,
     subheading,
     description,
     websiteURL,
     downloadOnImage,
     contactUsSection
-} = footerDetails;
-  
+  } = footerDetails;
+
   const { socials, copyrightText, links } = Footer.footerBottom;
 
   return (
@@ -38,10 +38,10 @@ const {
               </div>
 
               <div className=" flex mx-auto max-w-sm sm:max-w-lg gap-4 lg:max-w-xl">
-                <Link href={Home.pageLinks.app_store}>
+                <Link href={Footer.app_store}>
                   <Image className="w-36" src={downloadOnImage.appstore} alt="Download on App Store" width={300} height={50} />
                 </Link>
-                <Link href={Home.pageLinks.google_play}>
+                <Link href={Footer.google_play}>
                   <Image className="w-36" src={downloadOnImage.googleplay} alt="Download on Google Play" width={300} height={50} />
                 </Link>
               </div>

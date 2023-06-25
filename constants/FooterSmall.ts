@@ -21,23 +21,6 @@ const footer = {
     ],
 
     pageLinks: {
-      home: '/',
-      products: [
-        '/customer-support-solution',
-        '/enterprise',
-        '/whatsapp',
-        '/live-chat-solution',
-      ],
-      industries: [
-        '/insurance',
-        '/retail',
-      ],
-      partner: '/partner',
-      pricing: '/pricing',
-
-      talk_to_expert: '/talk-to-expert',
-      watch_video: '/',
-
       app_store: 'https://itunes.apple.com/sg/app/moobidesk/id1220287272?mt=8',
       google_play: 'https://play.google.com/store/apps/details?id=com.mavenlab.moobidesk&hl=en',
     },

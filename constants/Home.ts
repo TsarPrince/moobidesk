@@ -1,68 +1,68 @@
 
 const Home = {
-  pageLinks: {
-    home: '/',
-    products: [
-      '/customer-support-solution',
-      '/enterprise',
-      '/whatsapp',
-      '/live-chat-solution',
-    ],
-    industries: [
-      '/insurance',
-      '/retail',
-    ],
-    partner: '/partner',
-    pricing: '/pricing',
+  // pageLinks: {
+  //   home: '/',
+  //   products: [
+  //     '/customer-support-solution',
+  //     '/enterprise',
+  //     '/whatsapp',
+  //     '/live-chat-solution',
+  //   ],
+  //   industries: [
+  //     '/insurance',
+  //     '/retail',
+  //   ],
+  //   partner: '/partner',
+  //   pricing: '/pricing',
 
-    contactUS: '/#contactus',
+  //   contactUS: '/#contactus',
 
-    talk_to_expert: '/request-demo',
-    watch_video: '/',
+  //   talk_to_expert: '/request-demo',
+  //   watch_video: '/',
 
-    app_store: 'https://itunes.apple.com/sg/app/moobidesk/id1220287272?mt=8',
-    google_play: 'https://play.google.com/store/apps/details?id=com.mavenlab.moobidesk&hl=en',
-  },
+  //   app_store: 'https://itunes.apple.com/sg/app/moobidesk/id1220287272?mt=8',
+  //   google_play: 'https://play.google.com/store/apps/details?id=com.mavenlab.moobidesk&hl=en',
+  // },
 
-  productDropdownCards: [
-    {
-      imageURL: '/icons/home-navigation.svg',
-      heading: 'Moobidesk',
-      description: 'Simple, flexible and versatile Omnichannel Customer Support Platform',
-      link: '/customer-support-solution',
-    },
-    {
-      imageURL: '/icons/home-enterprise.svg',
-      heading: 'Moobidesk Enterprise',
-      description: 'Intuitive, unified  and  powerful Omnichannel  Contact  Center Platform',
-      link: '/enterprise',
-    },
-    {
-      imageURL: '/icons/home-whatsapp.svg',
-      heading: 'Whatsapp Solution',
-      description: 'Customer support made smarter',
-      link: '/whatsapp',
-    },
-    {
-      imageURL: '/icons/home-live-chat.png',
-      heading: 'Live Chat Solution',
-      description: 'Live chat customer support for your website',
-      link: '/live-chat-solution',
-    },
-  ],
+  // productDropdownCards: [
+  //   {
+  //     imageURL: '/icons/home-navigation.svg',
+  //     heading: 'Moobidesk',
+  //     description: 'Simple, flexible and versatile Omnichannel Customer Support Platform',
+  //     link: '/customer-support-solution',
+  //   },
+  //   {
+  //     imageURL: '/icons/home-enterprise.svg',
+  //     heading: 'Moobidesk Enterprise',
+  //     description: 'Intuitive, unified  and  powerful Omnichannel  Contact  Center Platform',
+  //     link: '/enterprise',
+  //   },
+  //   {
+  //     imageURL: '/icons/home-whatsapp.svg',
+  //     heading: 'Whatsapp Solution',
+  //     description: 'Customer support made smarter',
+  //     link: '/whatsapp',
+  //   },
+  //   {
+  //     imageURL: '/icons/home-live-chat.png',
+  //     heading: 'Live Chat Solution',
+  //     description: 'Live chat customer support for your website',
+  //     link: '/live-chat-solution',
+  //   },
+  // ],
 
-  industryDropdownCards: [
-    {
-      imageURL: '/icons/home-industries-1.svg',
-      heading: 'Insurance',
-      link: '/insurance',
-    },
-    {
-      imageURL: '/icons/home-industries-2.svg',
-      heading: 'Retail',
-      link: '/retail',
-    },
-  ],
+  // industryDropdownCards: [
+  //   {
+  //     imageURL: '/icons/home-industries-1.svg',
+  //     heading: 'Insurance',
+  //     link: '/insurance',
+  //   },
+  //   {
+  //     imageURL: '/icons/home-industries-2.svg',
+  //     heading: 'Retail',
+  //     link: '/retail',
+  //   },
+  // ],
 
   topBanner: {
 

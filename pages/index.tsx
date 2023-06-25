@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           {HomeConstants.topBanner.subheading}
         </p>
         <div className='flex mt-20'>
-          <Link className='mx-auto' href={HomeConstants.pageLinks.watch_video}>
+          <Link className='mx-auto' href={'/'}>
             <TopBannerButton>
               {HomeConstants.topBanner.bannerButton.text}
             </TopBannerButton>
