@@ -45,18 +45,16 @@ const generate = async function (req: NextApiRequest, res: NextApiResponse) {
 
     // store values in supabase
     const { data, error } = await supabase.from('knowledge-base').insert([{ question: prompt, answer: result }])
-    console.log(data)
     if (error) console.error(error)
 
 
     res.status(200).json({ result })
 
   } catch (error: any) {
+    console.error(error)
     if (error.response) {
-      console.error(error.response.status, error.response.data)
       res.status(error.response.status).json(error.response.data)
     } else {
-      console.error(`Error with OpenAI API request: ${error.message}`)
       res.status(500).json({
         error: {
           message: 'An error occurred during your request.',
