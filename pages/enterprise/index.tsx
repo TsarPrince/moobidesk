@@ -234,7 +234,7 @@ const EnterprisePage: NextPage = () => {
           {/* top part */}
           <div className="flex justify-between max-w-2xl mx-auto">
             <div className="w-max">
-              <Image src={'/cussupport/icons/comma-1?.png'} alt="''"
+              <Image src={'/cussupport/icons/comma-1.png'} alt="''"
                 width={200} height={200}
                 className="w-20"
               />
@@ -246,7 +246,7 @@ const EnterprisePage: NextPage = () => {
               />
             </div>
             <div className="w-max">
-              <Image src={'/cussupport/icons/comma-2?.png'} alt="''"
+              <Image src={'/cussupport/icons/comma-2.png'} alt="''"
                 width={200} height={200}
                 className="w-20"
               />
