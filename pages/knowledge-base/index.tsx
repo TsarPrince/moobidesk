@@ -4,8 +4,6 @@ import CommonNav from "@/components/CommonNav";
 import { Player } from '@lottiefiles/react-lottie-player';
 import Link from "next/link";
 import FooterSmall from "@/components/Footer/FooterSmall";
-import FooterTop from "@/components/Footer/FooterBig";
-import FooterBig from "@/components/Footer/FooterBig";
 
 export default function Home() {
   const result = useRef<HTMLDivElement>(null)
@@ -17,13 +15,17 @@ export default function Home() {
     event.preventDefault();
     try {
       setLoading(true)
-      const response = await fetch("/api/generate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt }),
-      });
+      // const response = await fetch("/api/generate", {
+      const response = await fetch(
+        "https://moobidesk-backend.onrender.com/api/generate",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt }),
+        }
+      );
 
       const data = await response.json();
       if (response.status !== 200) {

@@ -100,7 +100,7 @@ const FooterBig = () => {
           <div className="hidden xl:inline xl:mt-6">
             <Image
               className=" w-64 mr-4"
-              src={'/home/whatsapp-qr?.png'}
+              src={'/home/whatsapp-qr.png'}
               alt="WhatsApp QR"
               width={600} height={600} />
           </div>

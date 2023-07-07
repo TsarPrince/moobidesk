@@ -36,5 +36,10 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": ["node_modules", "sanity-codegen.config.ts", "sanity.cli.ts", "sanity.config.ts"]
+  "exclude": [
+    "node_modules",
+    "sanity-codegen.config.ts",
+    "sanity.cli.ts",
+    "sanity.config.ts"
+  ]
 }
